@@ -1,0 +1,4 @@
+Should be easy to use: 
+1)upload the Arduino code to the atmega, and make sure you have the rx and tx tied to tx and rx of an ftdi chip(which is assumed that the chip has a usb plug connected to it, which is in turn connected to your computer)
+2)make sure you have a joystick that is recognized by the OS plugged in
+3)run the python code named "joystickcontrol.py" with "python joystickcontrol.py"
