@@ -1,3 +1,6 @@
+#include "WProgram.h"
+void setup();
+void loop();
 int pinArray[4] = {9, 10, 2, 3}; // digital pins for the motors
 int i;              // iterator
 int motor;          // control pin for current servo
@@ -67,5 +70,18 @@ void loop() {
     digitalWrite(relayb[0], relayb[1]);
 
   }
+}
+
+
+int main(void)
+{
+	init();
+
+	setup();
+    
+	for (;;)
+		loop();
+        
+	return 0;
 }
 

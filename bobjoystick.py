@@ -24,13 +24,11 @@ def handleJoyEvent(e):
                 # convert joystick position to servo increment, 0-180
                 move = round(pos * 90, 0)
                 if (move < 0):
-                    motorf = int(90 - abs(move))
+                    speed = int(90 - abs(move))
                     fb = 253 #forwards
                 else:
-                    motorf= int(move + 90)
+                    speed = int(move + 90)
                     fb = 254 #go backwards
-                # convert position to ASCII character
-                speed = motorf
                 # and send to robot over serial connection
                 motor.move(1, speed, fb)
 #y axis of the joystick, this controlls the steering
@@ -39,15 +37,13 @@ def handleJoyEvent(e):
                 # convert joystick position to servo increment, 0-180
                 move = round(pos * 90, 0)
                 if (move < 0):
-                    motorf = int(90 - abs(move))
+                    speed = int(90 - abs(move))
                     fb = 253
                 else:
-                    serv = int(move + 90)
+                    speed = int(move + 90)
                     fb = 254
-                # convert position to ASCII character
-                speed = motorf
                 # and send to Arduino over serial connection
-                servo.move(2, speed, fb)
+                motor.move(2, speed, fb)
     elif e.type == pygame.JOYBUTTONDOWN:
         str = "Button: %d" % (e.dict['button'])
         # Button 0 (trigger) to quit
@@ -71,10 +67,11 @@ def main():
         print "\nI could not find a joystick, please plug one in, or un-plug and re-plug back in your current joystick.\n"
         quit()
     print "\n%d joystick detected." % pygame.joystick.get_count()
-    myjoy = pygame.joystick.Joystick(i)
-    myjoy.init()
-    joy.append(myjoy)
-    print "Joystick %d: " % (i) + joy[i].get_name()
+    for i in range(pygame.joystick.get_count()):
+        myjoy = pygame.joystick.Joystick(i)
+        myjoy.init()
+        joy.append(myjoy)
+        print "Joystick %d: " % (i) + joy[i].get_name()
     print "Pull trigger (button 0) to quit.\n"
     # run joystick listener loop
     joystickControl()

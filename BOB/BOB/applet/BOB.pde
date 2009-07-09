@@ -1,4 +1,4 @@
-int pinArray[4] = {9, 10, 2, 3}; // digital pins for the motors
+int pinArray[2] = {9, 10}; // digital pins for the motors
 int i;              // iterator
 int motor;          // control pin for current servo
 int userInput[4];   // raw input from serial buffer, 3 bytes
@@ -8,22 +8,20 @@ int motorb[2];      // motorback #2 array{pin, pulsewidth}
 int pin;            // digital pin for pulse() function
 int puls;           // pulsewidth for pulse() function
 int startbyte;      // start byte, begin reading input
-int relayf[2];      //front relay
-int relayb[2];       //back relay
+int relayf = 2;     //front relay
+int relayb = 3;     //back relay
 int motordirection; //which way?
 int fb = 0;         //convert the python which way to a value the arduino can use
 
 void setup() {
   // loop through all 4 servo pins
   // and set them as OUTPUT
-  for (i=0;i<4;i++) {
+  for (i=0;i<2;i++) {
     pinMode(pinArray[i], OUTPUT);
   }  
   // map pins to motor controllers
   motorf[0] = pinArray[0];  // front motor is pin 9
   motorb[0] = pinArray[1];  // back motor is pin 10
-  relayf[0] = pinArray[2];
-  relayb[0] = pinArray[3];
   Serial.begin(9600);
 }
 
@@ -50,22 +48,24 @@ void loop() {
       if (motordirection == 254) {
         fb = 1023; //if the motor direction is 254 then turn on the relay
       }
+      Serial.println(startbyte);
+      delay(100);
+      Serial.println(motor);
+      delay(100);
+      Serial.println(motorspeed);
+      delay(100);
+      Serial.println(fb);
       switch (motor) {
         case 1:
           motorf[1] = motorspeed;
-          relayf[1] = fb;
+          relayf = fb;
           break;
         case 2:
           motorb[1] = motorspeed;
-          relayb[1] = fb;
+          relayb = fb;
           break;
       }
     }
-    digitalWrite(motorf[0], motorf[1]);
-    digitalWrite(motorb[0], motorb[1]);
-    digitalWrite(relayf[0], relayf[1]);
-    digitalWrite(relayb[0], relayb[1]);
-
   }
 }
 
