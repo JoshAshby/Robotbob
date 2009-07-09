@@ -25,10 +25,10 @@ def handleJoyEvent(e):
                 move = round(pos * 90, 0)
                 if (move < 0):
                     speed = int(90 - abs(move))
-                    fb = 253 #forwards
+                    fb = 254 #forwards
                 else:
-                    speed = int(move + 90)
-                    fb = 254 #go backwards
+                    speed = int(90 - abs(move))
+                    fb = 253 #go backwards
                 # and send to robot over serial connection
                 motor.move(1, speed, fb)
 #y axis of the joystick, this controlls the steering
@@ -38,10 +38,10 @@ def handleJoyEvent(e):
                 move = round(pos * 90, 0)
                 if (move < 0):
                     speed = int(90 - abs(move))
-                    fb = 253
-                else:
-                    speed = int(move + 90)
                     fb = 254
+                else:
+                    speed = int(90 - abs(move))
+                    fb = 253
                 # and send to Arduino over serial connection
                 motor.move(2, speed, fb)
     elif e.type == pygame.JOYBUTTONDOWN:

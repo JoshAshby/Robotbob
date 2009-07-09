@@ -25,9 +25,13 @@ void setup() {
   // map pins to motor controllers
   motorf[0] = pinArray[0];  // front motor is pin 9
   motorb[0] = pinArray[1];  // back motor is pin 10
-  relayf[0] = pinArray[2];
-  relayb[0] = pinArray[3];
+  relayf[0] = pinArray[2];  //front relay is pin 2
+  relayb[0] = pinArray[3];  //back relay is pin 3
   Serial.begin(9600);
+  digitalWrite(motorf[0], LOW);//turn all the pins low to make sure the robot doesn't take off
+  digitalWrite(motorb[0], LOW);
+  digitalWrite(relayf[0], LOW);
+  digitalWrite(relayb[0], LOW);
 }
 
 void loop() {
@@ -48,10 +52,10 @@ void loop() {
       //third byte = what direction
       motordirection = userInput[2];
       if (motordirection == 253) {
-        fb = 0; //if the motor direction is 253 then turn off the relay
+        fb = LOW; //if the motor direction is 253 then turn off the relay
       }
       if (motordirection == 254) {
-        fb = 1023; //if the motor direction is 254 then turn on the relay
+        fb = HIGH; //if the motor direction is 254 then turn on the relay
       }
       switch (motor) {
         case 1:
@@ -64,10 +68,10 @@ void loop() {
           break;
       }
     }
-    digitalWrite(motorf[0], motorf[1]);
-    digitalWrite(motorb[0], motorb[1]);
-    digitalWrite(relayf[0], relayf[1]);
-    digitalWrite(relayb[0], relayb[1]);
+    digitalWrite(motorf[0], motorf[1]);//write the speed to the right motor
+    digitalWrite(motorb[0], motorb[1]);//write the speed to the right motor
+    digitalWrite(relayf[0], relayf[1]);//write the direction to the right relay
+    digitalWrite(relayb[0], relayb[1]);//write the direction to the right relay
 
   }
 }
