@@ -3,14 +3,15 @@ int i;              // iterator
 int motor;          // control pin for current servo
 int userInput[4];   // raw input from serial buffer, 3 bytes
 int motorspeed;          // commanded speed
-int motor;          // which motor to control? 1-2
 int motorf[2];      // motorfront #1 array{pin, pulsewidth}
 int motorb[2];      // motorback #2 array{pin, pulsewidth}
 int pin;            // digital pin for pulse() function
 int puls;           // pulsewidth for pulse() function
 int startbyte;      // start byte, begin reading input
-int relayf = 2
-int relayb = 3
+int relayf = 2;     //front relay
+int relayb = 3;     //back relay
+int motordirection; //which way?
+int fb = 0;         //convert the python which way to a value the arduino can use
 
 void setup() {
   // loop through all 4 servo pins
@@ -42,10 +43,10 @@ void loop() {
       //third byte = what direction
       motordirection = userInput[2];
       if (motordirection == 253) {
-        fb = 0;
+        fb = 0; //if the motor direction is 253 then turn off the relay
       }
       if (motordirection == 254) {
-        fb = 1023;
+        fb = 1023; //if the motor direction is 254 then turn on the relay
       }
       switch (motor) {
         case 1:
