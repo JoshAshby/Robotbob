@@ -69,6 +69,7 @@ void loop() {
     digitalWrite(motorb[0], motorb[1]);//write the speed to the right motor
     digitalWrite(relayf[0], relayf[1]);//write the direction to the right relay
     digitalWrite(relayb[0], relayb[1]);//write the direction to the right relay
+    
 
   }
 }
