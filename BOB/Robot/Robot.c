@@ -25,7 +25,7 @@ Robot::Robot(int pin, int pin1, int pin2, int pin3)
   _pin3 = pin3; //turn relay
 }
 
-Robot::twiAddress(int set1, int set2, int set3, int set4)
+Robot::twiAdress(int set1, int set2, int set3, int set4)
 {
    pinMode(set1, OUTPUT);
    pinMode(set2, INPUT);
