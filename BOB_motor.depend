@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1266042156 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/main.c
+	<avr/io.h>
+	<util/delay.h>
+
+1265990064 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/pwm.c
+	<avr/io.h>
+	<util/delay.h>
+
+1265990037 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/pwm.c
+	<avr/io.h>
+	<util/delay.h>
+
