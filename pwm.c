@@ -1,6 +1,6 @@
 //-------------------------------------------
 /*
-PWM function
+PWM.c
 2010 - Josh Ashby
 joshuaashby@joshashby.com
 http://joshashby.com
@@ -12,28 +12,43 @@ freenode - JoshAshby
 //some of this is a little bit of a hack from arduino's wire_analog.c :D
 int pwm_setup(void)
 {
-    sbi(TCCR1B, CS11);
-    sbi(TCCR1B, CS10);
-    sbi(TCCR1A, WGM10);
+    TCCR1B |= (1<<CS11)
+            | (1<<CS10);
+    TCCR1A |= (1<<WGM10);
     DDRB |= (1<<1);
     DDRB |= (1<<2);
+    pwm_speed = 0;
+    pwm_value = 0;
+    pwm_value_old = 0;
     return 1;
 }
 int pwm(unsigned int value, unsigned int speed)
 {
-    sbi(TCCR1A, COM1A1);
+    TCCR1A |= (1<<COM1A1);
     OCR1A = value;
     return 1;
 }
-int pwm_ramp(unsigned int value, unsigned int speed)
+int pwm_rampUp(unsigned int value, unsigned int speed)
 {
-    sbi(TCCR1A, COM1A1);
-    if (i == value){
-        OCR1A = value;
-    } else {
+    TCCR1A |= (1<<COM1A1);
+    unsigned int i = pwm_value_old;
+    while (i<=value) {
+        OCR1A=i;
         i++;
-        OCR1A = i;
         _delay_ms(speed);
     }
+    pwm_value_old = value;
+    return 1;
+}
+int pwm_rampDown(unsigned int value, unsigned int speed)
+{
+    TCCR1A |= (1<<COM1A1);
+    unsigned int i = pwm_value_old;
+    while (i>=value) {
+        OCR1A=i;
+        i--;
+        _delay_ms(speed);
+    }
+    pwm_value_old = value;
     return 1;
 }

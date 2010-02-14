@@ -1,6 +1,6 @@
 //-------------------------------------------
 /*
-ADC function
+ADC.c
 2010 - Josh Ashby
 joshuaashby@joshashby.com
 http://joshashby.com
