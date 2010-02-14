@@ -22,6 +22,7 @@
 				<Option compiler="avrgcc" />
 				<Compiler>
 					<Add option="-Os" />
+					<Add option="-O3" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -39,11 +40,20 @@
 			<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
 			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
 			<Add after="avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_FILE).lss" />
-			<Add after="avrdude -P /dev/ttyACM0 -c stk500v2 -p m328p -U flash:w:$(TARGET_OUTPUT_FILE).elf.hex:i" />
+			<Add after="avrdude -P /dev/ttyACM0 -c stk500v2 -p m328p -U flash:w:$(TARGET_OUTPUT_FILE).hex:i" />
+			<Mode after="always" />
 		</ExtraCommands>
+		<Unit filename="adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="adc.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="pwm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pwm.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />
