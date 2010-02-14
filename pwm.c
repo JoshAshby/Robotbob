@@ -28,12 +28,12 @@ int pwm(unsigned int value, unsigned int speed)
 int pwm_ramp(unsigned int value, unsigned int speed)
 {
     sbi(TCCR1A, COM1A1);
-    unsigned int i;
     if (i == value){
         OCR1A = value;
     } else {
         i++;
         OCR1A = i;
+        _delay_ms(speed);
     }
     return 1;
 }

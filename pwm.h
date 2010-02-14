@@ -29,4 +29,5 @@ int pwm_ramp(unsigned int value, unsigned int speed);
 volatile unsigned int pwm_value;
 volatile unsigned int pwm_speed;
 volatile unsigned int pwm_value_old;
+volatile unsigned int i;
 #endif
