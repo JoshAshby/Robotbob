@@ -14,8 +14,8 @@ int main(void)
 {
     pwm_setup();
     for(;;){
-        pwm_rampUp(255, 5);
-        pwm_rampDown(1, 10);
+        pwm_ramp(255, 5);
+        pwm_ramp(1, 10);
     }
 return 0;   //  never reached
 }

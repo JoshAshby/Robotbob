@@ -16,6 +16,7 @@ freenode - JoshAshby
 
 int pwm_setup(void);
 int pwm(unsigned int value, unsigned int speed);
+int pwm_ramp(unsigned int value, unsigned int speed);
 int pwm_rampUp(unsigned int value, unsigned int speed);
 int pwm_rampDown(unsigned int value, unsigned int speed);
 volatile unsigned int pwm_value;
