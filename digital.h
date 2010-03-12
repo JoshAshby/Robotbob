@@ -1,6 +1,6 @@
 //-------------------------------------------
 /*
-ADC.h
+DIGITAL.h
 2010 - Josh Ashby
 joshuaashby@joshashby.com
 http://joshashby.com
@@ -8,9 +8,11 @@ http://github.com/JoshAshby
 freenode - JoshAshby
 */
 //-------------------------------------------
-#ifndef ADC_H
-#define ADC_H
+#ifndef DIGITAL_H
+#define DIGITAL_H
 #include <avr/io.h>
-#include <avr/interrupt.h>
-void adc_start(void);
+void portB_out(int pin, int value);
+void portD_out(int pin, int value);
+void inputB(int pin, int value);
+void inputD(int pin, int value);
 #endif

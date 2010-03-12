@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="adc.c" open="1" top="0" tabpos="2">
+		<Cursor position="252" topLine="0" />
+	</File>
+	<File name="adc.h" open="1" top="0" tabpos="4">
+		<Cursor position="266" topLine="0" />
+	</File>
+	<File name="digital.c" open="1" top="0" tabpos="6">
+		<Cursor position="662" topLine="0" />
+	</File>
+	<File name="digital.h" open="1" top="0" tabpos="7">
+		<Cursor position="328" topLine="0" />
+	</File>
+	<File name="main.c" open="1" top="1" tabpos="1">
+		<Cursor position="330" topLine="0" />
+	</File>
+	<File name="pwm.c" open="1" top="0" tabpos="3">
+		<Cursor position="377" topLine="0" />
+	</File>
+	<File name="pwm.h" open="1" top="0" tabpos="5">
+		<Cursor position="308" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
