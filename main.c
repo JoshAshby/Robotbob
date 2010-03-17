@@ -2,6 +2,7 @@
 #include "pwm.h"
 #include "digital.h"
 #include <avr/delay.h>
+#include "boot.h"
 //-------------------------------------------
 /*
 Main.c
@@ -14,16 +15,18 @@ freenode - JoshAshby
 //-------------------------------------------
 int main(void)
 {
-    pwm_setup();
-    adc_start();//because we're using interrupts ADCH will auto update'
-    DDRD |= (1<<2);//LED 1
-    DDRD |= (1<<3);//LED2
-    DDRD |= (1<<4);//relay 1
-    DDRD |= (1<<5);//relay 2
-    portD_out(2, 1);//says that power is on and the uC is running
-    pwm_ramp1A(255, 20);
+    setup();
+    pwm_ramp1A(255, 10);
     for(;;){
-        portD_out(3,1);//show that the PWM ramp up was good, this is mainly a debuging thing as i doubt i will be able to see the LED on when BOB's driving in the AVC '10
+        //simple test, runs through a few different commands
+        _delay_ms(4000);
+        pwm_ramp1A(0, 10);
+        oh_crap();
+        portB_out(2, 1);
+        _delay_ms(500);
+        portB_out(2, 0);
+        all_good();
+        pwm_ramp1A(255, 10);
     }
 return 0;   //  never reached
 }

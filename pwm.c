@@ -26,12 +26,12 @@ void pwm_setup(void)
     pwm_value1B = 0;
     pwm_value_old1B = 0;
 }
-void pwm1A(unsigned int value, unsigned int speed)//set the duty cycle on the PWM
+void pwm1A(unsigned int value)//set the duty cycle on the PWM
 {
     TCCR1A |= (1<<COM1A1);
     OCR1A = value;
 }
-void pwm1B(unsigned int value, unsigned int speed)//set the duty cycle on the PWM
+void pwm1B(unsigned int value)//set the duty cycle on the PWM
 {
     TCCR1A |= (1<<COM1B1);
     OCR1B = value;
@@ -40,8 +40,9 @@ void pwm1B(unsigned int value, unsigned int speed)//set the duty cycle on the PW
 void pwm_ramp1A(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+    pwm1A(0);
     }
+    else {
     if (value > pwm_value_old1A){//determine if it should ramp up or down
         TCCR1A |= (1<<COM1A1);
         unsigned int i = pwm_value_old1A;
@@ -59,6 +60,7 @@ void pwm_ramp1A(unsigned int value, unsigned int speed)
             i--;
             _delay_ms(speed);
         }
+    }
         pwm_value_old1A = value;//store the old pwm for autoramping
     }
 }
@@ -76,14 +78,16 @@ void pwm_rampUp1A(unsigned int value, unsigned int speed)
 void pwm_rampDown1A(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm1A(0);
     }
+    else {
     TCCR1A |= (1<<COM1A1);
     unsigned int i = pwm_value_old1A;
     while (i>=value) {//ramp down
         OCR1A=i;
         i--;
         _delay_ms(speed);
+    }
     }
     pwm_value_old1A = value;//store the old pwm for autoramping
 }

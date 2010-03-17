@@ -47,6 +47,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="adc.h" />
+		<Unit filename="boot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="boot.h" />
 		<Unit filename="digital.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -58,6 +62,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="pwm.h" />
+		<Unit filename="robotfunc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="robotfunc.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />

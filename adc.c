@@ -26,3 +26,45 @@ void adc_start(void)
     sei();
     ADCSRA |= (1 << ADSC);  // Start A2D Conversions
 }
+void adc_stop(){
+    //stop the ADC
+    ADCSRA |= (0 << ADSC);
+}
+void adc_change(int chan){
+    //stop the ADC
+    ADCSRA |= (0 << ADSC);
+    //and now change the ADMUX bits to fit which channal you want to use, this should probably be replaced by a switch soon
+    if (chan == 0) {
+        ADMUX |= (0 << MUX0);
+    }
+    if (chan == 1) {
+        ADMUX |= (1 << MUX0);
+    }
+    if (chan == 2) {
+        ADMUX |= (1 << MUX1);
+    }
+    if (chan == 3) {
+        ADMUX |= (1 << MUX0)
+               | (1 << MUX1);
+    }
+    if (chan == 4) {
+        ADMUX |= (1 << MUX2);
+    }
+    if (chan == 5) {
+        ADMUX |= (1 << MUX0)
+               | (1 << MUX2);
+    }
+    if (chan == 6) {
+        ADMUX |= (1 << MUX1)
+               | (1 << MUX2);
+    }
+    if (chan == 7) {
+        ADMUX |= (1 << MUX0)
+               | (1 << MUX1)
+               | (1 << MUX2);
+    }
+    if (chan == 8) {
+        ADMUX |= (1 << MUX3);
+    }
+    ADCSRA |= (1 << ADSC);
+}

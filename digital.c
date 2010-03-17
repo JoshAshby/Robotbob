@@ -9,6 +9,7 @@ freenode - JoshAshby
 */
 //-------------------------------------------
 #include "digital.h"
+//add the ability for it to auto detect which port based on what pin number you give
 void portB_out(int pin, int value)
 {
     if (value == 0)
