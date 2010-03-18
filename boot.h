@@ -11,6 +11,7 @@ freenode - JoshAshby
 #ifndef BOOT_H
 #define BOOT_H
 #include <avr/io.h>
+#include <avr/delay.h>
 void setup();
 void all_good();
 void oh_crap();

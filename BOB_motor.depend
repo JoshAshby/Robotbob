@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1268786553 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/main.c
+1268878498 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/main.c
 	"adc.h"
 	"pwm.h"
 	"digital.h"
@@ -18,27 +18,29 @@
 	<avr/delay.h>
 	<stdio.h>
 
-1268780194 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/adc.c
+1268803033 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/adc.c
 	"adc.h"
 	"pwm.h"
 
-1268780111 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/adc.h
+1268839843 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/adc.h
 	<avr/io.h>
 	<avr/interrupt.h>
 
-1266204454 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.c
+1268803182 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.c
 	"digital.h"
 
 1268190603 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.h
 	<avr/io.h>
 
-1268671477 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/boot.c
+1268878774 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/boot.c
 	"adc.h"
 	"pwm.h"
 	"digital.h"
+	<avr/delay.h>
 
-1268497094 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/boot.h
+1268878472 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/boot.h
 	<avr/io.h>
+	<avr/delay.h>
 
 1268671202 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/robotfunc.h
 	<avr/io.h>

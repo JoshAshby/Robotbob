@@ -1,6 +1,8 @@
 #include "adc.h"
 #include "pwm.h"
 #include "digital.h"
+#include <avr/delay.h>
+
 //-------------------------------------------
 /*
 Boot.c
@@ -26,12 +28,34 @@ void error(){//blink the status led if there is an error
     _delay_ms(500);
 }
 void setup(){
-    DDRD |= (1<<2);//LED 1
-    DDRD |= (1<<3);//LED 2
-    DDRD |= (1<<4);//relay 1
-    DDRD |= (1<<5);//relay 2
+    DDRD |= (1<<2);//LED power
+    DDRD |= (1<<3);//LED Status
+    DDRD |= (1<<4);//relay back
+    DDRD |= (1<<5);//relay front
     portD_out(2,1); //say that power is good and the chip is up and running
     pwm_setup();
     adc_start();//because we're using interrupts ADCH will auto update'
     all_good();
+}
+void test(){
+    pwm_ramp1A(255, 10);
+    _delay_ms(500);
+    pwm_ramp1A(0, 10);
+    portD_out(4,1);
+    pwm_ramp1A(255, 10);
+    _delay_ms(500);
+    pwm_ramp1A(0,10);
+    portD_out(4,0);
+    oh_crap();
+    _delay_ms(1000);
+    all_good();
+    pwm1B(255);
+    _delay_ms(500);
+    pwm1B(0);
+    portD_out(5, 1);
+    _delay_ms(500);
+    pwm1B(255);
+    _delay_ms(500);
+    pwm1B(0);
+    portD_out(5, 0);
 }
