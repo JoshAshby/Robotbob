@@ -14,5 +14,5 @@ freenode - JoshAshby
 void turn_left();
 void turn_right();
 void stop();
-
+#define dirrection 1 //east or west starting
 #endif

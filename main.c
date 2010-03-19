@@ -16,9 +16,11 @@ freenode - JoshAshby
 int main(void)
 {
     setup();
+    pwm_setup2();
     for(;;){
         //simple test, runs through a few different commands
-        test();
+        adc_change(4);
+        pwm2B(ADCH);
     }
 return 0;   //  never reached
 }
