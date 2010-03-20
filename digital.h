@@ -15,5 +15,5 @@ void portB_out(int pin, int value);
 void portD_out(int pin, int value);
 void inputB(int pin, int value);
 void inputD(int pin, int value);
-void out(char port, int pin, bool value);
+void out(char port, int pin, int value);
 #endif

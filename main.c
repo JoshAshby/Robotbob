@@ -29,8 +29,8 @@ int main(void)
         }
         for (j = 0; j <= 20; j++){
             average += rollAverage[j];
-            average = average/20;
         }
+        average = average/19;
         pwm2B(average);
     }
 return 0;   //  never reached

@@ -32,48 +32,22 @@ void portD_out(int pin, int value)
         PORTD |= (1<<pin);
     }
 }
-void inputB(int pin, int value)
-{
-    if (value == 0)
-    {
-        DDRB |= (0<<pin);
-    }
-    else
-    {
-        DDRB |= (1<<pin);
-    }
-}
-void inputD(int pin, int value)
-{
-    if (value == 0)
-    {
-        DDRD |= (0<<pin);
-    }
-    else
-    {
-        DDRD |= (1<<pin);
-    }
-}
-void out(char port, int pin, bool value){
+void out(char port, int pin, int value){
     switch (port) {
-        case D:
-            switch (value) {
-                case 0:
-                    PORTD &= ~(1<<pin);
-                    break;
-                case 1:
-                    PORTD |= (1<<pin);
-                    break;
+        case 'D':
+            if(value == 1){
+                PORTD |= (1<<pin);
+            }
+            else {
+                PORTD &= ~(1<<pin);
             }
             break;
-        case B:
-            switch (value) {
-                case 0:
-                    PORTB &= ~(1<<pin);
-                    break;
-                case 1:
-                    PORTB |= (1<<pin);
-                    break;
+        case 'B':
+            if(value == 1){
+                PORTB |= (1<<pin);
+            }
+            else {
+                PORTB &= ~(1<<pin);
             }
             break;
     }

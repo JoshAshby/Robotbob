@@ -32,7 +32,7 @@ void setup(){
     DDRD |= (1<<3);//LED Status
     DDRD |= (1<<4);//relay back
     DDRD |= (1<<5);//relay front
-    portD_out(2,1); //say that power is good and the chip is up and running
+    out('D', 2, 1);
     pwm_setup1();
     adc_start();//because we're using interrupts ADCH will auto update'
     all_good();
