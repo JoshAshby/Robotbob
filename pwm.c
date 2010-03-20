@@ -9,6 +9,51 @@ freenode - JoshAshby
 */
 //-------------------------------------------
 #include "pwm.h"
+void pwm_setup_all(){
+    TCCR0B |= (1<<CS00)
+            | (1<<CS01);
+    TCCR0A |= (1<<WGM00);
+
+    DDRD |= (1<<5);
+    DDRD |= (1<<6);
+
+    pwm_speed0A = 0;
+    pwm_value0A = 0;
+    pwm_value_old0A = 0;
+
+    pwm_speed0B = 0;
+    pwm_value0B = 0;
+    pwm_value_old0B = 0;
+
+    TCCR1B |= (1<<CS11)
+            | (1<<CS10);
+    TCCR1A |= (1<<WGM10);
+
+    DDRB |= (1<<1);
+    DDRB |= (1<<2);
+
+    pwm_speed1A = 0;
+    pwm_value1A = 0;
+    pwm_value_old1A = 0;
+
+    pwm_speed1B = 0;
+    pwm_value1B = 0;
+    pwm_value_old1B = 0;
+
+    TCCR2B |= (1<<CS22);
+    TCCR2A |= (1<<WGM20);
+
+    DDRD |= (1<<3);
+    DDRB |= (1<<3);
+
+    pwm_speed2A = 0;
+    pwm_value2A = 0;
+    pwm_value_old2A = 0;
+
+    pwm_speed2B = 0;
+    pwm_value2B = 0;
+    pwm_value_old2B = 0;
+}
 void pwm_setup0(void)
 {
     TCCR0B |= (1<<CS00)

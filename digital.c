@@ -54,3 +54,27 @@ void inputD(int pin, int value)
         DDRD |= (1<<pin);
     }
 }
+void out(char port, int pin, bool value){
+    switch (port) {
+        case D:
+            switch (value) {
+                case 0:
+                    PORTD &= ~(1<<pin);
+                    break;
+                case 1:
+                    PORTD |= (1<<pin);
+                    break;
+            }
+            break;
+        case B:
+            switch (value) {
+                case 0:
+                    PORTB &= ~(1<<pin);
+                    break;
+                case 1:
+                    PORTB |= (1<<pin);
+                    break;
+            }
+            break;
+    }
+}

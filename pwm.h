@@ -14,6 +14,8 @@ freenode - JoshAshby
 #include <avr/delay.h>
 #include <stdio.h>
 
+void pwm_setup_all(void);
+
 void pwm_setup0(void);
 
 void pwm0A(unsigned int value);

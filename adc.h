@@ -13,6 +13,6 @@ freenode - JoshAshby
 #include <avr/io.h>
 #include <avr/interrupt.h>
 void adc_start(void);
-void adc_stop();
+void adc_stop(void);
 void adc_change(int chan);
 #endif

@@ -11,8 +11,11 @@ freenode - JoshAshby
 #ifndef ROBOTFUNC_H
 #define ROBOTFUNC_H
 #include <avr/io.h>
-void turn_left();
-void turn_right();
-void stop();
+
+void turn_left(void);
+void turn_right(void);
+void stop(void);
+
 #define dirrection 1 //east or west starting
+
 #endif

@@ -1,5 +1,7 @@
 Archive member included because of file (symbol)
 
+/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+                              obj/Release/main.o (__divmodhi4)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
                               /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o (exit)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
@@ -24,6 +26,8 @@ Archive member included because of file (symbol)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__thenan_sf)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
                               obj/Release/pwm.o (__floatunsisf)
+/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o) (__udivmodhi4)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__prologue_saves__)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
@@ -43,6 +47,7 @@ Allocating common symbols
 Common symbol       size              file
 
 pwm_speed1A         0x2               obj/Release/adc.o
+j                   0x2               obj/Release/main.o
 pwm_value_old0B     0x2               obj/Release/adc.o
 pwm_value1A         0x2               obj/Release/adc.o
 pwm_speed0B         0x2               obj/Release/adc.o
@@ -178,7 +183,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x295c
+.text           0x00000000     0x2b1c
  *(.vectors)
  .vectors       0x00000000       0x68 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vectors
@@ -259,102 +264,110 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
                 0x000000a2                __vector_16
                 0x000000a2                __vector_18
                 0x000000a2                __vector_20
- .text          0x000000a6      0x124 obj/Release/adc.o
+ .text          0x000000a6      0x16c obj/Release/adc.o
                 0x000000f4                adc_stop
                 0x000000ba                adc_start
                 0x000000a6                __vector_21
                 0x000000fe                adc_change
- .text          0x000001ca      0x1ca obj/Release/boot.o
-                0x00000226                all_good
-                0x00000234                test
-                0x000001ca                error
-                0x0000036a                setup
-                0x00000218                oh_crap
- .text          0x00000394       0xac obj/Release/digital.o
-                0x000003fc                inputB
-                0x0000041e                inputD
-                0x000003c8                portD_out
-                0x00000394                portB_out
- .text          0x00000440       0x1c obj/Release/main.o
-                0x00000440                main
- .text          0x0000045c     0x1840 obj/Release/pwm.o
-                0x00000c7a                pwm1A
-                0x00001376                pwm_rampDown1B
-                0x0000045c                pwm_setup0
-                0x00000b2c                pwm_rampDown0B
-                0x000014d8                pwm2B
-                0x00000c8e                pwm1B
-                0x000004b2                pwm_ramp0A
-                0x000016c8                pwm_rampUp2A
-                0x000017c2                pwm_rampDown2A
-                0x00001b98                pwm_rampDown2B
-                0x000010a4                pwm_ramp1B
-                0x00000e8e                pwm_rampUp1A
-                0x00000774                pwm_rampDown0A
-                0x0000147e                pwm_setup2
-                0x000004a8                pwm0B
-                0x00000878                pwm_ramp0B
-                0x000018d2                pwm_ramp2B
-                0x00000ca2                pwm_ramp1A
-                0x00001a9e                pwm_rampUp2B
-                0x00001278                pwm_rampUp1B
-                0x000014c8                pwm2A
-                0x00000680                pwm_rampUp0A
-                0x00000f8c                pwm_rampDown1A
-                0x00000c30                pwm_setup1
-                0x0000049e                pwm0A
-                0x00000a38                pwm_rampUp0B
-                0x000014e8                pwm_ramp2A
- .text          0x00001c9c        0xa obj/Release/robotfunc.o
-                0x00001c9e                turn_right
-                0x00001c9c                turn_left
-                0x00001ca0                stop
- .text          0x00001ca6        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .text          0x00001ca6        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .text          0x00001ca6        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .text          0x00001ca6       0x58 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                0x00001ca6                __fixunssfsi
- .text          0x00001cfe      0x354 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                0x00001f96                __subsf3
-                0x00001ff8                __addsf3
- .text          0x00002052      0x1f4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                0x00002052                __mulsf3
- .text          0x00002246       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                0x00002246                __gtsf2
- .text          0x000022a6       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                0x000022a6                __gesf2
- .text          0x00002306       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                0x00002306                __ltsf2
- .text          0x00002366       0xa8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                0x00002366                __fixsfsi
- .text          0x0000240e        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
- .text          0x0000240e       0xf2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                0x0000240e                __floatunsisf
- .text          0x00002500        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .text          0x00002500        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .text          0x00002500       0x9e /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                0x00002500                __clzsi2
- .text          0x0000259e      0x1aa /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                0x0000259e                __pack_f
- .text          0x00002748       0xf0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                0x00002748                __unpack_f
- .text          0x00002838       0xb2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                0x00002838                __fpcmp_parts_f
- .text          0x000028ea        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                0x000028ea                . = ALIGN (0x2)
+ .text          0x00000212      0x1ca obj/Release/boot.o
+                0x0000026e                all_good
+                0x0000027c                test
+                0x00000212                error
+                0x000003b2                setup
+                0x00000260                oh_crap
+ .text          0x000003dc       0xac obj/Release/digital.o
+                0x00000444                inputB
+                0x00000466                inputD
+                0x00000410                portD_out
+                0x000003dc                portB_out
+ .text          0x00000488       0x74 obj/Release/main.o
+                0x00000488                main
+ .text          0x000004fc     0x1912 obj/Release/pwm.o
+                0x00000dec                pwm1A
+                0x000014e8                pwm_rampDown1B
+                0x000005ce                pwm_setup0
+                0x00000c9e                pwm_rampDown0B
+                0x0000164a                pwm2B
+                0x00000e00                pwm1B
+                0x00000624                pwm_ramp0A
+                0x0000183a                pwm_rampUp2A
+                0x00001934                pwm_rampDown2A
+                0x00001d0a                pwm_rampDown2B
+                0x00001216                pwm_ramp1B
+                0x00001000                pwm_rampUp1A
+                0x000008e6                pwm_rampDown0A
+                0x000015f0                pwm_setup2
+                0x0000061a                pwm0B
+                0x000009ea                pwm_ramp0B
+                0x00001a44                pwm_ramp2B
+                0x00000e14                pwm_ramp1A
+                0x000004fc                pwm_setup_all
+                0x00001c10                pwm_rampUp2B
+                0x000013ea                pwm_rampUp1B
+                0x0000163a                pwm2A
+                0x000007f2                pwm_rampUp0A
+                0x000010fe                pwm_rampDown1A
+                0x00000da2                pwm_setup1
+                0x00000610                pwm0A
+                0x00000baa                pwm_rampUp0B
+                0x0000165a                pwm_ramp2A
+ .text          0x00001e0e        0xa obj/Release/robotfunc.o
+                0x00001e10                turn_right
+                0x00001e0e                turn_left
+                0x00001e12                stop
+ .text          0x00001e18        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x00001e18        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .text          0x00001e18        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .text          0x00001e18        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .text          0x00001e18       0x58 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+                0x00001e18                __fixunssfsi
+ .text          0x00001e70      0x354 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
+                0x00002108                __subsf3
+                0x0000216a                __addsf3
+ .text          0x000021c4      0x1f4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
+                0x000021c4                __mulsf3
+ .text          0x000023b8       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
+                0x000023b8                __gtsf2
+ .text          0x00002418       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
+                0x00002418                __gesf2
+ .text          0x00002478       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
+                0x00002478                __ltsf2
+ .text          0x000024d8       0xa8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
+                0x000024d8                __fixsfsi
+ .text          0x00002580        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
+ .text          0x00002580       0xf2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
+                0x00002580                __floatunsisf
+ .text          0x00002672        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x00002672        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
+ .text          0x00002672        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
+ .text          0x00002672       0x9e /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
+                0x00002672                __clzsi2
+ .text          0x00002710      0x1aa /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
+                0x00002710                __pack_f
+ .text          0x000028ba       0xf0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
+                0x000028ba                __unpack_f
+ .text          0x000029aa       0xb2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x000029aa                __fpcmp_parts_f
+ .text          0x00002a5c        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
+                0x00002a5c                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000028ea        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x000028ea        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x000028ea        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x000028ea       0x38 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
-                0x000028ea                __prologue_saves__
- .text.libgcc   0x00002922       0x36 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
-                0x00002922                __epilogue_restores__
-                0x00002958                . = ALIGN (0x2)
+ .text.libgcc   0x00002a5c       0x26 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+                0x00002a5c                __divmodhi4
+                0x00002a5c                _div
+ .text.libgcc   0x00002a82        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00002a82        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002a82        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00002a82       0x28 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+                0x00002a82                __udivmodhi4
+ .text.libgcc   0x00002aaa       0x38 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
+                0x00002aaa                __prologue_saves__
+ .text.libgcc   0x00002ae2       0x36 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
+                0x00002ae2                __epilogue_restores__
+                0x00002b18                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002958        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-                0x00002958                exit
-                0x00002958                _exit
+ .fini9         0x00002b18        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+                0x00002b18                exit
+                0x00002b18                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -373,11 +386,11 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002958        0x4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .fini0         0x00002b18        0x4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000295c                _etext = .
+                0x00002b1c                _etext = .
 
-.data           0x00800100      0x108 load address 0x0000295c
+.data           0x00800100      0x108 load address 0x00002b1c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
@@ -387,6 +400,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  .data          0x00800100        0x0 obj/Release/main.o
  .data          0x00800100        0x0 obj/Release/pwm.o
  .data          0x00800100        0x0 obj/Release/robotfunc.o
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
@@ -400,6 +414,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  .data          0x00800100        0x8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
                 0x00800100                __thenan_sf
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
+ .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
@@ -416,66 +431,73 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
                 0x00800208                _edata = .
                 0x00800208                PROVIDE (__data_end, .)
 
-.bss            0x00800208       0x24 load address 0x00002a64
+.bss            0x00800208       0x52 load address 0x00002c24
                 0x00800208                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
  .bss           0x00800208        0x0 obj/Release/adc.o
  .bss           0x00800208        0x0 obj/Release/boot.o
  .bss           0x00800208        0x0 obj/Release/digital.o
- .bss           0x00800208        0x0 obj/Release/main.o
- .bss           0x00800208        0x0 obj/Release/pwm.o
- .bss           0x00800208        0x0 obj/Release/robotfunc.o
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
+ .bss           0x00800208       0x2c obj/Release/main.o
+                0x00800230                average
+                0x00800232                i
+                0x00800208                rollAverage
+ .bss           0x00800234        0x0 obj/Release/pwm.o
+ .bss           0x00800234        0x0 obj/Release/robotfunc.o
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800234        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800208       0x24 obj/Release/adc.o
-                0x00800208                pwm_speed1A
-                0x0080020a                pwm_value_old0B
-                0x0080020c                pwm_value1A
-                0x0080020e                pwm_speed0B
-                0x00800210                pwm_speed2A
-                0x00800212                pwm_value_old0A
-                0x00800214                pwm_value_old1B
-                0x00800216                pwm_speed2B
-                0x00800218                pwm_speed1B
-                0x0080021a                pwm_value0B
-                0x0080021c                pwm_value2A
-                0x0080021e                pwm_value2B
-                0x00800220                pwm_value1B
-                0x00800222                pwm_value_old2A
-                0x00800224                pwm_value_old1A
-                0x00800226                pwm_value0A
-                0x00800228                pwm_speed0A
-                0x0080022a                pwm_value_old2B
-                0x0080022c                PROVIDE (__bss_end, .)
-                0x0000295c                __data_load_start = LOADADDR (.data)
-                0x00002a64                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800234       0x24 obj/Release/adc.o
+                0x00800234                pwm_speed1A
+                0x00800236                pwm_value_old0B
+                0x00800238                pwm_value1A
+                0x0080023a                pwm_speed0B
+                0x0080023c                pwm_speed2A
+                0x0080023e                pwm_value_old0A
+                0x00800240                pwm_value_old1B
+                0x00800242                pwm_speed2B
+                0x00800244                pwm_speed1B
+                0x00800246                pwm_value0B
+                0x00800248                pwm_value2A
+                0x0080024a                pwm_value2B
+                0x0080024c                pwm_value1B
+                0x0080024e                pwm_value_old2A
+                0x00800250                pwm_value_old1A
+                0x00800252                pwm_value0A
+                0x00800254                pwm_speed0A
+                0x00800256                pwm_value_old2B
+ COMMON         0x00800258        0x2 obj/Release/main.o
+                0x00800258                j
+                0x0080025a                PROVIDE (__bss_end, .)
+                0x00002b1c                __data_load_start = LOADADDR (.data)
+                0x00002c24                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080022c        0x0
-                0x0080022c                PROVIDE (__noinit_start, .)
+.noinit         0x0080025a        0x0
+                0x0080025a                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080022c                PROVIDE (__noinit_end, .)
-                0x0080022c                _end = .
-                0x0080022c                PROVIDE (__heap_start, .)
+                0x0080025a                PROVIDE (__noinit_end, .)
+                0x0080025a                _end = .
+                0x0080025a                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -572,6 +594,8 @@ __clzsi2                                          /usr/lib/gcc/avr/4.3.3/avr5/li
 __data_end                                        /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
 __data_load_start                                 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
 __data_start                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+                                                  obj/Release/main.o
 __do_clear_bss                                    /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
@@ -660,6 +684,8 @@ __subsf3                                          /usr/lib/gcc/avr/4.3.3/avr5/li
 __thenan_sf                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
+__udivmodhi4                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
 __unpack_f                                        /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
@@ -695,6 +721,7 @@ __vector_8                                        /usr/lib/gcc/avr/4.3.3/../../.
 __vector_9                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 __vector_default                                  /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 __vectors                                         /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+_div                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
 _exit                                             /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
 adc_change                                        obj/Release/adc.o
                                                   obj/Release/main.o
@@ -702,12 +729,15 @@ adc_start                                         obj/Release/adc.o
                                                   obj/Release/boot.o
 adc_stop                                          obj/Release/adc.o
 all_good                                          obj/Release/boot.o
+average                                           obj/Release/main.o
 error                                             obj/Release/boot.o
                                                   obj/Release/robotfunc.o
 exit                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
                                                   /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+i                                                 obj/Release/main.o
 inputB                                            obj/Release/digital.o
 inputD                                            obj/Release/digital.o
+j                                                 obj/Release/main.o
 main                                              obj/Release/main.o
                                                   /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 oh_crap                                           obj/Release/boot.o
@@ -746,6 +776,7 @@ pwm_setup1                                        obj/Release/pwm.o
                                                   obj/Release/boot.o
 pwm_setup2                                        obj/Release/pwm.o
                                                   obj/Release/main.o
+pwm_setup_all                                     obj/Release/pwm.o
 pwm_speed0A                                       obj/Release/robotfunc.o
                                                   obj/Release/pwm.o
                                                   obj/Release/main.o
@@ -836,6 +867,7 @@ pwm_value_old2B                                   obj/Release/robotfunc.o
                                                   obj/Release/main.o
                                                   obj/Release/boot.o
                                                   obj/Release/adc.o
+rollAverage                                       obj/Release/main.o
 setup                                             obj/Release/boot.o
                                                   obj/Release/main.o
 stop                                              obj/Release/robotfunc.o
