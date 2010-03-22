@@ -11,7 +11,7 @@ freenode - JoshAshby
 #ifndef PWM_H
 #define PWM_H
 #include <avr/io.h>
-#include <avr/delay.h>
+#include <util/delay.h>
 #include <stdio.h>
 
 void pwm_setup_all(void);

@@ -11,7 +11,7 @@ freenode - JoshAshby
 #ifndef BOOT_H
 #define BOOT_H
 #include <avr/io.h>
-#include <avr/delay.h>
+#include <util/delay.h>
 void bios(void);
 void all_good(void);
 void oh_crap(void);

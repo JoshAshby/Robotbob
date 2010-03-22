@@ -4,7 +4,7 @@
 #include "boot.h"
 #include "global.h"
 #include "robotfunc.h"
-#include <avr/delay.h>
+#include <util/delay.h>
 //-------------------------------------------
 /*
 robotfunc.c
@@ -19,6 +19,12 @@ void turn_left(void){
     if (dirrection == 0) {
         if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)
         {
+            out('D', 4, 1);
+            _delay_ms(5);
+            pwm1B(255);
+            _delay_ms(200);
+            pwm1B(0);
+            out('D', 4, 0);
         }
     }
 }
@@ -26,6 +32,9 @@ void turn_right(void){
     if (dirrection == 1){
         if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)
         {
+            pwm1B(255);
+            _delay_ms(200);
+            pwm1B(0);
         }
     }
 }
@@ -76,4 +85,13 @@ int ultrasound_filter(int pin){
     }
     average = average/20;
     return average;
+}
+void ultrasound_test(void){
+    if (ultrasound_filter(4) >= base) {
+        out('D', 2, 0);
+        pwm2B(ultrasound_filter(5));
+    } else {
+        out('D', 2, 1);
+        pwm2B(ultrasound_filter(4));
+    }
 }

@@ -22,6 +22,7 @@ void turn_right(void);
 void stop(void);
 int ultrasound_filter(int pin);
 void calibrate(void);
+void ultrasound_test(void);
 
 #define dirrection 1 //east or west starting
 

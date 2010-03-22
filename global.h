@@ -12,7 +12,7 @@ freenode - JoshAshby
 #define GLOBAL_H
 
 #include <avr/io.h>
-#include <avr/delay.h>
+#include <util/delay.h>
 
 int base;
 

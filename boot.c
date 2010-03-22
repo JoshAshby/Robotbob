@@ -4,7 +4,7 @@
 #include "boot.h"
 #include "global.h"
 #include "robotfunc.h"
-#include <avr/delay.h>
+#include <util/delay.h>
 
 //-------------------------------------------
 /*
@@ -45,8 +45,8 @@ void bios(){
     DDRD |= (1<<5);//relay front
     out('D', 2, 1);//CPU power LED
     pwm_setup_all();
+    adc_start();//because we're using interrupts ADCH will auto update
     calibrate();
-    adc_start();//because we're using interrupts ADCH will auto update'
     all_good();
 }
 void test(){

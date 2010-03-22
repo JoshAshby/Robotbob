@@ -4,7 +4,7 @@
 #include "boot.h"
 #include "global.h"
 #include "robotfunc.h"
-#include <avr/delay.h>
+#include <util/delay.h>
 //-------------------------------------------
 /*
 Main.c
@@ -18,8 +18,8 @@ freenode - JoshAshby
 int main(void)
 {
     bios();
-    for(;;)
-    {
+    for(;;) {
+        ultrasound_test();
     }
 return 0;   //  never reached
 }
