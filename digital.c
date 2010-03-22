@@ -8,7 +8,12 @@ http://github.com/JoshAshby
 freenode - JoshAshby
 */
 //-------------------------------------------
+#include "adc.h"
+#include "pwm.h"
 #include "digital.h"
+#include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
 //add the ability for it to auto detect which port based on what pin number you give
 void portB_out(int pin, int value)
 {

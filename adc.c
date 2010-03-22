@@ -10,6 +10,10 @@ freenode - JoshAshby
 //-------------------------------------------
 #include "adc.h"
 #include "pwm.h"
+#include "digital.h"
+#include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
 ISR(ADC_vect)
 {
 }

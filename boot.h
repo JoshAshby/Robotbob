@@ -12,7 +12,7 @@ freenode - JoshAshby
 #define BOOT_H
 #include <avr/io.h>
 #include <avr/delay.h>
-void setup(void);
+void bios(void);
 void all_good(void);
 void oh_crap(void);
 void error(int type);

@@ -1,11 +1,10 @@
 #include "adc.h"
 #include "pwm.h"
 #include "digital.h"
-#include <avr/delay.h>
 #include "boot.h"
 #include "global.h"
 #include "robotfunc.h"
-int adcv;
+#include <avr/delay.h>
 //-------------------------------------------
 /*
 Main.c
@@ -18,9 +17,7 @@ freenode - JoshAshby
 //-------------------------------------------
 int main(void)
 {
-    setup();
-    pwm_setup_all();
-    calibrate();
+    bios();
     for(;;)
     {
     }

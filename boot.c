@@ -1,6 +1,9 @@
 #include "adc.h"
 #include "pwm.h"
 #include "digital.h"
+#include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
 #include <avr/delay.h>
 
 //-------------------------------------------
@@ -35,7 +38,7 @@ void error(int type){//blink the status led if there is an error
             break;
     }
 }
-void setup(){
+void bios(){
     DDRD |= (1<<2);//LED power
     DDRD |= (1<<3);//LED Status
     DDRD |= (1<<4);//relay back

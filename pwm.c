@@ -8,7 +8,12 @@ http://github.com/JoshAshby
 freenode - JoshAshby
 */
 //-------------------------------------------
+#include "adc.h"
 #include "pwm.h"
+#include "digital.h"
+#include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
 void pwm_setup_all(void){
     TCCR0B |= (1<<CS00)
             | (1<<CS01);

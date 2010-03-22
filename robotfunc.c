@@ -1,10 +1,10 @@
 #include "adc.h"
 #include "pwm.h"
 #include "digital.h"
-#include <avr/delay.h>
 #include "boot.h"
-#include "robotfunc.h"
 #include "global.h"
+#include "robotfunc.h"
+#include <avr/delay.h>
 //-------------------------------------------
 /*
 robotfunc.c
