@@ -55,6 +55,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="digital.h" />
+		<Unit filename="global.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

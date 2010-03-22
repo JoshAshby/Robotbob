@@ -1,5 +1,7 @@
 Archive member included because of file (symbol)
 
+/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+                              obj/Debug/robotfunc.o (__divmodhi4)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
                               /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o (exit)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
@@ -7,23 +9,25 @@ Archive member included because of file (symbol)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
                               obj/Debug/adc.o (__do_clear_bss)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                              obj/Debug/pwm.o (__fixunssfsi)
+                              obj/Debug/boot.o (__fixunssfsi)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o) (__subsf3)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                              obj/Debug/pwm.o (__mulsf3)
+                              obj/Debug/boot.o (__mulsf3)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                              obj/Debug/pwm.o (__gtsf2)
+                              obj/Debug/boot.o (__gtsf2)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o) (__gesf2)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                              obj/Debug/pwm.o (__ltsf2)
+                              obj/Debug/boot.o (__ltsf2)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o) (__fixsfsi)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__thenan_sf)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
                               obj/Debug/pwm.o (__floatunsisf)
+/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o) (__udivmodhi4)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
                               /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__prologue_saves__)
 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
@@ -42,9 +46,28 @@ Archive member included because of file (symbol)
 Allocating common symbols
 Common symbol       size              file
 
-pwm_speed           0x2               obj/Debug/adc.o
-pwm_value_old       0x2               obj/Debug/adc.o
-pwm_value           0x2               obj/Debug/adc.o
+base                0x2               obj/Debug/main.o
+pwm_speed1A         0x2               obj/Debug/adc.o
+j                   0x2               obj/Debug/robotfunc.o
+pwm_value_old0B     0x2               obj/Debug/adc.o
+pwm_value1A         0x2               obj/Debug/adc.o
+pwm_speed0B         0x2               obj/Debug/adc.o
+pwm_speed2A         0x2               obj/Debug/adc.o
+pwm_value_old0A     0x2               obj/Debug/adc.o
+pwm_value_old1B     0x2               obj/Debug/adc.o
+pwm_speed2B         0x2               obj/Debug/adc.o
+pwm_speed1B         0x2               obj/Debug/adc.o
+pwm_value0B         0x2               obj/Debug/adc.o
+adc                 0x2               obj/Debug/robotfunc.o
+adcv                0x2               obj/Debug/main.o
+pwm_value2A         0x2               obj/Debug/adc.o
+pwm_value2B         0x2               obj/Debug/adc.o
+pwm_value1B         0x2               obj/Debug/adc.o
+pwm_value_old2A     0x2               obj/Debug/adc.o
+pwm_value_old1A     0x2               obj/Debug/adc.o
+pwm_value0A         0x2               obj/Debug/adc.o
+pwm_speed0A         0x2               obj/Debug/adc.o
+pwm_value_old2B     0x2               obj/Debug/adc.o
 
 Memory Configuration
 
@@ -62,9 +85,11 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 LOAD obj/Debug/adc.o
+LOAD obj/Debug/boot.o
 LOAD obj/Debug/digital.o
 LOAD obj/Debug/main.o
 LOAD obj/Debug/pwm.o
+LOAD obj/Debug/robotfunc.o
 LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
 LOAD /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/libm.a
 LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
@@ -161,7 +186,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1666
+.text           0x00000000     0x451e
  *(.vectors)
  .vectors       0x00000000       0x68 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vectors
@@ -242,68 +267,111 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
                 0x000000a2                __vector_16
                 0x000000a2                __vector_18
                 0x000000a2                __vector_20
- .text          0x000000a6       0x92 obj/Debug/adc.o
+ .text          0x000000a6      0x1f2 obj/Debug/adc.o
+                0x00000138                adc_stop
                 0x000000c6                adc_start
                 0x000000a6                __vector_21
- .text          0x00000138      0x18c obj/Debug/digital.o
-                0x00000214                inputB
-                0x0000026c                inputD
-                0x000001a6                portD_out
-                0x00000138                portB_out
- .text          0x000002c4       0x92 obj/Debug/main.o
-                0x000002c4                main
- .text          0x00000356      0x65a obj/Debug/pwm.o
-                0x000003f0                pwm_ramp
-                0x00000356                pwm_setup
-                0x00000832                pwm_rampDown
-                0x000003b4                pwm
-                0x000006c4                pwm_rampUp
- .text          0x000009b0        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .text          0x000009b0        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .text          0x000009b0        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .text          0x000009b0       0x58 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                0x000009b0                __fixunssfsi
- .text          0x00000a08      0x354 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                0x00000ca0                __subsf3
-                0x00000d02                __addsf3
- .text          0x00000d5c      0x1f4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                0x00000d5c                __mulsf3
- .text          0x00000f50       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                0x00000f50                __gtsf2
- .text          0x00000fb0       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                0x00000fb0                __gesf2
- .text          0x00001010       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                0x00001010                __ltsf2
- .text          0x00001070       0xa8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                0x00001070                __fixsfsi
- .text          0x00001118        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
- .text          0x00001118       0xf2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                0x00001118                __floatunsisf
- .text          0x0000120a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .text          0x0000120a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .text          0x0000120a       0x9e /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                0x0000120a                __clzsi2
- .text          0x000012a8      0x1aa /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                0x000012a8                __pack_f
- .text          0x00001452       0xf0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                0x00001452                __unpack_f
- .text          0x00001542       0xb2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                0x00001542                __fpcmp_parts_f
- .text          0x000015f4        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                0x000015f4                . = ALIGN (0x2)
+                0x00000152                adc_change
+ .text          0x00000298      0x964 obj/Debug/boot.o
+                0x00000298                all_good
+                0x0000053a                test
+                0x000002d0                error
+                0x000004da                setup
+                0x000002b4                oh_crap
+ .text          0x00000bfc      0x1ce obj/Debug/digital.o
+                0x00000cd8                out
+                0x00000c6a                portD_out
+                0x00000bfc                portB_out
+ .text          0x00000dca       0x7a obj/Debug/main.o
+                0x00000dca                main
+ .text          0x00000e44     0x2614 obj/Debug/pwm.o
+                0x00001c3a                pwm1A
+                0x000026a4                pwm_rampDown1B
+                0x00000f8a                pwm_setup0
+                0x00001a46                pwm_rampDown0B
+                0x000028c6                pwm2B
+                0x00001c6c                pwm1B
+                0x0000105c                pwm_ramp0A
+                0x00002bc2                pwm_rampUp2A
+                0x00002d2c                pwm_rampDown2A
+                0x000032de                pwm_rampDown2B
+                0x00002262                pwm_ramp1B
+                0x00001f74                pwm_rampUp1A
+                0x00001494                pwm_rampDown0A
+                0x00002822                pwm_setup2
+                0x0000102e                pwm0B
+                0x00001610                pwm_ramp0B
+                0x00002ea8                pwm_ramp2B
+                0x00001c9e                pwm_ramp1A
+                0x00000e44                pwm_setup_all
+                0x00003174                pwm_rampUp2B
+                0x00002536                pwm_rampUp1B
+                0x00002898                pwm2A
+                0x0000132a                pwm_rampUp0A
+                0x000020e2                pwm_rampDown1A
+                0x00001bc4                pwm_setup1
+                0x00001000                pwm0A
+                0x000018dc                pwm_rampUp0B
+                0x000028f4                pwm_ramp2A
+ .text          0x00003458      0x3c2 obj/Debug/robotfunc.o
+                0x00003466                turn_right
+                0x00003658                ultrasound_filter
+                0x00003458                turn_left
+                0x00003486                calibrate
+                0x00003474                stop
+ .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000381a       0x58 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+                0x0000381a                __fixunssfsi
+ .text          0x00003872      0x354 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
+                0x00003b0a                __subsf3
+                0x00003b6c                __addsf3
+ .text          0x00003bc6      0x1f4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
+                0x00003bc6                __mulsf3
+ .text          0x00003dba       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
+                0x00003dba                __gtsf2
+ .text          0x00003e1a       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
+                0x00003e1a                __gesf2
+ .text          0x00003e7a       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
+                0x00003e7a                __ltsf2
+ .text          0x00003eda       0xa8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
+                0x00003eda                __fixsfsi
+ .text          0x00003f82        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
+ .text          0x00003f82       0xf2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
+                0x00003f82                __floatunsisf
+ .text          0x00004074        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x00004074        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
+ .text          0x00004074        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
+ .text          0x00004074       0x9e /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
+                0x00004074                __clzsi2
+ .text          0x00004112      0x1aa /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
+                0x00004112                __pack_f
+ .text          0x000042bc       0xf0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
+                0x000042bc                __unpack_f
+ .text          0x000043ac       0xb2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x000043ac                __fpcmp_parts_f
+ .text          0x0000445e        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
+                0x0000445e                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000015f4        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x000015f4        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x000015f4        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x000015f4       0x38 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
-                0x000015f4                __prologue_saves__
- .text.libgcc   0x0000162c       0x36 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
-                0x0000162c                __epilogue_restores__
-                0x00001662                . = ALIGN (0x2)
+ .text.libgcc   0x0000445e       0x26 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+                0x0000445e                __divmodhi4
+                0x0000445e                _div
+ .text.libgcc   0x00004484        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00004484        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00004484        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00004484       0x28 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+                0x00004484                __udivmodhi4
+ .text.libgcc   0x000044ac       0x38 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
+                0x000044ac                __prologue_saves__
+ .text.libgcc   0x000044e4       0x36 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
+                0x000044e4                __epilogue_restores__
+                0x0000451a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00001662        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-                0x00001662                exit
-                0x00001662                _exit
+ .fini9         0x0000451a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+                0x0000451a                exit
+                0x0000451a                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -322,18 +390,21 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00001662        0x4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .fini0         0x0000451a        0x4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x00001666                _etext = .
+                0x0000451e                _etext = .
 
-.data           0x00800100      0x108 load address 0x00001666
+.data           0x00800100      0x108 load address 0x0000451e
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
  .data          0x00800100        0x0 obj/Debug/adc.o
+ .data          0x00800100        0x0 obj/Debug/boot.o
  .data          0x00800100        0x0 obj/Debug/digital.o
  .data          0x00800100        0x0 obj/Debug/main.o
  .data          0x00800100        0x0 obj/Debug/pwm.o
+ .data          0x00800100        0x0 obj/Debug/robotfunc.o
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
  .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
@@ -347,6 +418,7 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  .data          0x00800100        0x8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
                 0x00800100                __thenan_sf
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
+ .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
  .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
@@ -363,49 +435,76 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
                 0x00800208                _edata = .
                 0x00800208                PROVIDE (__data_end, .)
 
-.bss            0x00800208        0x6 load address 0x0000176e
+.bss            0x00800208       0x56 load address 0x00004626
                 0x00800208                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
  .bss           0x00800208        0x0 obj/Debug/adc.o
+ .bss           0x00800208        0x0 obj/Debug/boot.o
  .bss           0x00800208        0x0 obj/Debug/digital.o
  .bss           0x00800208        0x0 obj/Debug/main.o
  .bss           0x00800208        0x0 obj/Debug/pwm.o
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
+ .bss           0x00800208       0x2a obj/Debug/robotfunc.o
+                0x00800230                average
+                0x00800208                rollAverage
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800208        0x6 obj/Debug/adc.o
-                0x00800208                pwm_speed
-                0x0080020a                pwm_value_old
-                0x0080020c                pwm_value
-                0x0080020e                PROVIDE (__bss_end, .)
-                0x00001666                __data_load_start = LOADADDR (.data)
-                0x0000176e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800232       0x24 obj/Debug/adc.o
+                0x00800232                pwm_speed1A
+                0x00800234                pwm_value_old0B
+                0x00800236                pwm_value1A
+                0x00800238                pwm_speed0B
+                0x0080023a                pwm_speed2A
+                0x0080023c                pwm_value_old0A
+                0x0080023e                pwm_value_old1B
+                0x00800240                pwm_speed2B
+                0x00800242                pwm_speed1B
+                0x00800244                pwm_value0B
+                0x00800246                pwm_value2A
+                0x00800248                pwm_value2B
+                0x0080024a                pwm_value1B
+                0x0080024c                pwm_value_old2A
+                0x0080024e                pwm_value_old1A
+                0x00800250                pwm_value0A
+                0x00800252                pwm_speed0A
+                0x00800254                pwm_value_old2B
+ COMMON         0x00800256        0x4 obj/Debug/main.o
+                0x00800256                base
+                0x00800258                adcv
+ COMMON         0x0080025a        0x4 obj/Debug/robotfunc.o
+                0x0080025a                j
+                0x0080025c                adc
+                0x0080025e                PROVIDE (__bss_end, .)
+                0x0000451e                __data_load_start = LOADADDR (.data)
+                0x00004626                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080020e        0x0
-                0x0080020e                PROVIDE (__noinit_start, .)
+.noinit         0x0080025e        0x0
+                0x0080025e                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080020e                PROVIDE (__noinit_end, .)
-                0x0080020e                _end = .
-                0x0080020e                PROVIDE (__heap_start, .)
+                0x0080025e                PROVIDE (__noinit_end, .)
+                0x0080025e                _end = .
+                0x0080025e                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -423,21 +522,25 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x1974
+.stab           0x00000000     0x4fbc
  *(.stab)
  .stab          0x00000000      0x6b4 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
- .stab          0x000006b4      0x48c obj/Debug/adc.o
-                                0x498 (size before relaxing)
- .stab          0x00000b40      0x348 obj/Debug/digital.o
-                                0x504 (size before relaxing)
- .stab          0x00000e88      0x258 obj/Debug/main.o
-                                0x480 (size before relaxing)
- .stab          0x000010e0      0x894 obj/Debug/pwm.o
-                                0xab0 (size before relaxing)
+ .stab          0x000006b4      0x678 obj/Debug/adc.o
+                                0x684 (size before relaxing)
+ .stab          0x00000d2c      0xa74 obj/Debug/boot.o
+                                0xc9c (size before relaxing)
+ .stab          0x000017a0      0x300 obj/Debug/digital.o
+                                0x4bc (size before relaxing)
+ .stab          0x00001aa0      0x30c obj/Debug/main.o
+                                0x534 (size before relaxing)
+ .stab          0x00001dac     0x2ce8 obj/Debug/pwm.o
+                               0x2f04 (size before relaxing)
+ .stab          0x00004a94      0x528 obj/Debug/robotfunc.o
+                                0x750 (size before relaxing)
 
-.stabstr        0x00000000      0xb03
+.stabstr        0x00000000      0xf69
  *(.stabstr)
- .stabstr       0x00000000      0xb03 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .stabstr       0x00000000      0xf69 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 
 .stab.excl
  *(.stab.excl)
@@ -510,6 +613,8 @@ __clzsi2                                          /usr/lib/gcc/avr/4.3.3/avr5/li
 __data_end                                        /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
 __data_load_start                                 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
 __data_start                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
+                                                  obj/Debug/robotfunc.o
 __do_clear_bss                                    /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
@@ -525,9 +630,11 @@ __do_clear_bss                                    /usr/lib/gcc/avr/4.3.3/avr5/li
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+                                                  obj/Debug/robotfunc.o
                                                   obj/Debug/pwm.o
                                                   obj/Debug/main.o
                                                   obj/Debug/digital.o
+                                                  obj/Debug/boot.o
                                                   obj/Debug/adc.o
 __do_copy_data                                    /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
@@ -544,9 +651,11 @@ __do_copy_data                                    /usr/lib/gcc/avr/4.3.3/avr5/li
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+                                                  obj/Debug/robotfunc.o
                                                   obj/Debug/pwm.o
                                                   obj/Debug/main.o
                                                   obj/Debug/digital.o
+                                                  obj/Debug/boot.o
                                                   obj/Debug/adc.o
 __epilogue_restores__                             /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
@@ -560,6 +669,7 @@ __fixsfsi                                         /usr/lib/gcc/avr/4.3.3/avr5/li
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
 __fixunssfsi                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
                                                   obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
 __floatunsisf                                     /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
                                                   obj/Debug/pwm.o
 __fpcmp_parts_f                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
@@ -570,12 +680,15 @@ __gesf2                                           /usr/lib/gcc/avr/4.3.3/avr5/li
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
 __gtsf2                                           /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
                                                   obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
 __heap_end                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 __init                                            /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 __ltsf2                                           /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
                                                   obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
 __mulsf3                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
                                                   obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
 __pack_f                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
@@ -594,6 +707,8 @@ __subsf3                                          /usr/lib/gcc/avr/4.3.3/avr5/li
 __thenan_sf                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
+__udivmodhi4                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
 __unpack_f                                        /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
                                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
@@ -629,32 +744,164 @@ __vector_8                                        /usr/lib/gcc/avr/4.3.3/../../.
 __vector_9                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 __vector_default                                  /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 __vectors                                         /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+_div                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
 _exit                                             /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-adc_start                                         obj/Debug/adc.o
+adc                                               obj/Debug/robotfunc.o
+adc_change                                        obj/Debug/adc.o
+                                                  obj/Debug/robotfunc.o
                                                   obj/Debug/main.o
-delay_ms                                          obj/Debug/main.o
+adc_start                                         obj/Debug/adc.o
+                                                  obj/Debug/boot.o
+adc_stop                                          obj/Debug/adc.o
+adcv                                              obj/Debug/main.o
+all_good                                          obj/Debug/boot.o
+average                                           obj/Debug/robotfunc.o
+base                                              obj/Debug/robotfunc.o
+                                                  obj/Debug/main.o
+calibrate                                         obj/Debug/robotfunc.o
+                                                  obj/Debug/main.o
+error                                             obj/Debug/boot.o
+                                                  obj/Debug/robotfunc.o
 exit                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
                                                   /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-inputB                                            obj/Debug/digital.o
-inputD                                            obj/Debug/digital.o
+j                                                 obj/Debug/robotfunc.o
 main                                              obj/Debug/main.o
                                                   /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+oh_crap                                           obj/Debug/boot.o
+out                                               obj/Debug/digital.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
 portB_out                                         obj/Debug/digital.o
 portD_out                                         obj/Debug/digital.o
+pwm0A                                             obj/Debug/pwm.o
+pwm0B                                             obj/Debug/pwm.o
+pwm1A                                             obj/Debug/pwm.o
+pwm1B                                             obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
+pwm2A                                             obj/Debug/pwm.o
+pwm2B                                             obj/Debug/pwm.o
                                                   obj/Debug/main.o
-pwm                                               obj/Debug/pwm.o
-pwm_ramp                                          obj/Debug/pwm.o
+pwm_ramp0A                                        obj/Debug/pwm.o
+pwm_ramp0B                                        obj/Debug/pwm.o
+pwm_ramp1A                                        obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
+pwm_ramp1B                                        obj/Debug/pwm.o
+pwm_ramp2A                                        obj/Debug/pwm.o
+pwm_ramp2B                                        obj/Debug/pwm.o
+pwm_rampDown0A                                    obj/Debug/pwm.o
+pwm_rampDown0B                                    obj/Debug/pwm.o
+pwm_rampDown1A                                    obj/Debug/pwm.o
+pwm_rampDown1B                                    obj/Debug/pwm.o
+pwm_rampDown2A                                    obj/Debug/pwm.o
+pwm_rampDown2B                                    obj/Debug/pwm.o
+pwm_rampUp0A                                      obj/Debug/pwm.o
+pwm_rampUp0B                                      obj/Debug/pwm.o
+pwm_rampUp1A                                      obj/Debug/pwm.o
+pwm_rampUp1B                                      obj/Debug/pwm.o
+pwm_rampUp2A                                      obj/Debug/pwm.o
+pwm_rampUp2B                                      obj/Debug/pwm.o
+pwm_setup0                                        obj/Debug/pwm.o
+pwm_setup1                                        obj/Debug/pwm.o
+                                                  obj/Debug/boot.o
+pwm_setup2                                        obj/Debug/pwm.o
                                                   obj/Debug/main.o
-pwm_rampDown                                      obj/Debug/pwm.o
-pwm_rampUp                                        obj/Debug/pwm.o
-pwm_setup                                         obj/Debug/pwm.o
+pwm_setup_all                                     obj/Debug/pwm.o
+pwm_speed0A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
                                                   obj/Debug/main.o
-pwm_speed                                         obj/Debug/pwm.o
-                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
                                                   obj/Debug/adc.o
-pwm_value                                         obj/Debug/pwm.o
+pwm_speed0B                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
                                                   obj/Debug/main.o
+                                                  obj/Debug/boot.o
                                                   obj/Debug/adc.o
-pwm_value_old                                     obj/Debug/pwm.o
+pwm_speed1A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
                                                   obj/Debug/main.o
+                                                  obj/Debug/boot.o
                                                   obj/Debug/adc.o
+pwm_speed1B                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_speed2A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_speed2B                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value0A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value0B                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value1A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value1B                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value2A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value2B                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value_old0A                                   obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value_old0B                                   obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value_old1A                                   obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value_old1B                                   obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value_old2A                                   obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+pwm_value_old2B                                   obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+rollAverage                                       obj/Debug/robotfunc.o
+setup                                             obj/Debug/boot.o
+                                                  obj/Debug/main.o
+stop                                              obj/Debug/robotfunc.o
+test                                              obj/Debug/boot.o
+turn_left                                         obj/Debug/robotfunc.o
+turn_right                                        obj/Debug/robotfunc.o
+ultrasound_filter                                 obj/Debug/robotfunc.o
+                                                  obj/Debug/main.o

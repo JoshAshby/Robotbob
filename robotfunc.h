@@ -12,9 +12,16 @@ freenode - JoshAshby
 #define ROBOTFUNC_H
 #include <avr/io.h>
 
+volatile int rollAverage[20];
+volatile int average;
+volatile int j;
+volatile int adc;
+
 void turn_left(void);
 void turn_right(void);
 void stop(void);
+int ultrasound_filter(int pin);
+void calibrate(void);
 
 #define dirrection 1 //east or west starting
 

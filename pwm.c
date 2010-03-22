@@ -9,7 +9,7 @@ freenode - JoshAshby
 */
 //-------------------------------------------
 #include "pwm.h"
-void pwm_setup_all(){
+void pwm_setup_all(void){
     TCCR0B |= (1<<CS00)
             | (1<<CS01);
     TCCR0A |= (1<<WGM00);

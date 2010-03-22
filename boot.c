@@ -16,15 +16,15 @@ freenode - JoshAshby
 //add a basica bios that will take, start the ADC, calibrate the sensors to what value they should try to stay at
 //also go through and make sure everything is working from what it can tell if there is an error then it will blink the status led
 void all_good(){//turn the status led on
-    portD_out(3, 1);
+    out('D', 3, 1);
 }
 void oh_crap(){//status led off
-    portD_out(3, 0);
+    out('D', 3, 0);
 }
 void error(){//blink the status led if there is an error
-    portD_out(3, 1);
+    out('D', 3, 1);
     _delay_ms(500);
-    portD_out(3, 1);
+    out('D', 3, 0);
     _delay_ms(500);
 }
 void setup(){
@@ -41,21 +41,21 @@ void test(){
     pwm_ramp1A(255, 10);
     _delay_ms(500);
     pwm_ramp1A(0, 10);
-    portD_out(4,1);
+    out('D', 4, 1);
     pwm_ramp1A(255, 10);
     _delay_ms(500);
     pwm_ramp1A(0,10);
-    portD_out(4,0);
+    out('D', 4, 0);
     oh_crap();
     _delay_ms(1000);
     all_good();
     pwm1B(255);
     _delay_ms(500);
     pwm1B(0);
-    portD_out(5, 1);
+    out('D', 5, 1);
     _delay_ms(500);
     pwm1B(255);
     _delay_ms(500);
     pwm1B(0);
-    portD_out(5, 0);
+    out('D', 5, 0);
 }

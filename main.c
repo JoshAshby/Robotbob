@@ -3,6 +3,9 @@
 #include "digital.h"
 #include <avr/delay.h>
 #include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
+int adcv;
 //-------------------------------------------
 /*
 Main.c
@@ -13,25 +16,23 @@ http://github.com/JoshAshby
 freenode - JoshAshby
 */
 //-------------------------------------------
-int rollAverage[20] = {0};
-int average = 0;
-int i = 0;
-int j;
 int main(void)
 {
     setup();
     pwm_setup2();
-    for(;;){
-        //simple test, runs through a few different commands
-        adc_change(4);
-        for (i = 0; i <= 20; i++){
-            rollAverage[i] = ADCH;
+    calibrate();
+    for(;;)
+    {
+        if (ultrasound_filter(4) > base)
+        {
+            out('D', 2, 0);
+            pwm2B(ultrasound_filter(5));
         }
-        for (j = 0; j <= 20; j++){
-            average += rollAverage[j];
+        else
+        {
+            out('D', 2, 1);
+            pwm2B(ultrasound_filter(4));
         }
-        average = average/19;
-        pwm2B(average);
     }
 return 0;   //  never reached
 }

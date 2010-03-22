@@ -1,16 +1,18 @@
 # depslib dependency file v1.0
-1269107404 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/main.c
+1269226833 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/main.c
 	"adc.h"
 	"pwm.h"
 	"digital.h"
 	<avr/delay.h>
 	"boot.h"
+	"global.h"
+	"robotfunc.h"
 
 1265990064 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/pwm.c
 	<avr/io.h>
 	<util/delay.h>
 
-1269101346 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/pwm.c
+1269145424 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/pwm.c
 	"pwm.h"
 
 1269104325 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/pwm.h
@@ -18,7 +20,7 @@
 	<avr/delay.h>
 	<stdio.h>
 
-1269057233 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/adc.c
+1269227539 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/adc.c
 	"adc.h"
 	"pwm.h"
 
@@ -26,13 +28,13 @@
 	<avr/io.h>
 	<avr/interrupt.h>
 
-1269107410 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.c
+1269136249 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.c
 	"digital.h"
 
-1269107229 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.h
+1269130947 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/digital.h
 	<avr/io.h>
 
-1269107474 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/boot.c
+1269137071 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/boot.c
 	"adc.h"
 	"pwm.h"
 	"digital.h"
@@ -42,14 +44,19 @@
 	<avr/io.h>
 	<avr/delay.h>
 
-1269104823 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/robotfunc.h
+1269214292 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/robotfunc.h
 	<avr/io.h>
 
-1269019125 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/robotfunc.c
+1269214292 source:/home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/robotfunc.c
 	"adc.h"
 	"pwm.h"
 	"digital.h"
 	<avr/delay.h>
 	"boot.h"
 	"robotfunc.h"
+	"global.h"
+
+1269185014 /home/joshua/Downloads/of_preRelease_v0.06_linux_cb_FAT/apps/myApps/BOB_motor/global.h
+	<avr/io.h>
+	<avr/delay.h>
 

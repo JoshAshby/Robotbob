@@ -36,36 +36,58 @@ void adc_change(int chan){
     //and now change the ADMUX bits to fit which channal you want to use, this should probably be replaced by a switch soon
     switch (chan) {
         case 0:
-            ADMUX |= (0 << MUX0);
+            ADMUX &= ~(1 << MUX0)
+                  &  ~(1 << MUX1)
+                  &  ~(1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 1:
-            ADMUX |= (1 << MUX0);
+            ADMUX |= (1 << MUX0)
+                  &  ~(1 << MUX1)
+                  &  ~(1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 2:
-            ADMUX |= (1 << MUX1);
+            ADMUX &= ~(1 << MUX0)
+                  |  (1 << MUX1)
+                  &  ~(1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 3:
             ADMUX |= (1 << MUX0)
-                  |  (1 << MUX1);
+                  |  (1 << MUX1)
+                  &  ~(1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 4:
-            ADMUX |= (1 << MUX2);
+            ADMUX &= ~(1 << MUX0)
+                  &  ~(1 << MUX1)
+                  |  (1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 5:
             ADMUX |= (1 << MUX0)
-                  |  (1 << MUX2);
+                  &  ~(1 << MUX1)
+                  |  (1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 6:
-            ADMUX |= (1 << MUX1)
-                  |  (1 << MUX2);
+            ADMUX &= ~(1 << MUX0)
+                  |  (1 << MUX1)
+                  |  (1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 7:
             ADMUX |= (1 << MUX0)
                   |  (1 << MUX1)
-                  |  (1 << MUX2);
+                  |  (1 << MUX2)
+                  &  ~(1 << MUX3);
             break;
         case 8:
-            ADMUX |= (1 << MUX3);
+            ADMUX &= ~(1 << MUX0)
+                  &  ~(1 << MUX1)
+                  &  ~(1 << MUX2)
+                  |  (1 << MUX3);
             break;
     }
 /*    if (chan == 0) {
