@@ -274,53 +274,53 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
                 0x000000ba                adc_start
                 0x000000a6                __vector_21
                 0x000000fe                adc_change
- .text          0x000001fe      0x1e2 obj/Release/boot.o
-                0x00000260                all_good
-                0x00000270                test
-                0x000001fe                error
-                0x000003b2                setup
-                0x00000250                oh_crap
- .text          0x000003e0       0xd2 obj/Release/digital.o
-                0x00000448                out
-                0x00000414                portD_out
-                0x000003e0                portB_out
- .text          0x000004b2       0x5a obj/Release/main.o
-                0x000004b2                main
- .text          0x0000050c     0x1912 obj/Release/pwm.o
-                0x00000dfc                pwm1A
-                0x000014f8                pwm_rampDown1B
-                0x000005de                pwm_setup0
-                0x00000cae                pwm_rampDown0B
-                0x0000165a                pwm2B
-                0x00000e10                pwm1B
-                0x00000634                pwm_ramp0A
-                0x0000184a                pwm_rampUp2A
-                0x00001944                pwm_rampDown2A
-                0x00001d1a                pwm_rampDown2B
-                0x00001226                pwm_ramp1B
-                0x00001010                pwm_rampUp1A
-                0x000008f6                pwm_rampDown0A
-                0x00001600                pwm_setup2
-                0x0000062a                pwm0B
-                0x000009fa                pwm_ramp0B
-                0x00001a54                pwm_ramp2B
-                0x00000e24                pwm_ramp1A
-                0x0000050c                pwm_setup_all
-                0x00001c20                pwm_rampUp2B
-                0x000013fa                pwm_rampUp1B
-                0x0000164a                pwm2A
-                0x00000802                pwm_rampUp0A
-                0x0000110e                pwm_rampDown1A
-                0x00000db2                pwm_setup1
-                0x00000620                pwm0A
-                0x00000bba                pwm_rampUp0B
-                0x0000166a                pwm_ramp2A
- .text          0x00001e1e      0x35a obj/Release/robotfunc.o
-                0x00001e20                turn_right
-                0x00001e22                ultrasound_filter
-                0x00001e1e                turn_left
-                0x00001fa2                calibrate
-                0x00002172                stop
+ .text          0x000001fe      0x20a obj/Release/boot.o
+                0x0000020e                all_good
+                0x0000021e                test
+                0x00000392                error
+                0x00000360                setup
+                0x000001fe                oh_crap
+ .text          0x00000408       0xd2 obj/Release/digital.o
+                0x00000470                out
+                0x0000043c                portD_out
+                0x00000408                portB_out
+ .text          0x000004da        0xe obj/Release/main.o
+                0x000004da                main
+ .text          0x000004e8     0x1912 obj/Release/pwm.o
+                0x00000dd8                pwm1A
+                0x000014d4                pwm_rampDown1B
+                0x000005ba                pwm_setup0
+                0x00000c8a                pwm_rampDown0B
+                0x00001636                pwm2B
+                0x00000dec                pwm1B
+                0x00000610                pwm_ramp0A
+                0x00001826                pwm_rampUp2A
+                0x00001920                pwm_rampDown2A
+                0x00001cf6                pwm_rampDown2B
+                0x00001202                pwm_ramp1B
+                0x00000fec                pwm_rampUp1A
+                0x000008d2                pwm_rampDown0A
+                0x000015dc                pwm_setup2
+                0x00000606                pwm0B
+                0x000009d6                pwm_ramp0B
+                0x00001a30                pwm_ramp2B
+                0x00000e00                pwm_ramp1A
+                0x000004e8                pwm_setup_all
+                0x00001bfc                pwm_rampUp2B
+                0x000013d6                pwm_rampUp1B
+                0x00001626                pwm2A
+                0x000007de                pwm_rampUp0A
+                0x000010ea                pwm_rampDown1A
+                0x00000d8e                pwm_setup1
+                0x000005fc                pwm0A
+                0x00000b96                pwm_rampUp0B
+                0x00001646                pwm_ramp2A
+ .text          0x00001dfa      0x37e obj/Release/robotfunc.o
+                0x00001f7c                turn_right
+                0x00001dfc                ultrasound_filter
+                0x00001dfa                turn_left
+                0x00001f9e                calibrate
+                0x0000216e                stop
  .text          0x00002178        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
  .text          0x00002178        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
  .text          0x00002178        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
@@ -746,6 +746,7 @@ base                                              obj/Release/robotfunc.o
                                                   obj/Release/main.o
 calibrate                                         obj/Release/robotfunc.o
                                                   obj/Release/main.o
+                                                  obj/Release/boot.o
 error                                             obj/Release/boot.o
                                                   obj/Release/robotfunc.o
 exit                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
@@ -756,7 +757,6 @@ main                                              obj/Release/main.o
                                                   /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
 oh_crap                                           obj/Release/boot.o
 out                                               obj/Release/digital.o
-                                                  obj/Release/main.o
                                                   obj/Release/boot.o
 portB_out                                         obj/Release/digital.o
 portD_out                                         obj/Release/digital.o
@@ -767,7 +767,6 @@ pwm1B                                             obj/Release/pwm.o
                                                   obj/Release/boot.o
 pwm2A                                             obj/Release/pwm.o
 pwm2B                                             obj/Release/pwm.o
-                                                  obj/Release/main.o
 pwm_ramp0A                                        obj/Release/pwm.o
 pwm_ramp0B                                        obj/Release/pwm.o
 pwm_ramp1A                                        obj/Release/pwm.o
@@ -775,6 +774,7 @@ pwm_ramp1A                                        obj/Release/pwm.o
 pwm_ramp1B                                        obj/Release/pwm.o
 pwm_ramp2A                                        obj/Release/pwm.o
 pwm_ramp2B                                        obj/Release/pwm.o
+                                                  obj/Release/boot.o
 pwm_rampDown0A                                    obj/Release/pwm.o
 pwm_rampDown0B                                    obj/Release/pwm.o
 pwm_rampDown1A                                    obj/Release/pwm.o
@@ -789,10 +789,10 @@ pwm_rampUp2A                                      obj/Release/pwm.o
 pwm_rampUp2B                                      obj/Release/pwm.o
 pwm_setup0                                        obj/Release/pwm.o
 pwm_setup1                                        obj/Release/pwm.o
-                                                  obj/Release/boot.o
 pwm_setup2                                        obj/Release/pwm.o
-                                                  obj/Release/main.o
 pwm_setup_all                                     obj/Release/pwm.o
+                                                  obj/Release/main.o
+                                                  obj/Release/boot.o
 pwm_speed0A                                       obj/Release/robotfunc.o
                                                   obj/Release/pwm.o
                                                   obj/Release/main.o
@@ -892,4 +892,3 @@ test                                              obj/Release/boot.o
 turn_left                                         obj/Release/robotfunc.o
 turn_right                                        obj/Release/robotfunc.o
 ultrasound_filter                                 obj/Release/robotfunc.o
-                                                  obj/Release/main.o

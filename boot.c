@@ -21,19 +21,28 @@ void all_good(){//turn the status led on
 void oh_crap(){//status led off
     out('D', 3, 0);
 }
-void error(){//blink the status led if there is an error
-    out('D', 3, 1);
-    _delay_ms(500);
-    out('D', 3, 0);
-    _delay_ms(500);
+void error(int type){//blink the status led if there is an error
+    switch (type) {
+        case 0:
+            out('D', 3, 1);
+            _delay_ms(500);
+            out('D', 3, 0);
+            _delay_ms(500);
+            break;
+        case 1:
+            pwm_ramp2B(255, 10);
+            pwm_ramp2B(1, 10);
+            break;
+    }
 }
 void setup(){
     DDRD |= (1<<2);//LED power
     DDRD |= (1<<3);//LED Status
     DDRD |= (1<<4);//relay back
     DDRD |= (1<<5);//relay front
-    out('D', 2, 1);
-    pwm_setup1();
+    out('D', 2, 1);//CPU power LED
+    pwm_setup_all();
+    calibrate();
     adc_start();//because we're using interrupts ADCH will auto update'
     all_good();
 }

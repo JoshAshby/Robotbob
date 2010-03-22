@@ -16,11 +16,21 @@ freenode - JoshAshby
 */
 //-------------------------------------------
 void turn_left(void){
+    if (dirrection == 0) {
+        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)
+        {
+        }
+    }
 }
 void turn_right(void){
+    if (dirrection == 1){
+        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)
+        {
+        }
+    }
 }
 void stop(void){
-    error();
+    error(1);
 }
 void calibrate(void){
     adc_change(5);

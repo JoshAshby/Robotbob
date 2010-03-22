@@ -15,5 +15,5 @@ freenode - JoshAshby
 void setup(void);
 void all_good(void);
 void oh_crap(void);
-void error(void);
+void error(int type);
 #endif
