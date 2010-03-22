@@ -19,7 +19,7 @@ int main(void)
 {
     bios();
     for(;;) {
-        ultrasound_test();
+        error(2);
     }
 return 0;   //  never reached
 }

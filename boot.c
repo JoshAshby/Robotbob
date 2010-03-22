@@ -36,6 +36,10 @@ void error(int type){//blink the status led if there is an error
             pwm_ramp2B(255, 10);
             pwm_ramp2B(1, 10);
             break;
+        case 2:
+            pwm_ramp2B(255, 50);
+            pwm_ramp2B(0, 10);
+            break;
     }
 }
 void bios(){

@@ -39,7 +39,16 @@ void turn_right(void){
     }
 }
 void stop(void){
+    pwm0A(0);
+    pwm0B(0);
+    pwm1A(0);
+    pwm1B(0);
+    pwm2A(0);
+    pwm2B(0);
+    out('D', 2, 1);
     error(1);
+    out('D', 4, 0);
+    out('D', 5, 0);
 }
 void calibrate(void){
     adc_change(5);

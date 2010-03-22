@@ -90,7 +90,7 @@ void pwm0B(unsigned int value)//set the duty cycle on the PWM
 void pwm_ramp0A(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    pwm0A(0);
+        pwm0A(0);
     }
     else {
     if (value > pwm_value_old1A){//determine if it should ramp up or down
@@ -146,7 +146,7 @@ void pwm_rampDown0A(unsigned int value, unsigned int speed)
 void pwm_ramp0B(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm0B(0);
     }
     if (value > pwm_value_old0B){//determine if it should ramp up or down
         TCCR0A |= (1<<COM0B1);
@@ -182,7 +182,7 @@ void pwm_rampUp0B(unsigned int value, unsigned int speed)
 void pwm_rampDown0B(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm0B(0);
     }
     TCCR0A |= (1<<COM0B1);
     unsigned int i = pwm_value_old0B;
@@ -226,7 +226,7 @@ void pwm1B(unsigned int value)//set the duty cycle on the PWM
 void pwm_ramp1A(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    pwm1A(0);
+        pwm1A(0);
     }
     else {
     if (value > pwm_value_old1A){//determine if it should ramp up or down
@@ -282,7 +282,7 @@ void pwm_rampDown1A(unsigned int value, unsigned int speed)
 void pwm_ramp1B(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm1B(0);
     }
     if (value > pwm_value_old1B){//determine if it should ramp up or down
         TCCR1A |= (1<<COM1B1);
@@ -318,7 +318,7 @@ void pwm_rampUp1B(unsigned int value, unsigned int speed)
 void pwm_rampDown1B(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm1B(0);
     }
     TCCR1A |= (1<<COM1B1);
     unsigned int i = pwm_value_old1B;
@@ -360,7 +360,7 @@ void pwm2B(unsigned int value)//set the duty cycle on the PWM
 void pwm_ramp2A(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    pwm2A(0);
+        pwm2A(0);
     }
     else {
     if (value > pwm_value_old2A){//determine if it should ramp up or down
@@ -416,7 +416,7 @@ void pwm_rampDown2A(unsigned int value, unsigned int speed)
 void pwm_ramp2B(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm2B(0);
     }
     if (value > pwm_value_old2B){//determine if it should ramp up or down
         TCCR2A |= (1<<COM2B1);
@@ -452,7 +452,7 @@ void pwm_rampUp2B(unsigned int value, unsigned int speed)
 void pwm_rampDown2B(unsigned int value, unsigned int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
-    value = 1;
+        pwm2B(0);
     }
     TCCR2A |= (1<<COM2B1);
     unsigned int i = pwm_value_old2B;
