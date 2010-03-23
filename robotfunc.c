@@ -15,6 +15,32 @@ http://github.com/JoshAshby
 freenode - JoshAshby
 */
 //-------------------------------------------
+char can_turn_left(void){
+    if (dirrection == 0) {
+        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base){
+            return 't';
+        }
+        if (ultrasound_filter(4) > base){
+            return 'f';
+        }
+    } else {
+        return 't';
+    }
+    return 0;
+}
+char can_turn_right(void){
+    if (dirrection == 1) {
+        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base){
+            return 't';
+        }
+        if (ultrasound_filter(4) > base){
+            return 'f';
+        }
+    } else {
+        return 't';
+    }
+    return 0;
+}
 void turn_left(void){
     if (dirrection == 0) {
         if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)

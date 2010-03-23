@@ -17,6 +17,8 @@ volatile int average;
 volatile int j;
 volatile int adc;
 
+char can_turn_left(void);
+char can_turn_right(void);
 void turn_left(void);
 void turn_right(void);
 void stop(void);

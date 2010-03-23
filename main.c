@@ -20,8 +20,9 @@ int main(void)
     bios();
     pwm_ramp1A(255, 10);
     for(;;) {
-        if (turn_left() ==
-
+        if (can_turn_left() == 1){
+            turn_left();
+        }
     }
 return 0;   //  never reached
 }
