@@ -18,8 +18,10 @@ freenode - JoshAshby
 int main(void)
 {
     bios();
+    pwm_ramp1A(255, 10);
     for(;;) {
-        error(2);
+        if (turn_left() ==
+
     }
 return 0;   //  never reached
 }

@@ -13,7 +13,7 @@ freenode - JoshAshby
 
 #include <avr/io.h>
 #include <util/delay.h>
-
+#define dirrection 0
 int base;
 
 #endif

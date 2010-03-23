@@ -1,2 +1,3 @@
 Codeblocks project files for BOB_motor is the code for BOB's motor controller
 These branch is the experimental AVR-C code for BOB, simply open the project and click build, it should upload the code automatically, if not then change the post build options for the project to fit.
+for more information go to joshashby.com

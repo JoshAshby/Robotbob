@@ -26,6 +26,13 @@ void turn_left(void){
             pwm1B(0);
             out('D', 4, 0);
         }
+    } else {
+        out('D', 4, 1);
+        _delay_ms(5);
+        pwm1B(255);
+        _delay_ms(200);
+        pwm1B(0);
+        out('D', 4, 0);
     }
 }
 void turn_right(void){
@@ -36,6 +43,10 @@ void turn_right(void){
             _delay_ms(200);
             pwm1B(0);
         }
+    } else {
+        pwm1B(255);
+        _delay_ms(200);
+        pwm1B(0);
     }
 }
 void stop(void){
