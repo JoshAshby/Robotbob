@@ -36,8 +36,8 @@ volatile unsigned int pwm_value_old0B;
 
 void pwm_setup1(void);
 
-void pwm1A(unsigned int value);
-void pwm_ramp1A(unsigned int value, unsigned int speed);
+void pwm1A(int value);
+void pwm_ramp1A(int value, int speed);
 void pwm_rampUp1A(unsigned int value, unsigned int speed);
 void pwm_rampDown1A(unsigned int value, unsigned int speed);
 volatile unsigned int pwm_value1A;

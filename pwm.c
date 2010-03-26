@@ -212,7 +212,7 @@ void pwm_setup1(void)
     pwm_value1B = 0;
     pwm_value_old1B = 0;
 }
-void pwm1A(unsigned int value)//set the duty cycle on the PWM
+void pwm1A(int value)//set the duty cycle on the PWM
 {
     TCCR1A |= (1<<COM1A1);
     OCR1A = value;
@@ -223,7 +223,7 @@ void pwm1B(unsigned int value)//set the duty cycle on the PWM
     OCR1B = value;
 }
 //calling any of these wll stop the processor for a short amonnt of time due to the delay
-void pwm_ramp1A(unsigned int value, unsigned int speed)
+void pwm_ramp1A(int value, int speed)
 {
     if (value == 0) {//safe gaurd to prevent i from over flowing
         pwm1A(0);
