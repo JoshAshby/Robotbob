@@ -53,25 +53,3 @@ void bios(){
     calibrate();
     all_good();
 }
-void test(){
-    pwm_ramp1A(255, 10);
-    _delay_ms(500);
-    pwm_ramp1A(0, 10);
-    out('D', 4, 1);
-    pwm_ramp1A(255, 10);
-    _delay_ms(500);
-    pwm_ramp1A(0,10);
-    out('D', 4, 0);
-    oh_crap();
-    _delay_ms(1000);
-    all_good();
-    pwm1B(255);
-    _delay_ms(500);
-    pwm1B(0);
-    out('D', 5, 1);
-    _delay_ms(500);
-    pwm1B(255);
-    _delay_ms(500);
-    pwm1B(0);
-    out('D', 5, 0);
-}
