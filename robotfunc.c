@@ -60,6 +60,14 @@ void turn_left(void){
         pwm1B(0);
         out('D', 4, 0);
     }
+    if (debug == 1) {
+        out('D', 4, 1);
+        _delay_ms(5);
+        pwm1B(255);
+        _delay_ms(200);
+        pwm1B(0);
+        out('D', 4, 0);
+    }
 }
 void turn_right(void){
     if (dirrection == 1){
@@ -70,6 +78,11 @@ void turn_right(void){
             pwm1B(0);
         }
     } else {
+        pwm1B(255);
+        _delay_ms(200);
+        pwm1B(0);
+    }
+    if (debug == 1){
         pwm1B(255);
         _delay_ms(200);
         pwm1B(0);
@@ -140,4 +153,33 @@ void ultrasound_test(void){
         out('D', 2, 1);
         pwm2B(ultrasound_filter(4));
     }
+}
+void test_turn(void){
+    out('B', 2, 1);
+    _delay_ms(200);
+    out('B', 2, 0);
+    _delay_ms(200);
+    out('D', 4, 1);
+    _delay_ms(500);
+    out('B', 2, 1);
+    _delay_ms(200);
+    out('B', 2, 0);
+    _delay_ms(500);
+    out('D', 4, 0);
+    _delay_ms(500);
+}
+void test_motor(void){
+    pwm_ramp1A(255, 10);
+    _delay_ms(2000);
+    pwm_ramp1A(1, 0);
+    pwm1A(0);
+    _delay_ms(500);
+    out('D', 5, 1);
+    _delay_ms(500);
+    pwm_ramp1A(255, 10);
+    _delay_ms(2000);
+    pwm_ramp1A(1, 0);
+    pwm1A(0);
+    _delay_ms(500);
+    out('D', 5, 0);
 }

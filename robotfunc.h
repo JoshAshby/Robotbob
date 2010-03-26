@@ -26,4 +26,7 @@ int ultrasound_filter(int pin);
 void calibrate(void);
 void ultrasound_test(void);
 
+void test_turn(void);
+void test_motor(void);
+
 #endif
