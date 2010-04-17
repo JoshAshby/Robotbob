@@ -15,78 +15,18 @@ http://github.com/JoshAshby
 freenode - JoshAshby
 */
 //-------------------------------------------
-char can_turn_left(void){
-    if (dirrection == 0) {
-        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base){
-            return 't';
-        }
-        if (ultrasound_filter(4) > base){
-            return 'f';
-        }
-    } else {
-        return 't';
-    }
-    return 0;
-}
-char can_turn_right(void){
-    if (dirrection == 1) {
-        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base){
-            return 't';
-        }
-        if (ultrasound_filter(4) > base){
-            return 'f';
-        }
-    } else {
-        return 't';
-    }
-    return 0;
-}
 void turn_left(void){
-    if (dirrection == 0) {
-        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)
-        {
-            out('D', 4, 1);
-            _delay_ms(5);
-            pwm1B(255);
-            _delay_ms(200);
-            pwm1B(0);
-            out('D', 4, 0);
-        }
-    } else {
-        out('D', 4, 1);
-        _delay_ms(5);
-        pwm1B(255);
-        _delay_ms(200);
-        pwm1B(0);
-        out('D', 4, 0);
-    }
-    if (debug == 1) {
-        out('D', 4, 1);
-        _delay_ms(5);
-        pwm1B(255);
-        _delay_ms(200);
-        pwm1B(0);
-        out('D', 4, 0);
-    }
+    out('D', 4, 1);
+    _delay_ms(5);
+    pwm1B(255);
+    _delay_ms(200);
+    pwm1B(0);
+    out('D', 4, 0);
 }
 void turn_right(void){
-    if (dirrection == 1){
-        if (ultrasound_filter(4) > base && ultrasound_filter(5) > base)
-        {
-            pwm1B(255);
-            _delay_ms(200);
-            pwm1B(0);
-        }
-    } else {
-        pwm1B(255);
-        _delay_ms(200);
-        pwm1B(0);
-    }
-    if (debug == 1){
-        pwm1B(255);
-        _delay_ms(200);
-        pwm1B(0);
-    }
+    pwm1B(255);
+    _delay_ms(200);
+    pwm1B(0);
 }
 void stop(void){
     pwm0A(0);
@@ -129,7 +69,7 @@ int ultrasound_filter(int pin){
     adc_change(pin);
     _delay_ms(20);
     adc = ADCH;
-    for (j = 0; j <= 20; j++){
+    for (j = 0; j <= 30; j++){
         if (ADCH > average + 100)
         {
             adc = (ADCH/2) + (average/2);
@@ -139,10 +79,10 @@ int ultrasound_filter(int pin){
         }
         rollAverage[j] = adc;
     }
-    for (j = 0; j <= 20; j++){
+    for (j = 0; j <= 30; j++){
         average += rollAverage[j];
     }
-    average = average/20;
+    average = average/30;
     return average;
 }
 void ultrasound_test(void){

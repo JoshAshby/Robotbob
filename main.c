@@ -18,8 +18,14 @@ freenode - JoshAshby
 int main(void)
 {
     bios();
+    pwm_ramp1A(255, 10);
     for(;;) {
-        test_turn();
+        if (ultrasound_filter(4) > 150 && ultrasound_filter(5) > 750){
+            turn_left();
+        }
+        if (ultrasound_filter(4) < 100 && ultrasound_filter(5) < 50){
+            turn_right();
+        }
     }
 return 0;   //  never reached
 }
