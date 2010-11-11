@@ -5,7 +5,7 @@ ADC.c
 joshuaashby@joshashby.com
 http://joshashby.com
 http://github.com/JoshAshby
-freenode - JoshAshby
+freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
 #include "adc.h"

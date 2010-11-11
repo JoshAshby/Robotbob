@@ -5,7 +5,7 @@ global.h
 joshuaashby@joshashby.com
 http://joshashby.com
 http://github.com/JoshAshby
-freenode - JoshAshby
+freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
 #ifndef GLOBAL_H
@@ -16,6 +16,15 @@ freenode - JoshAshby
 
 #define dirrection 0
 #define debug 1
+
+#define Stat1 3
+#define statPower 2
+
+#define Trelay 4
+#define Drelay 5
+
+#define Tmotor 2
+//#define Dmotor
 
 int base;
 

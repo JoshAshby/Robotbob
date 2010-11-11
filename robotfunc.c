@@ -12,20 +12,21 @@ robotfunc.c
 joshuaashby@joshashby.com
 http://joshashby.com
 http://github.com/JoshAshby
-freenode - JoshAshby
+freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
+
 void turn_left(void){
-    out('D', 4, 1);
+    out('D', Trelay, 1);
     _delay_ms(5);
     pwm1B(255);
     _delay_ms(200);
     pwm1B(0);
-    out('D', 4, 0);
+    out('D', Trelay, 0);
 }
 void turn_right(void){
     pwm1B(255);
-    _delay_ms(200);
+    _delay_ms(150);
     pwm1B(0);
 }
 void stop(void){
@@ -37,8 +38,8 @@ void stop(void){
     pwm2B(0);
     out('D', 2, 1);
     error(1);
-    out('D', 4, 0);
-    out('D', 5, 0);
+    out('D', Trelay, 0);
+    out('D', Drelay, 0);
 }
 void calibrate(void){
     adc_change(5);
@@ -95,17 +96,17 @@ void ultrasound_test(void){
     }
 }
 void test_turn(void){
-    out('B', 2, 1);
+    out('B', Tmotor, 1);
     _delay_ms(200);
-    out('B', 2, 0);
+    out('B', Tmotor, 0);
     _delay_ms(200);
-    out('D', 4, 1);
+    out('D', Trelay, 1);
     _delay_ms(500);
-    out('B', 2, 1);
+    out('B', Tmotor, 1);
     _delay_ms(200);
-    out('B', 2, 0);
+    out('B', Tmotor, 0);
     _delay_ms(500);
-    out('D', 4, 0);
+    out('D', Trelay, 0);
     _delay_ms(500);
 }
 void test_motor(void){
@@ -114,12 +115,12 @@ void test_motor(void){
     pwm_ramp1A(1, 0);
     pwm1A(0);
     _delay_ms(500);
-    out('D', 5, 1);
+    out('D', Drelay, 1);
     _delay_ms(500);
     pwm_ramp1A(255, 10);
     _delay_ms(2000);
     pwm_ramp1A(1, 0);
     pwm1A(0);
     _delay_ms(500);
-    out('D', 5, 0);
+    out('D', Drelay, 0);
 }
