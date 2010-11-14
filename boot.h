@@ -12,6 +12,7 @@ freenode/#linuxandsci - JoshAshby
 #define BOOT_H
 #include <avr/io.h>
 #include <util/delay.h>
+//prototypes
 void bios(void);
 void all_good(void);
 void oh_crap(void);

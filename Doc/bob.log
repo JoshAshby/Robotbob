@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.11)  12 NOV 2010 22:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.11)  13 NOV 2010 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -214,29 +214,33 @@ Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
 )
 \c@ContinuedFloat=\count99
 Package caption Info: listings package is loaded.
+)
+(/usr/share/texmf-texlive/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
 ) (./bob.aux)
 \openout1 = `bob.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
 
 (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 20.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 22.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -301,7 +305,7 @@ Package caption Info: End \AtBeginDocument code.
  <boblogo.png, id=1, 218.8175pt x 214.8025pt>
 File: boblogo.png Graphic file (type png)
  <use boblogo.png>
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 34.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -313,21 +317,21 @@ File: logo-med.png Graphic file (type png)
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./boblogo.png> <./logo-med
 .png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 39.
+(Font)              <12> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 39.
+(Font)              <8> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 39.
+(Font)              <6> on input line 41.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
  []
 
 [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
  (./bob.toc
 ! Missing control sequence inserted.
 <inserted text> 
@@ -347,11 +351,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@lof=\write4
 \openout4 = `bob.lof'.
 
- (./bob.lol)
+ (./bob.lol [3])
 \tf@lol=\write5
 \openout5 = `bob.lol'.
 
- [3] [4]
+ [4]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -359,27 +363,27 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53 M
+l.55 M
       arch 10th/11th/12th, 2010 - Joshua Ashby\\
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--61
+Underfull \hbox (badness 10000) in paragraph at lines 55--65
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 69.
+(Font)              <14.4> on input line 73.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 69.
+(Font)              <7> on input line 73.
 ! Argument of \@sect has an extra }.
 <inserted text> 
                 \par 
-l.69 }
+l.73 }
       
 ? 
 Runaway argument?
@@ -388,86 +392,66 @@ C.
 ! Paragraph ended before \@sect was complete.
 <to be read again> 
                    \par 
-l.69 }
+l.73 }
       
 ? 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
 <steering.png, id=25, 501.875pt x 376.40625pt>
 File: steering.png Graphic file (type png)
  <use steering.png>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 79--79
+Overfull \hbox (6.0pt too wide) in paragraph at lines 83--83
 [][][][][][][] 
  []
 
 <steeringmotor.png, id=26, 501.875pt x 376.40625pt>
 File: steeringmotor.png Graphic file (type png)
  <use steeringmotor.png>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 89--89
+Overfull \hbox (6.0pt too wide) in paragraph at lines 93--93
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--93
+Underfull \hbox (badness 10000) in paragraph at lines 78--97
 
  []
 
 <reardrive.png, id=27, 501.875pt x 376.40625pt>
 File: reardrive.png Graphic file (type png)
  <use reardrive.png>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 100--100
+Overfull \hbox (6.0pt too wide) in paragraph at lines 104--104
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--104
+Underfull \hbox (badness 10000) in paragraph at lines 98--108
 
  []
 
 [6] [7 <./steering.png (PNG copy)> <./steeringmotor.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 [8 <./reardrive.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
 
  []
 
@@ -478,153 +462,232 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 140--140
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 163--163
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 140--140
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 163--163
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--140
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 143.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 166.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-LaTeX Warning: Reference `analog' on page 10 undefined on input line 147.
+LaTeX Warning: Reference `analog' on page 11 undefined on input line 170.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
-[10]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 155--155
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 178--178
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 155--155
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 178--178
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
-
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 177--177
-[][][][][][][] 
- []
-
-
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 177--177
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
-
- []
-
-
-LaTeX Warning: Reference `robot' on page 11 undefined on input line 185.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 
  []
 
 [11]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 203--203
+Overfull \hbox (6.0pt too wide) in paragraph at lines 200--200
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 203--203
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 200--200
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+LaTeX Warning: Reference `robot' on page 12 undefined on input line 208.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 221--221
+[12]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 226--226
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 221--221
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 226--226
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
-
- []
-
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 233--236
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 237--237
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 244--244
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 237--237
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 244--244
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
+Underfull \hbox (badness 10000) in paragraph at lines 244--244
+
+ []
+
+[13] <josh.jpg, id=56, 1951.29pt x 2601.72pt>
+File: josh.jpg Graphic file (type jpg)
+ <use josh.jpg>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 256--256
+[][][][][][][] 
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259 \subsection
+                 {Maurice Ashby}
+? 
+<maurice.jpg, id=57, 3083.52pt x 2055.68pt>
+File: maurice.jpg Graphic file (type jpg)
+ <use maurice.jpg>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 264--264
+[][][][][][][] 
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.267 \\
+        
+? 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 
+      
+? 
+[14 <./josh.jpg> <./maurice.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--274
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 275--275
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 275--275
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
 
  []
 
@@ -642,143 +705,121 @@ File: omlptm.fd
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 22.
- [14])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 238--238
+ [15])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 276--276
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 238--238
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 276--276
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--238
+Underfull \hbox (badness 10000) in paragraph at lines 276--276
 
  []
 
-(../pwm.c [15] [16] [17] [18] [19] [20] [21] [22])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 239--239
+(../pwm.c [16] [17] [18] [19] [20] [21] [22] [23])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 277--277
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 239--239
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 277--277
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--239
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
 
  []
 
-(../digital.c [23])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 240--240
+(../digital.c [24])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 278--278
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 240--240
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 278--278
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 
  []
 
-[24] (../boot.c) [25]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 241--241
+[25] (../boot.c) [26]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 279--279
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 241--241
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 279--279
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--241
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
 
  []
 
-(../robotfunc.c [26] [27])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 242--242
+(../robotfunc.c [27] [28])
+Overfull \hbox (6.0pt too wide) in paragraph at lines 280--280
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 242--242
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 280--280
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
 
  []
 
 (../global.h)
-Overfull \hbox (6.0pt too wide) in paragraph at lines 243--243
+Overfull \hbox (6.0pt too wide) in paragraph at lines 281--281
 [][][][][][][] 
  []
 
 
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 243--243
+Overfull \hbox (50.00006pt too wide) in paragraph at lines 281--281
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
 
  []
 
-(../version.h [28])
-Overfull \hbox (6.0pt too wide) in paragraph at lines 244--244
-[][][][][][][] 
- []
-
-
-Overfull \hbox (50.00006pt too wide) in paragraph at lines 244--244
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
-
- []
-
-(./bob.tex
-LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
- [29] [30] [31] [32] [33]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
- [34] [35] [36]) [37] (./bob.aux)
+(../version.h [29]) [30] (./bob.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 6491 strings out of 495061
- 88823 string characters out of 1182620
- 597715 words of memory out of 3000000
- 9581 multiletter control sequences out of 15000+50000
+ 5084 strings out of 495061
+ 73476 string characters out of 1182620
+ 279715 words of memory out of 3000000
+ 8170 multiletter control sequences out of 15000+50000
  28598 words of font info for 60 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,8n,49p,937b,1515s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,49p,938b,1495s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/urw/couri
 er/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/
 share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on bob.pdf (37 pages, 1262395 bytes).
+Output written on bob.pdf (30 pages, 5532140 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

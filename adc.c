@@ -31,7 +31,7 @@ void adc_start(void)
     ADCSRA |= (1 << ADSC);  // Start A2D Conversions
 }
 void adc_stop(){
-    //stop the ADC
+    //stop the ADC by clearing the ADSC bit
     ADCSRA &= ~(1 << ADSC);
 }
 void adc_change(int chan){
@@ -39,25 +39,26 @@ void adc_change(int chan){
     ADCSRA &= ~(1 << ADSC);
     //and now change the ADMUX bits to fit which channal you want to use, this should probably be replaced by a switch soon
     switch (chan) {
-        case 0:
+        case 0: //For ADC0 the data sheet says that all MUX bits in ADMUX need to be cleared.
             ADMUX &= ~(1 << MUX0)
                   &  ~(1 << MUX1)
                   &  ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 1:
+        case 1: //for ADC1 MUX0 bit is set, but others cleared
             ADMUX |=  (1 << MUX0);
             ADMUX &= ~(1 << MUX1)
                   &  ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 2:
+        case 2: //for ADC2 MUX1 bit is set, but others cleared
             ADMUX &= ~(1 << MUX0);
             ADMUX |=  (1 << MUX1);
             ADMUX &= ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 3:
+        case 3: //for ADC3 MUX0 and MUX1 bits are set, but others cleared (see a pattern, this is binary
+                // 1100
             ADMUX |=  (1 << MUX0)
                   |   (1 << MUX1);
             ADMUX &= ~(1 << MUX2)

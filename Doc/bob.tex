@@ -10,6 +10,8 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{caption}
+\usepackage{fixltx2e}
+
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
@@ -58,6 +60,8 @@ April 20th, 2010 - Joshua Ashby\\
 Finished the software section and got the appendix of code cleaned up. also changed the program boxes from floats to listings. Still need to fix the steering descriptor section (marked with TODO).\\
 November 11th, 2010 - Joshua Ashby\\
 Started work on updating the various sections and the hardware section for the new boards and matching code. Updated Linux And Sci logo.\\
+November 12-13th, 2010 - Joshua Ashby\\
+Added the Current Generation section, and a more in depth discussion of the electronic. Also went through and did some clean up, still a lot to do. Moved abstract to the title page.\\
 
 \newpage
 
@@ -101,12 +105,13 @@ Our second attempt was based off of a bike, just instead of a chain drive, we de
 \label{reardrive}
 \end{figure}\\
 This drive system worked perfectly both downhill and uphill, and as a result it is the drive system currently used. The motor is the same as the steering motor, a recycled drill motor that is rated at 9.6V and 10A.\\
-\section{Electronics}
+\section{Electronics - Introduction \& History}
 \subsection{Introduction}
 The electronics have always been a troublesome matter for this project and as this is being typed, the electronics still are providing issues, even with new designs.\\
 The motors, which each draw ~10A, must have easy to use, and cheap to build motor controllers, along with the ability to easily replace major parts while the robot is not in the Lab or near a soldering iron. This means the motor controllers can not be store bought, as all of the quality controllers that we can find are not only expensive, but also do not have common, easy to find parts. Instead to replace a part, the whole controller must be replaced most the time\footnote{Plus it's funner to build your own controllers}.\\
 Generation 1 electronics consisted of one micro-controller, and one and a half motor controllers. These electronics shorted out at the 2009 Sparkfun AVC competition, and as a result will only be used as both a comparison, and as a resource for what not to do on future generations.\\
-\subsection{Motor controller}
+Please note that voltages will always be expressed like so: V\textsubscript{5} or V\textsubscript{12} Due to the mixed voltages that exsist on BOB.
+\subsection{Motor controller - History}
 As stated above, the use of store bought motor controllers is out of the question for use on BOB. They tend to be expensive, and typically must have the whole unit replaced if something burns out. Because of this, the motor controllers have been hand designed by us.\\
 \subsubsection{Generation 1}
 The first version, which is the version that was used during the 2009 Sparkfun AVC competition, was designed to be very simple, and yet still provide the power that was needed for the motors. It consisted of a TIP125 PNP transistor driving a pair of paralleled IRF540N n-channel MOSFETs. At the time of their designing and building, we both were very new to MOSFETs and as a result the knowledge of how to hook the MOSFETs up, and the voltage required to drive them was unknown. This caused many problems, such as the MOSFETs not having enough voltage and amperes for them to fully close. This caused them to over heat, and also caused a massive power spike somewhere along the lines that burnt out the MOSFETs and transistor.\\
@@ -116,15 +121,33 @@ The new generation 2 motor controllers were designed to avoid these problems, al
 The Generation 3 board consists of the main ATmega328P running at 5V with a 16MHz crystal. The I2C headers are broken out\footnote{Which also provide two analog pins for the ultrasounds on BOB}, and the ATmega has 2 LEDs connected to PortD pins 3 and 5, also known as OC2B and OC0B. This allows for PWM debugging of any functions. Next the Atmega is connected to two TC4424CPA chips, one of these chips being on PD1 and PD2, OR1A, OR1B for PWM speed control, and the other chip being on pins PD2, PD4 for simple digital triggering of relays.\\
 This board, which is named Taco is infact a general purpose MOSFET board, but has been desinged in conjunction with BOB for use on him, however the only problem so far has been the traces not being big enough to carry the 10A and 20A from the motors. As a result the board also has several high amperage wires for the MOSFETs and motor outputs.\\
 The I2C header is broken out which I2C on the Atmega328p is the analog pins 4 and 5, which means that the board can also be used for analog inputs, such as was used for the ultrasounds on BOB.\\
-\subsubsection{Generation 4}
-The Current and newest Generation 4 boards regresses back to the node building system, in preparation for a full I2C network system in Generation 5 boards. This means the power, and the Atmega328p and support hardware are all on one board, with currently a 10 pin ribbon cable system running to each of the two motor controller nodes. These cables simply carry PWM and digital signals to the motor controller boards for now.\\
-\\
-\\
 Each motor controller board is the same design since they both serve similar motors. As a result they have the MOSFETs for the motor and it's corisponding dirrection relay. Future versions may bring in the temperature shut off for the MOSFETs however this feature is currently not going to be on the Generation 4 boards for technical reasons.\\
 Along with the new MOSFET drivers that were introduced in Generation 3 electronics, the MOSFET gates have current limiting resistors, and 12V zener diodes to prevent power spikes. The boards also have a 10uF and 1000uF capacitor to help smooth out power drops from the motors.\\
 \subsection{Power Node}
 The Power Node, as of Generation 2 electronics is simply a “dead” Node as one might call it. It has no intelligence, instead it's only function for generation 2 is to regulate and distribute 5V to all the boards. It does this via Molex connectors off of old ATX power supplies from computers. This same board design was used in the Generation 3 electronics also.\\
-In Generation 4 electronics, the Power Node is intergrated with the Master Node for ease of use and space reasons.\\
+\section{Current Generation - Generation 4}
+Generation 4 electronics are in some ways a stepping stone. They place the electronics into an area where they may be broken up into intelligent Nodes, while at the same time, keeping the same principle of operation the same and being based off the same electronics as Generation 3.\\
+\subsection{Master Node}
+As stated above, there are three nodes that will end up on BOB once Generation 4 electronics are completed. Of these three nodes, the Master Node is the only node which is capable of operation on it's own. This means that it has the microcontroller on board, while the other two nodes are simply additional boards which allow the Master Node to interact with the motors.\\
+The controller of choice for the Master Node is still the Atmega328p for the time being. This is because not only are all of my libraries and code already written and specialized for the AtmegaXX8 family, but I also currently have the most experience in working with these chips. The Atmega328p gives 32K of flash memory to work with, so my larger and inefficient libraries are okay, seeing as they currently come out to be aproximentally 13K with little optimization. The chips also provide 6 PWM\footnote{PWM- Pulse Width Modification - fancy use of really fast digital signals to, in the case of it's use on BOB, emulate an analog signal} outputs, and plenty of digital inputs and outputs, along with 6 analog inputs, 2 of which, however, are used for I2C communication. Through the plethora of inputs and outputs and memory which the Atmega328p provides me with, I can easily run all of BOB off of one chip.\\
+The Atmega328p has all it's pins broken out into .01 inch spaced headers, for easy access during development and debuging. It also has an Atmel 6 pin ISP header broken out, and a 4 pin I2C header broken out. The I2C header pins are arranged in the following confiuguration:\\
+\\
+\begin{tabular}{ l | l | l | l }
+V\textsubscript{5} & SDA & SCL & Gnd \\
+\end{tabular}\\
+\\
+The Atmega also has 4 of it's pins broken out into a 2 by 5 pin header that is used for communication to the Motor Nodes. There is a ribbon cable that then connects the Master Node to both Motor Nodes via this 2x5 header. The pin out is as followed:\\
+\\
+\begin{tabular}{ l | l | l | l | l }
+V\textsubscript{12} & V\textsubscript{5} & Pwm-Back & Digital-Back & Gnd \\
+V\textsubscript{12} & V\textsubscript{5} & Pwm-Front & Digital-Front & Gnd \\
+\end{tabular}\\
+\\
+In addition to the Atmega, the Maste Node is also the power distribution node. It has the on board 5V regulator and filters which is then distributed to the other nodes where needed.\\
+\subsection{Motor Nodes}
+The Motor Nodes are simply all the electronics which directly deal with interacting with the motors. They contain the IRF540N N-channel MOSFETs which handle the voltage and amperage of the motors, and the switching MOSFETS, also IRF540N's which handle the switching of the heavy duty relays which take the place of an H-Bridge.\\
+The motor MOSFETs are driven by the TCP4424 N-channel 3A dual MOSFET driver chip, which takes the 5V PWM logic of the Atmega and converts it to the 12V logic of the MOSFETS, and also takes care of charging and driving the MOSFETs gates. This chip has been in use since Generation 3 electronics, and has proven to be indispensable to the operation of BOB. These chips also handle the PWM signal very well, and allow for effective speed control of BOB through the use of PWM. Also, above the MOSFETs is a small fan which takes care of heat problems that occur at slower speeds where the MOSFET's are burning off restricted amps that are being pulled through it, as heat.\\
+To manage switching the dirrection of the motors, in Generation 1 a mechanical solution was devised, a Double Pull, Double Throw "Ice cube\footnote{They are called Ice Cube relays because of the large box shape and clear plastic which surrounds the relay itself.}" relay would be used, wired in an alternating pattern so that when the relay was activated, the pins of the motor are effectivly switched, changing the dirrection of the motor. Since the relay's coil pulls more current than the Atmega can safely source, a MOSFET is used to take care of the switching process. Since this MOSFET is not handling large amounts of current, or being used all the time, it does not need a heat sink or to be dirrectly under the fan, however the design of the Nodes has the MOSFET next to the motor MOSFET in any case.\\
 \section{Software}
 \subsection{Libraries - Introduction}
 As of January 2010, BOB runs a custom writen library set that takes care of everything from PWM and digital function to analog, ultrasounds, and calibration. Newer additions to this library include (or will soon include) I2C functionality.\footnote{Please note that memory was not an issue during the time of the writing of these libraries there for they have many places that memory types can be changed to improve file size.}\\
@@ -226,13 +249,28 @@ error(1); //will display the error 1
 \newpage
 \section{About the builders}
 \subsection{Joshua Ashby}
+\begin{figure}[htp]
+  \begin{center}
+\includegraphics[scale=0.05]{josh}
+  \end{center}
+  \caption{Author and co-builder Josh Ashby}
+\label{josh}
+\end{figure}\\
 \subsection{Maurice Ashby}
+\begin{figure}[htp]
+  \begin{center}
+\includegraphics[scale=0.05]{maurice}
+  \end{center}
+  \caption{Co-builder Maurice Ashby}
+\label{maurice}
+\end{figure}\\
+\\
 
 \newpage
 \section{Appendix}
 All code and schematics are released under the Creative Commons Attribution-Noncommercial 3.0 United States License.\\
 The code can be found online at github: http://github.com/JoshAshby/Robotbob/tree/experimental\\
-Source for this LaTeX PDF can be found online at github: http://github.com/JoshAshby/BOB-Documentation\\
+Source for this \LaTeX ~{}PDF can be found online at github: http://github.com/JoshAshby/BOB-Documentation\\
 
 \lstinputlisting[caption={Adc.c},label=adc,frame=bl]{../adc.c}
 \lstinputlisting[caption={Pwm.c},label=pwm,frame=bl]{../pwm.c}
@@ -241,6 +279,5 @@ Source for this LaTeX PDF can be found online at github: http://github.com/JoshA
 \lstinputlisting[caption={Robot.c},label=robotfunc,frame=bl]{../robotfunc.c}
 \lstinputlisting[caption={Global.h},label=global,frame=bl]{../global.h}
 \lstinputlisting[caption={Version.h},label=version,frame=bl]{../version.h}
-\lstinputlisting[caption={Bob.tex},label=tex,frame=bl]{bob.tex}
 
 \end{document}

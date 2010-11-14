@@ -11,6 +11,7 @@ freenode/#linuxandsci - JoshAshby
 #ifndef DIGITAL_H
 #define DIGITAL_H
 #include <avr/io.h>
+//prototypes
 void portB_out(int pin, int value);
 void portD_out(int pin, int value);
 void out(char port, int pin, int value);

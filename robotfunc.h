@@ -11,12 +11,12 @@ freenode/#linuxandsci - JoshAshby
 #ifndef ROBOTFUNC_H
 #define ROBOTFUNC_H
 #include <avr/io.h>
-
+//variables used in robotfunc.c
 volatile int rollAverage[30];
 volatile int average;
 volatile int j;
 volatile int adc;
-
+//prototypes
 void turn_left(void);
 void turn_right(void);
 void stop(void);

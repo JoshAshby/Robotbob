@@ -13,7 +13,7 @@ freenode/#linuxandsci - JoshAshby
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
-
+//prototypes
 void pwm_setup_all(void);
 
 void pwm_setup0(void);

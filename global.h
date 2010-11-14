@@ -14,8 +14,9 @@ freenode/#linuxandsci - JoshAshby
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define dirrection 0
-#define debug 1
+//variables and other things used through out the libraries.
+#define dirrection 0 //which way are you going around the building?
+#define debug 1 //are we debuging or not, if this is 1 then debug tests will run and report back via serial and the LEDs
 
 #define Stat1 3
 #define statPower 2

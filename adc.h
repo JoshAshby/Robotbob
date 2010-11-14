@@ -12,6 +12,7 @@ freenode/#linuxandsci - JoshAshby
 #define ADC_H
 #include <avr/io.h>
 #include <avr/interrupt.h>
+//prototypes
 void adc_start(void);
 void adc_stop(void);
 void adc_change(int chan);
