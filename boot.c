@@ -1,11 +1,3 @@
-#include "adc.h"
-#include "pwm.h"
-#include "digital.h"
-#include "boot.h"
-#include "global.h"
-#include "robotfunc.h"
-#include <util/delay.h>
-
 //-------------------------------------------
 /*
 Boot.c
@@ -16,6 +8,13 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
+#include "adc.h"
+#include "pwm.h"
+#include "digital.h"
+#include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
+#include <util/delay.h>
 //add a basic bios that will take, start the ADC, calibrate the sensors to what value they should try to stay at
 //also go through and make sure everything is working from what it can tell if there is an error then it will blink the status led
 void all_good(){//turn the status led on

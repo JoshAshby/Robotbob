@@ -167,7 +167,7 @@ out('D',5,1); //will turn on (close) PORTD pin 5
 \end{lstlisting}
 
 \subsection{Analog Functions}
-Unlike the digital code, reading from an analog pin takes some work. First you have to setup the registers, which in my case get me going at a prescaler of 128, interupt driven, and left alinged bits. The left aligned results mean that I don't have to do fancy code and get 10bit results, which I don't need. instead I can simply read the ADCH register and get an 8 bit result. The next step is to read the results, or change the pin that I am reading from, both which take more code. As a result of all this, placing the analog functions inside of a nice, clean library makes sense (Page: \pageref{analog}).\\
+Unlike the digital code, reading from an analog pin takes some work. First you have to setup the registers, which in my case get me going at a prescaler of 128, interupt driven, and left alinged bits. The left aligned results mean that I don't have to do fancy code and get 10bit results, which I don't need. instead I can simply read the ADCH register and get an 8 bit result. The next step is to read the results, or change the pin that I am reading from, both which take more code. As a result of all this, placing the analog functions inside of a nice, clean library makes sense (Page: \pageref{adc}).\\
 \begin{verbatim}void adc_start(void)\end{verbatim}
 Calling this will simply setup the correct registers, and start an interupt driven ADC comversion. After this is called the value of the ADC can be found in the ADCH register.
 \begin{verbatim}void adc_stop()\end{verbatim}
@@ -205,7 +205,7 @@ pwm_ramp1A(255, 10); //will ramp OCR1A to 255 with a delay of 10ms between each 
 \end{lstlisting}
 
 \subsection{Robotics Functions}
-The robotics library takes care of most of the things that BOB needs to run. It houses the turn functions, and the filter that takes care of the  ultrasound data. This filter is a custom rolling average with a few additions which smooth the data points out really well as the analog outputs on the ultrasounds are a little jumpy (Page: \pageref{robot}).\\
+The robotics library takes care of most of the things that BOB needs to run. It houses the turn functions, and the filter that takes care of the  ultrasound data. This filter is a custom rolling average with a few additions which smooth the data points out really well as the analog outputs on the ultrasounds are a little jumpy (Page: \pageref{robotfunc}).\\
 \begin{verbatim}void turn_left(void)\end{verbatim}
 Does exactly what it says, simply takes care of the timing and everything for turning.
 \begin{verbatim}void turn_right(void)\end{verbatim}

@@ -1,10 +1,3 @@
-#include "adc.h"
-#include "pwm.h"
-#include "digital.h"
-#include "boot.h"
-#include "global.h"
-#include "robotfunc.h"
-#include <util/delay.h>
 //-------------------------------------------
 /*
 robotfunc.c
@@ -15,6 +8,13 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
+#include "adc.h"
+#include "pwm.h"
+#include "digital.h"
+#include "boot.h"
+#include "global.h"
+#include "robotfunc.h"
+#include <util/delay.h>
 
 void turn_left(void){
     out('D', Trelay, 1);
@@ -41,7 +41,9 @@ void stop(void){
     out('D', Trelay, 0);
     out('D', Drelay, 0);
 }
-void calibrate(void){
+void calibrate(void){ /*sets up the rolling average, and fills it with data but only once,
+    This is ran once and only once at the very begining of the code for BOB because it
+    tells BOB how far from the wall he should be*/
     adc_change(5);
     _delay_ms(20);
     adc = ADCH;

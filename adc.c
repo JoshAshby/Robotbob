@@ -8,6 +8,11 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
+/*
+Information about this file and all the registers used in it
+can be found on page 251 section 23 of the Atmega datasheet
+*/
+//-------------------------------------------
 #include "adc.h"
 #include "pwm.h"
 #include "digital.h"

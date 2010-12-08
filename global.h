@@ -18,14 +18,20 @@ freenode/#linuxandsci - JoshAshby
 #define dirrection 0 //which way are you going around the building?
 #define debug 1 //are we debuging or not, if this is 1 then debug tests will run and report back via serial and the LEDs
 
-#define Stat1 3
-#define statPower 2
+#define Stat1 3 //which pin is the stat LED on?
+#define statPower 2 //which pin is the CPU power on?
+//#define stat2
 
-#define Trelay 4
-#define Drelay 5
+#define Button1 2
 
-#define Tmotor 2
-//#define Dmotor
+//#define button1
+//#define button2
+
+#define Trelay 4 //which pin is the Front turning motor relay on?
+#define Drelay 5 //which pin is the back propulsion motor relay on?
+
+#define Tmotor 2 //which pin is the front turning motor on?
+//#define Dmotor //not really used, here just incase. typically this pin is addressed via this pwm1a channel and commands
 
 int base;
 
