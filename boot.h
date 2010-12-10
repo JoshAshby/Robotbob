@@ -10,11 +10,13 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #ifndef BOOT_H
 #define BOOT_H
-#include <avr/io.h>
-#include <util/delay.h>
-//prototypes
+#include global.h
+
+//-------------------------------------------
+//Protoypes
+//-------------------------------------------
+
+void error(char type);
 void bios(void);
-void all_good(void);
-void oh_crap(void);
-void error(int type);
+
 #endif

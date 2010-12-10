@@ -10,10 +10,14 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #ifndef ADC_H
 #define ADC_H
-#include <avr/io.h>
-#include <avr/interrupt.h>
-//prototypes
-void adc_start(void);
+#include "global.h"
+
+//-------------------------------------------
+//Prototypes
+//-------------------------------------------
+
+void adc_start(_Bool left);
 void adc_stop(void);
-void adc_change(int chan);
+void adc_change(char chan);
+
 #endif

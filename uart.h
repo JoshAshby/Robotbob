@@ -1,6 +1,6 @@
 //-------------------------------------------
 /*
-DIGITAL.h
+uart.h
 2010 - Josh Ashby
 joshuaashby@joshashby.com
 http://joshashby.com
@@ -8,26 +8,35 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
-#ifndef DIGITAL_H
-#define DIGITAL_H
+#ifndef UART_H
+#define UART_H
 #include "global.h"
+
+//-------------------------------------------
+//Defines
+//-------------------------------------------
+
+#define BAUD 9600
+#define BUFF_LEN 700
+#define BAUD_PRESCALE (((F_CPU / (BAUD * 16UL))) - 1)
 
 //-------------------------------------------
 //Prototypes
 //-------------------------------------------
 
-void portB_out(int pin, _Bool value);
-void portD_out(int pin, _Bool value);
-void out(char port, int pin, _Bool value);
-void init_button_timer0(void);
-void buttons(void);
-void check_buttons(void);
-void run_once(void);
+void uart_start(void);
+void uart_sendint(uint8_t data);
+void uart_sendint16(uint16_t data);
+void uart_sendchar(char *data);
+uint8_t uart_get(void);
 
 //-------------------------------------------
 //Variables
 //-------------------------------------------
 
-uint8_t i_one;
+char input_buffer[BUFF_LEN];
+
+uint16_t read_spot;
+
 
 #endif

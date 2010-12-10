@@ -8,97 +8,96 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
-/*
-Information about this file and all the registers used in it
-can be found on page 251 section 23 of the Atmega datasheet
-*/
-//-------------------------------------------
-#include "adc.h"
-#include "pwm.h"
-#include "digital.h"
-#include "boot.h"
 #include "global.h"
-#include "robotfunc.h"
-ISR(ADC_vect)
-{
+
+//anything that needs to be ran when ever a new conversion happens goes in here
+//other wise, simply read from the data registers if data isn't all that important
+//aka: you can miss a few bits of data and still be good to go
+ISR(ADC_vect) {
 }
-void adc_start(void)
-{
+
+void adc_start(_Bool left) {//Passing a 0 will not left align results
     ADCSRA |= (1 << ADPS2)
             | (1 << ADPS1)
             | (1 << ADPS0); // Set ADC prescaler to 128 - 125KHz sample rate @ 16MHz
     ADMUX |= (1 << REFS0); // Set ADC reference to AVCC
-    ADMUX |= (1 << ADLAR); // Left adjust ADC result to allow easy 8 bit reading
+    if (left) {
+        ADMUX |= (1 << ADLAR); // Left adjust ADC result to allow easy 8 bit reading
+    }
     ADCSRA |= (1 << ADATE);
     ADCSRA |= (1 << ADEN);  // Enable ADC
     ADCSRA |= (1 << ADIE);  // Enable ADC Interrupt
     sei();
     ADCSRA |= (1 << ADSC);  // Start A2D Conversions
+
 }
-void adc_stop(){
-    //stop the ADC by clearing the ADSC bit
-    ADCSRA &= ~(1 << ADSC);
-}
-void adc_change(int chan){
+
+void adc_stop() {
     //stop the ADC
     ADCSRA &= ~(1 << ADSC);
-    //and now change the ADMUX bits to fit which channal you want to use, this should probably be replaced by a switch soon
+}
+
+void adc_change(char chan) {
+    //stop the ADC
+    ADCSRA &= ~(1 << ADSC);
+    //and now change the ADMUX bits to fit which channal you want to use
+    //sets the MUX0-3 bits inthe ADMUX register
     switch (chan) {
-        case 0: //For ADC0 the data sheet says that all MUX bits in ADMUX need to be cleared.
+        case '0'://binary 0
             ADMUX &= ~(1 << MUX0)
                   &  ~(1 << MUX1)
                   &  ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 1: //for ADC1 MUX0 bit is set, but others cleared
+        case '1'://binary 1
             ADMUX |=  (1 << MUX0);
             ADMUX &= ~(1 << MUX1)
                   &  ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 2: //for ADC2 MUX1 bit is set, but others cleared
+        case '2'://binary 2
             ADMUX &= ~(1 << MUX0);
             ADMUX |=  (1 << MUX1);
             ADMUX &= ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 3: //for ADC3 MUX0 and MUX1 bits are set, but others cleared (see a pattern, this is binary
-                // 1100
+        case '3': //should have the picture by now
             ADMUX |=  (1 << MUX0)
                   |   (1 << MUX1);
             ADMUX &= ~(1 << MUX2)
                   &  ~(1 << MUX3);
             break;
-        case 4:
+        case '4':
             ADMUX &= ~(1 << MUX0)
                   &  ~(1 << MUX1);
             ADMUX |=  (1 << MUX2);
             ADMUX &= ~(1 << MUX3);
             break;
-        case 5:
+        case '5':
             ADMUX |=  (1 << MUX0);
             ADMUX &= ~(1 << MUX1);
             ADMUX |=  (1 << MUX2);
             ADMUX &= ~(1 << MUX3);
             break;
-        case 6:
+        case '6':
             ADMUX &= ~(1 << MUX0);
             ADMUX |=  (1 << MUX1)
                   |   (1 << MUX2);
             ADMUX &= ~(1 << MUX3);
             break;
-        case 7:
+        case '7':
             ADMUX |=  (1 << MUX0)
                   |   (1 << MUX1)
                   |   (1 << MUX2);
             ADMUX &= ~(1 << MUX3);
             break;
-        case 8:
+        case '8':
             ADMUX &= ~(1 << MUX0)
                   &  ~(1 << MUX1)
                   &  ~(1 << MUX2);
             ADMUX |=  (1 << MUX3);
             break;
     }
+    //re-enable ADC conversions now that the channel is selected
     ADCSRA |= (1 << ADSC);
 }

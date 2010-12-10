@@ -1,13 +1,6 @@
-#include "adc.h"
-#include "pwm.h"
-#include "digital.h"
-#include "boot.h"
-#include "global.h"
-#include "robotfunc.h"
-#include <util/delay.h>
 //-------------------------------------------
 /*
-Main.c
+main.c
 2010 - Josh Ashby
 joshuaashby@joshashby.com
 http://joshashby.com
@@ -15,28 +8,29 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
-int temp;
-int main(void)
-{
-    bios();
-    //pwm_ramp1A(255, 10);
-    for(;;) {
+#include "global.h"
 
-        temp = (PIND & 0x0c);
-        if (temp == 1){
-            portB_out(1,1);
-        }
-        if (temp == 0){
-            portB_out(1,0);
-        }
+int main(void) { //Main loop, runs once but can have an infinit loop in it
+    DDRD |= (1<<CPU_POW);
+    PORTD |= (1<<CPU_POW);
 
-/*        _delay_ms(7000);
-        if (ultrasound_filter(4) > 100 && ultrasound_filter(5) > 100){
-            turn_left();
-        }
-        else if (ultrasound_filter(4) < 90 && ultrasound_filter(5) < 90){
-            turn_right();
-        }*/
-    }
-return 0;   //  never reached
+    //various start up parts, these run once since they are not with in the main
+    //while loop that runs forever. (see below)
+    pwm_setup_all(); //start all the pwm channels
+    adc_start(1); //start the adc converters
+    uart_start(); //start the UART interface
+    twi_start(); //start the TWI/I2C interface
+
+    DDRD |= (0<<3)
+         |  (0<<4); //setup the button pins as inputs
+
+    init_button_timer0(); //start the timer that takes care of the interrupt which
+    //holds the counter for button debouncing
+
+    while(1) { //infinit loop that doesn't stop running. (always true since 1 is always 1
+        check_buttons(); //debounces the buttons with the aid of the timer0 interrupt
+        buttons(); //if a buttons been pressed, code inside of here will run, if not
+        //it's skiped over. simply cleans up this part of the code
+    };
+    return 0; //never reached since 1 is always true
 }

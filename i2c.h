@@ -1,6 +1,6 @@
 //-------------------------------------------
 /*
-robotfunc.h
+i2c.h
 2010 - Josh Ashby
 joshuaashby@joshashby.com
 http://joshashby.com
@@ -8,24 +8,32 @@ http://github.com/JoshAshby
 freenode/#linuxandsci - JoshAshby
 */
 //-------------------------------------------
-#ifndef ROBOTFUNC_H
-#define ROBOTFUNC_H
-#include global.h
+#ifndef I2C_H
+#define I2C_H
+#include "global.h"
+
+//-------------------------------------------
+//Defines
+//-------------------------------------------
+
+#define MAX_TRIES 50
+#define TWI_START 0
+#define TWI_DATA 1
+#define TWI_STOP 2
 
 //-------------------------------------------
 //Prototypes
 //-------------------------------------------
 
-int ultrasound_filter(int pin);
-void calibrate(void);
+void twi_start(void);
+unsigned char twi_tran(unsigned char type);
+int twi_mcp_dac(unsigned int twi_address, uint16_t data, _Bool type);
+uint16_t twi_mcp_read(unsigned int twi_address);
 
 //-------------------------------------------
 //Variables
 //-------------------------------------------
 
-volatile int rollAverage[30];
-volatile int average;
-volatile int j;
-volatile int adc;
+uint16_t mcp_data[2];
 
 #endif

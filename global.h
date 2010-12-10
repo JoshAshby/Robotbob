@@ -11,29 +11,59 @@ freenode/#linuxandsci - JoshAshby
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
+//-----------------------------------------------
+//Libraries
+//-----------------------------------------------
+
 #include <avr/io.h>
 #include <util/delay.h>
+#include <stdio.h>
+#include <avr/interrupt.h>
+#include <compat/twi.h>
+#include <inttypes.h>
+#include <stdlib.h>
+#include <avr/sleep.h>
 
-//variables and other things used through out the libraries.
-#define dirrection 0 //which way are you going around the building?
-#define debug 1 //are we debuging or not, if this is 1 then debug tests will run and report back via serial and the LEDs
+#include "adc.h"
+#include "pwm.h"
+#include "i2c.h"
+#include "uart.h"
+#include "digital.h"
 
-#define Stat1 3 //which pin is the stat LED on?
-#define statPower 2 //which pin is the CPU power on?
-//#define stat2
+//-----------------------------------------------
+//Defines
+//-----------------------------------------------
 
-#define Button1 2
+#define debug 1 //if true, anything inside of an if(debug){} tag will run
 
-//#define button1
-//#define button2
+#define MCP_ADDRESS 0xC0 //address of the MCP I2C DAC
 
-#define Trelay 4 //which pin is the Front turning motor relay on?
-#define Drelay 5 //which pin is the back propulsion motor relay on?
+//Buttons
+#define button_one 0b00001000 //PORTD pin 3
+#define button_two 0b00010000 //PORTD pin 4
 
-#define Tmotor 2 //which pin is the front turning motor on?
-//#define Dmotor //not really used, here just incase. typically this pin is addressed via this pwm1a channel and commands
+//Status LEDs
+#define stat_led1 5 //PORTD
+#define stat_led2 6 //PORTD
 
-int base;
+//CPU power LED
+//On my Dev board this pin bootstraps the regulator so the power button can be released
+//On BOB this is the LED which lets you know the CPU is alive
+#define CPU_POW 2 //PORTD
+
+//addresses of the IGT I2C gyroscope
+#define	GX_H	0x1D
+#define	GX_L	0x1E
+#define	GY_H	0x1F
+#define	GY_L	0x20
+#define GZ_H	0x21
+#define GZ_L	0x22
+
+//-----------------------------------------------
+//Variables
+//-----------------------------------------------
+
+uint8_t count[2];
+unsigned char button[2];
 
 #endif
-
