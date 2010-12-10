@@ -77,77 +77,62 @@
 	<avr/io.h>
 	<util/delay.h>
 
-1289759726 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.c
-	"adc.h"
-	"pwm.h"
-	"digital.h"
-	"boot.h"
+1291585626 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.c
 	"global.h"
-	"robotfunc.h"
 
-1289715091 /home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.h
-	<avr/io.h>
-	<avr/interrupt.h>
+1291767579 /home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.h
+	"global.h"
 
-1289715091 /home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.h
+1291767579 /home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.h
+	"global.h"
+
+1291872222 /home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.h
+	"global.h"
+
+1291961353 /home/joshua/Desktop/Stuff/github/repos/Robotbob/boot.h
+	"global.h"
+
+1291961401 /home/joshua/Desktop/Stuff/github/repos/Robotbob/global.h
 	<avr/io.h>
 	<util/delay.h>
 	<stdio.h>
-
-1289715091 /home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.h
-	<avr/io.h>
-
-1289715091 /home/joshua/Desktop/Stuff/github/repos/Robotbob/boot.h
-	<avr/io.h>
-	<util/delay.h>
-
-1291480041 /home/joshua/Desktop/Stuff/github/repos/Robotbob/global.h
-	<avr/io.h>
-	<util/delay.h>
-
-1289715091 /home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.h
-	<avr/io.h>
-
-1289759726 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.c
+	<avr/interrupt.h>
+	<compat/twi.h>
+	<inttypes.h>
+	<stdlib.h>
+	<avr/sleep.h>
 	"adc.h"
 	"pwm.h"
+	"i2c.h"
+	"uart.h"
 	"digital.h"
 	"boot.h"
-	"global.h"
 	"robotfunc.h"
 
-1291480914 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/main.c
-	"adc.h"
-	"pwm.h"
-	"digital.h"
-	"boot.h"
+1291961357 /home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.h
 	"global.h"
-	"robotfunc.h"
-	<util/delay.h>
 
-1289759726 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/boot.c
-	"adc.h"
-	"pwm.h"
-	"digital.h"
-	"boot.h"
+1291872252 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.c
 	"global.h"
-	"robotfunc.h"
-	<util/delay.h>
 
-1289759726 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.c
-	"adc.h"
-	"pwm.h"
-	"digital.h"
-	"boot.h"
+1291769498 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/main.c
 	"global.h"
-	"robotfunc.h"
 
-1289777720 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.c
-	"adc.h"
-	"pwm.h"
-	"digital.h"
-	"boot.h"
+1291961141 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/boot.c
 	"global.h"
-	"robotfunc.h"
-	<util/delay.h>
+
+1291585626 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.c
+	"global.h"
+
+1291961142 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.c
+	"global.h"
+
+1291769902 /home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.h
+	"global.h"
+
+1291767579 /home/joshua/Desktop/Stuff/github/repos/Robotbob/uart.h
+	"global.h"
+
+1291769875 source:/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.c
+	"global.h"
 

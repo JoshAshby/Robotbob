@@ -10,14 +10,14 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #include "global.h"
 
-void calibrate(void) {
+void calibrate(char pin) {
     /*
     sets up the rolling average, and fills it with data but only once,
     This is ran once and only once at the very begining of the code for BOB because it
     tells BOB how far from the wall he should be
     */
-    adc_change(5);
-    _delay_ms(20);
+    adc_change(pin);
+    _delay_ms(20); //need to get rid of this ugly delay, may replace it with timer2 interrupt
     adc = ADCH;
     for (j = 0; j <= 20; j++){
         if (ADCH > average + 100)
@@ -39,13 +39,13 @@ void calibrate(void) {
     }
 }
 
-int ultrasound_filter(int pin) {
+uint16_t ultrasound_filter(char pin) {
     /*
     simple filter that works quite well, it simply smooths out the ADC data from the ultrasounds
-    if the ADCH data is out of range, it will divide it by two, and then add the average divided by two
-        */
+    if the ADC data is out of range, it will divide it by two, and then add the average divided by two
+    */
     adc_change(pin);
-    _delay_ms(20);
+    _delay_ms(20); //need to get rid of this ugly delay, may replace it with timer2 interrupt
     adc = ADCH;
     for (j = 0; j <= 30; j++){
         if (ADCH > average + 100)

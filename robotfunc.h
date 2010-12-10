@@ -10,22 +10,22 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #ifndef ROBOTFUNC_H
 #define ROBOTFUNC_H
-#include global.h
+#include "global.h"
 
 //-------------------------------------------
 //Prototypes
 //-------------------------------------------
 
-int ultrasound_filter(int pin);
-void calibrate(void);
+uint16_t ultrasound_filter(char pin);
+void calibrate(char pin);
 
 //-------------------------------------------
 //Variables
 //-------------------------------------------
 
-volatile int rollAverage[30];
-volatile int average;
-volatile int j;
-volatile int adc;
+volatile uint8_t rollAverage[30];
+volatile uint16_t average;
+volatile uint8_t j;
+volatile uint16_t adc;
 
 #endif

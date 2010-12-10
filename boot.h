@@ -10,7 +10,7 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #ifndef BOOT_H
 #define BOOT_H
-#include global.h
+#include "global.h"
 
 //-------------------------------------------
 //Protoypes

@@ -89,7 +89,7 @@ uint8_t uart_get(void) {
 	return b;
 }
 
-ISR(SIG_USART_RECV) {//sets up the interrupt to recieve any data coming in
+ISR(USART_RX_vect) {//sets up the interrupt to recieve any data coming in
 	input_buffer[read_spot] = UDR0;
 	read_spot++;//and "exports" if you will the data to a variable outside of the register
 	//until the main program has time to read it. makes sure data isn't lost as much

@@ -10,6 +10,7 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #include "global.h"
 
+/* Coming soon: error reporting
 void error(char type) {
     switch (type) {
         case 0:
@@ -20,13 +21,19 @@ void error(char type) {
             break;
     }
 }
+*/
+
 void bios(void) {
-    DDRD |= (1<<statPower);//LED power
-    DDRD |= (1<<Stat1);//LED Status
-    DDRD |= (1<<Trelay);//relay back
-    DDRD |= (1<<Drelay);//relay front
-    //CPU_POW goes here
-    pwm_setup_all();
-    adc_start();
-    //calibrate();
+    DDRD |= (1<<CPU_POW); //CPU power led to output, and turn it on
+    PORTD |= (1<<CPU_POW);
+
+    DDRD |= (1<<stat_led1);//stat led one
+    DDRD |= (1<<stat_led2);//stat led two
+    DDRD |= (1<<turn_relay);//turn relay pin to output
+    DDRD |= (1<<drive_relay);//drive relay pin to output
+
+    pwm_setup_all(); //start all the pwm channels
+    adc_start(1); //start the adc converters
+    uart_start(); //start the UART interface
+    twi_start(); //start the TWI/I2C interface
 }

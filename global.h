@@ -29,6 +29,8 @@ freenode/#linuxandsci - JoshAshby
 #include "i2c.h"
 #include "uart.h"
 #include "digital.h"
+#include "boot.h"
+#include "robotfunc.h"
 
 //-----------------------------------------------
 //Defines
@@ -59,11 +61,16 @@ freenode/#linuxandsci - JoshAshby
 #define GZ_H	0x21
 #define GZ_L	0x22
 
+//relays
+#define turn_relay 2
+#define drive_relay 3
+
 //-----------------------------------------------
 //Variables
 //-----------------------------------------------
 
 uint8_t count[2];
 unsigned char button[2];
+uint16_t base;
 
 #endif
