@@ -76,39 +76,27 @@ void check_buttons(void) {
     for the rest of the code. If the button isn't stable then it doesn't do anything.
     */
     //button one
-    if (count[0] > 5) { //if the buttons stable, set the array for button 1 as stable
+    if (count[0] > 10) { //if the buttons stable, set the array for button 1 as stable
         //and reset the counter if the buttons been released
-        if ((PIND & button_one) == 0) {
+        /*if ((PIND & button_one) == 0) {
             count[0] = 0;
-        }
+        }*/
         button[0] = 1;
     }
-    if (count[0] > 250) {
-        if ((PIND & button_one) == 0) {
-            count[0] = 0;
-        }
-        button[0] = 2;
-    }
-    if ((PIND & button_one) == 0) { //reset the counter as soon as button one is released
-            button[0] = 0;
+    if ((PIND & button_one) == 0) {
+        button[0] = 0;
     }
 
-    //button two
-    if (count[1] > 5) {//if the buttons stable, set the array for button 2 as stable
+    //button one
+    if (count[1] > 10) { //if the buttons stable, set the array for button 1 as stable
         //and reset the counter if the buttons been released
-        if ((PIND & button_two) == 0) {
-            count[1] = 0;
-        }
+        /*if ((PIND & button_one) == 0) {
+            count[0] = 0;
+        }*/
         button[1] = 1;
     }
-    if (count[1] > 250) {
-        if ((PIND & button_two) == 0) {
-            count[1] = 0;
-        }
-        button[1] = 2;
-    }
-    if ((PIND & button_two) == 0) {//reset the counter as soon as button two is released
-            button[1] = 0;
+    if ((PIND & button_two) == 0) {
+        button[1] = 0;
     }
 }
 
@@ -119,25 +107,12 @@ void buttons(void) {
     */
     if (button[0] == 1) { //If the first button is pulled high then
         //turn pin 1 on port B on
-        //out('D',stat_led1,!debug);
-        run_once();
-    } else { //if either are off, turn pin1 port B off
-        out('D',stat_led1,debug);
-    }
-    if (button[1] == 1) { //If the second button is pulled high then
-        //turn pin 2 on port B on
-        out('D',stat_led2,!debug);
-    } else { //if either are off, turn pin1 port B off
-        out('D',stat_led2,debug);
-    }
-}
-
-void run_once(void) {
-    if (count[0]) {
-        for(i_one = 0; i_one < 2; i_one++) {
-            uart_sendint(88);
+        i_one += 1;
+        if (i_one == 1) {
+            uart_sendint(ultrasound_filter(1));
         }
-    } else {
+        i_one += 1;
+    } else { //if either are off, turn pin1 port B off
         i_one = 0;
     }
 }

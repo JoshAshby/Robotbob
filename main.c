@@ -13,6 +13,8 @@ freenode/#linuxandsci - JoshAshby
 int main(void) { //Main loop, runs once but can have an infinit loop in it
 
     bios();
+    calibrate(1);
+    uart_sendchar("Hello");
 
     while(1) { //infinit loop that doesn't stop running. (always true since 1 is always 1
         check_buttons(); //debounces the buttons with the aid of the timer0 interrupt

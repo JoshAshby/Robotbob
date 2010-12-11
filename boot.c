@@ -36,8 +36,10 @@ void bios(void) {
     adc_start(1); //start the adc converters
     uart_start(); //start the UART interface
     twi_start(); //start the TWI/I2C interface
-    setup_timer0();
 
     DDRD |= (0<<3)
          |  (0<<4); //setup the button pins as inputs
+
+    setup_timer0();
+
 }
