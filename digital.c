@@ -62,7 +62,7 @@ void out(char port, int pin, _Bool value) {
     }
 }
 
-void init_button_timer0(void) {
+void setup_timer0(void) {
     TCNT0 = 0; //set the inital timer value to 0
     TCCR0B |= (1<<CS01); //set the clock prescaler to clock/8 or 2mHz
     TIMSK0 |= (1<<TOIE0); //start the timer with the interrupt overflow turned on

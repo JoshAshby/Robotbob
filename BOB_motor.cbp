@@ -43,6 +43,7 @@
 			<Add after="avrdude -P /dev/ttyACM0 -c stk500v2 -p m328p -U flash:w:$(TARGET_OUTPUT_FILE).hex:i" />
 			<Mode after="always" />
 		</ExtraCommands>
+		<Unit filename="README" />
 		<Unit filename="adc.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -56,6 +57,10 @@
 		</Unit>
 		<Unit filename="digital.h" />
 		<Unit filename="global.h" />
+		<Unit filename="i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="i2c.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -67,7 +72,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="robotfunc.h" />
-		<Unit filename="version.h" />
+		<Unit filename="uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="uart.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />
