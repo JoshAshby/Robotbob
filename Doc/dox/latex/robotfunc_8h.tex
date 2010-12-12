@@ -1,0 +1,87 @@
+\hypertarget{robotfunc_8h}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.h File Reference}
+\label{robotfunc_8h}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.h@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.h}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\_\-t \hyperlink{robotfunc_8h_a7cf36d0ba0c0833d1b3ae525b664b056}{ultrasound\_\-filter} (char pin)
+\begin{DoxyCompactList}\small\item\em Filters the ultrasound data on BOB to make the data a little more smoother and remove oddball bits (aka outliers). \item\end{DoxyCompactList}\item 
+void \hyperlink{robotfunc_8h_a46d7ef79053be77b680bc9e22c79f4c1}{calibrate} (char pin)
+\begin{DoxyCompactList}\small\item\em Sets up the base comparison for the Ultrasound results on BOB. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\_\-t \hyperlink{robotfunc_8h_af7df15fe3a6fb6a9a67701a43a1c1faa}{rollAverage} \mbox{[}30\mbox{]}
+\item 
+volatile uint16\_\-t \hyperlink{robotfunc_8h_a577b98e4799c48eae10e3a62dbb1bc10}{average}
+\item 
+volatile uint8\_\-t \hyperlink{robotfunc_8h_a643ebc5306943604a6d8036bec56f97a}{j}
+\item 
+volatile uint16\_\-t \hyperlink{robotfunc_8h_a0a48e6d5521c2dfe7020b8a51107d0c9}{adc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{robotfunc_8h_a46d7ef79053be77b680bc9e22c79f4c1}{
+\index{robotfunc.h@{robotfunc.h}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!robotfunc.h@{robotfunc.h}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate (
+\begin{DoxyParamCaption}
+\item[{char}]{ pin}
+\end{DoxyParamCaption}
+)}}
+\label{robotfunc_8h_a46d7ef79053be77b680bc9e22c79f4c1}
+
+
+Sets up the base comparison for the Ultrasound results on BOB. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pin}]char -\/ Which ADC pin should be used for the results \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{robotfunc_8h_a7cf36d0ba0c0833d1b3ae525b664b056}{
+\index{robotfunc.h@{robotfunc.h}!ultrasound\_\-filter@{ultrasound\_\-filter}}
+\index{ultrasound\_\-filter@{ultrasound\_\-filter}!robotfunc.h@{robotfunc.h}}
+\subsubsection[{ultrasound\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t ultrasound\_\-filter (
+\begin{DoxyParamCaption}
+\item[{char}]{ pin}
+\end{DoxyParamCaption}
+)}}
+\label{robotfunc_8h_a7cf36d0ba0c0833d1b3ae525b664b056}
+
+
+Filters the ultrasound data on BOB to make the data a little more smoother and remove oddball bits (aka outliers). 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pin}]char -\/ Which ADC pin should be used for the results \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\_\-t -\/ The 10bit data from the ADC which has been filtered 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{robotfunc_8h_a0a48e6d5521c2dfe7020b8a51107d0c9}{
+\index{robotfunc.h@{robotfunc.h}!adc@{adc}}
+\index{adc@{adc}!robotfunc.h@{robotfunc.h}}
+\subsubsection[{adc}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\_\-t {\bf adc}}}
+\label{robotfunc_8h_a0a48e6d5521c2dfe7020b8a51107d0c9}
+\hypertarget{robotfunc_8h_a577b98e4799c48eae10e3a62dbb1bc10}{
+\index{robotfunc.h@{robotfunc.h}!average@{average}}
+\index{average@{average}!robotfunc.h@{robotfunc.h}}
+\subsubsection[{average}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint16\_\-t {\bf average}}}
+\label{robotfunc_8h_a577b98e4799c48eae10e3a62dbb1bc10}
+\hypertarget{robotfunc_8h_a643ebc5306943604a6d8036bec56f97a}{
+\index{robotfunc.h@{robotfunc.h}!j@{j}}
+\index{j@{j}!robotfunc.h@{robotfunc.h}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\_\-t {\bf j}}}
+\label{robotfunc_8h_a643ebc5306943604a6d8036bec56f97a}
+\hypertarget{robotfunc_8h_af7df15fe3a6fb6a9a67701a43a1c1faa}{
+\index{robotfunc.h@{robotfunc.h}!rollAverage@{rollAverage}}
+\index{rollAverage@{rollAverage}!robotfunc.h@{robotfunc.h}}
+\subsubsection[{rollAverage}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\_\-t {\bf rollAverage}\mbox{[}30\mbox{]}}}
+\label{robotfunc_8h_af7df15fe3a6fb6a9a67701a43a1c1faa}

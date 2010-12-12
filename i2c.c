@@ -10,12 +10,24 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #include "global.h"
 
+/** \brief Starts the TWI/I2C interface with the correct clock speed
+ *
+ * \param void - Takes nothing
+ * \return void - Returns nothing
+ *
+ */
 void twi_start(void) { //set up the clock speed for the I2C/TWI
     TWSR = 0x00;
     TWBR = (F_CPU / 100000UL - 16) / 2;
 }
 
 //various different things to help condense code
+/** \brief What action should be taken, simply used to clean code up a tad bit
+ *
+ * \param type unsigned char - What action should be taken, should the start condition be sent, the stop condition, or the data register
+ * \return unsigned char - Returns the TWI/I2C status register
+ *
+ */
 unsigned char twi_tran(unsigned char type) {
   switch(type) {
      case TWI_START: //Start Condition
@@ -38,6 +50,14 @@ for DAC only we send 0x40 which is 0b01000000 because we don't want
 any of the Power Down stuff and we only want DAC which means C2, C1, C0,
 should be 0, 1, 0 respectably. for writing to the DAC and the EEPROM
 they would be 0, 1, 1 and the last byte on the address should be 1 */
+/** \brief TWI code for writing DAC data to the MCP4725 I2C DAC first to write to the dac only we must specify this in the POD byte for DAC only we send 0x40 which is 0b01000000 because we don't want any of the Power Down stuff and we only want DAC which means C2, C1, C0, should be 0, 1, 0 respectably. for writing to the DAC and the EEPROM they would be 0, 1, 1 and the last byte on the address should be 1
+ *
+ * \param twi_address unsigned int - The address of the I2C/TWI part we are talking to, in this case, the MCP4725
+ * \param data uint16_t - The 10bit long DAC data
+ * \param type _Bool - Whether or not the data should also be written to the EEPROM
+ * \return int - Good to go or not sort of thing.
+ *
+ */
 int twi_mcp_dac(unsigned int twi_address, uint16_t data, _Bool type) {
     /*
     Pass the address, the 16 bit long data for the DAC/EEPROM
@@ -100,6 +120,12 @@ int twi_mcp_dac(unsigned int twi_address, uint16_t data, _Bool type) {
         return r_val;
 }
 
+/** \brief Reads the data from the EEPROM of the DAC
+ *
+ * \param twi_address unsigned int - Address of the DAC
+ * \return uint16_t - The data which is in the EEPROM (see datasheet)
+ *
+ */
 uint16_t twi_mcp_read(unsigned int twi_address) {
     /*
     Reads the data stored in the EEPROM and returns it as 16bit long data

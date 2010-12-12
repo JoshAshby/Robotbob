@@ -16,6 +16,12 @@ freenode/#linuxandsci - JoshAshby
 ISR(ADC_vect) {
 }
 
+/** \brief Sets up the registers and starts the Analog to Digital converter
+ *
+ * \param left _Bool - Left adjust results (1) for 8bit results, or no left adjust (0) for full 10bit results. If using 8bit, simply read ADCH for the value, if using 10bit, read ADCL then ADCH.
+ * \return void - Returns nothing
+ *
+ */
 void adc_start(_Bool left) {//Passing a 0 will not left align results
     ADCSRA |= (1 << ADPS2)
             | (1 << ADPS1)
@@ -32,11 +38,22 @@ void adc_start(_Bool left) {//Passing a 0 will not left align results
 
 }
 
+/** \brief Stops the Analog to Digital conversions
+ *
+ * \return void - Returns nothing
+ *
+ */
 void adc_stop() {
     //stop the ADC
     ADCSRA &= ~(1 << ADSC);
 }
 
+/** \brief Change the ADC to use the given pin. 8 will return the results for the internal temperature sensor.
+ *
+ * \param chan char - 0 through 8, representing which ADC pin the results are returned from
+ * \return void - Returns nothing
+ *
+ */
 void adc_change(char chan) {
     //stop the ADC
     ADCSRA &= ~(1 << ADSC);

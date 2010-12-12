@@ -35,22 +35,28 @@ freenode/#linuxandsci - JoshAshby
 //-----------------------------------------------
 //Defines
 //-----------------------------------------------
-
+/**< Debug, if set to one, any debug code will run */
 #define debug 1 //if true, anything inside of an if(debug){} tag will run
 
+/**< Address of the MCP I2C DAC */
 #define MCP_ADDRESS 0xC0 //address of the MCP I2C DAC
 
 //Buttons
+/**< PORTD pin 3 button */
 #define button_one 0b00001000 //PORTD pin 3
+/**< PORTD pin 4 button */
 #define button_two 0b00010000 //PORTD pin 4
 
 //Status LEDs
+/**< PORTD pin 5 LED */
 #define stat_led1 5 //PORTD
+/**< PORTD pin 6 LED */
 #define stat_led2 6 //PORTD
 
 //CPU power LED
 //On my Dev board this pin bootstraps the regulator so the power button can be released
 //On BOB this is the LED which lets you know the CPU is alive
+/**< PORTD pin 2 LED Indicating CPU power */
 #define CPU_POW 2 //PORTD
 
 //addresses of the IGT I2C gyroscope

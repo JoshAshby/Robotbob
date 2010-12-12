@@ -1,0 +1,158 @@
+\hypertarget{digital_8c}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.c File Reference}
+\label{digital_8c}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.c@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/digital.c}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{digital_8c_a1ffb8a81a26d53abbd297f90db139eb0}{portB\_\-out} (int pin, \_\-Bool value)
+\item 
+void \hyperlink{digital_8c_ab374bf5330ad4dbd8ca6de6a45d980ad}{portD\_\-out} (int pin, \_\-Bool value)
+\item 
+void \hyperlink{digital_8c_aa3851ddc6003a9ced660f9ada89bde06}{out} (char port, int pin, \_\-Bool value)
+\item 
+void \hyperlink{digital_8c_a26591725983003f14d610f011aa7349c}{setup\_\-timer0} (void)
+\begin{DoxyCompactList}\small\item\em Sets up timer0 for the overflow interrupt which is then used for button debouncing. \item\end{DoxyCompactList}\item 
+void \hyperlink{digital_8c_a4745fb2a5d7a523f3122cc6113af1e1a}{check\_\-buttons} (void)
+\begin{DoxyCompactList}\small\item\em Goes through and checks the state of the counter associated with each button to see if the button is stable. \item\end{DoxyCompactList}\item 
+void \hyperlink{digital_8c_a82b6a0bb2d8a5f28c7be78d77f07a471}{buttons} (void)
+\begin{DoxyCompactList}\small\item\em Button handler code which will run the gived code for each button if it has been pressed. \item\end{DoxyCompactList}\item 
+\hyperlink{digital_8c_add2d7cdddfb682dcc0391e60cf42c7d6}{ISR} (TIMER0\_\-OVF\_\-vect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{digital_8c_a82b6a0bb2d8a5f28c7be78d77f07a471}{
+\index{digital.c@{digital.c}!buttons@{buttons}}
+\index{buttons@{buttons}!digital.c@{digital.c}}
+\subsubsection[{buttons}]{\setlength{\rightskip}{0pt plus 5cm}void buttons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_a82b6a0bb2d8a5f28c7be78d77f07a471}
+
+
+Button handler code which will run the gived code for each button if it has been pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{digital_8c_a4745fb2a5d7a523f3122cc6113af1e1a}{
+\index{digital.c@{digital.c}!check\_\-buttons@{check\_\-buttons}}
+\index{check\_\-buttons@{check\_\-buttons}!digital.c@{digital.c}}
+\subsubsection[{check\_\-buttons}]{\setlength{\rightskip}{0pt plus 5cm}void check\_\-buttons (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_a4745fb2a5d7a523f3122cc6113af1e1a}
+
+
+Goes through and checks the state of the counter associated with each button to see if the button is stable. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{digital_8c_add2d7cdddfb682dcc0391e60cf42c7d6}{
+\index{digital.c@{digital.c}!ISR@{ISR}}
+\index{ISR@{ISR}!digital.c@{digital.c}}
+\subsubsection[{ISR}]{\setlength{\rightskip}{0pt plus 5cm}ISR (
+\begin{DoxyParamCaption}
+\item[{TIMER0\_\-OVF\_\-vect}]{}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_add2d7cdddfb682dcc0391e60cf42c7d6}
+\hypertarget{digital_8c_aa3851ddc6003a9ced660f9ada89bde06}{
+\index{digital.c@{digital.c}!out@{out}}
+\index{out@{out}!digital.c@{digital.c}}
+\subsubsection[{out}]{\setlength{\rightskip}{0pt plus 5cm}void out (
+\begin{DoxyParamCaption}
+\item[{char}]{ port, }
+\item[{int}]{ pin, }
+\item[{\_\-Bool}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_aa3851ddc6003a9ced660f9ada89bde06}
+
+
+Turn a pin on the given port on or off (or in reality, switch it from sourceing to sinking current)
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em port}]char -\/ Which port is the pin on? (ie: 'B' or 'D') \item[{\em pin}]int -\/ Which pin is set to source or sink current \item[{\em value}]\_\-Bool -\/ Whether the pin is sourcing or sinking current \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Returns nothing
+\end{DoxyReturn}
+
+
+\hypertarget{digital_8c_a1ffb8a81a26d53abbd297f90db139eb0}{
+\index{digital.c@{digital.c}!portB\_\-out@{portB\_\-out}}
+\index{portB\_\-out@{portB\_\-out}!digital.c@{digital.c}}
+\subsubsection[{portB\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}void portB\_\-out (
+\begin{DoxyParamCaption}
+\item[{int}]{ pin, }
+\item[{\_\-Bool}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_a1ffb8a81a26d53abbd297f90db139eb0}
+
+
+Turn a pin on PORTB on or off (or in reality, switch it from sourceing to sinking current)
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pin}]int -\/ Which pin is set to source or sink current \item[{\em value}]\_\-Bool -\/ Whether the pin is sourcing or sinking current \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Returns nothing
+\end{DoxyReturn}
+
+
+\hypertarget{digital_8c_ab374bf5330ad4dbd8ca6de6a45d980ad}{
+\index{digital.c@{digital.c}!portD\_\-out@{portD\_\-out}}
+\index{portD\_\-out@{portD\_\-out}!digital.c@{digital.c}}
+\subsubsection[{portD\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}void portD\_\-out (
+\begin{DoxyParamCaption}
+\item[{int}]{ pin, }
+\item[{\_\-Bool}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_ab374bf5330ad4dbd8ca6de6a45d980ad}
+
+
+Turn a pin on PORTD on or off (or in reality, switch it from sourceing to sinking current)
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pin}]int -\/ Which pin is set to source or sink current \item[{\em value}]\_\-Bool -\/ Whether the pin is sourcing or sinking current \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Returns nothing
+\end{DoxyReturn}
+
+
+\hypertarget{digital_8c_a26591725983003f14d610f011aa7349c}{
+\index{digital.c@{digital.c}!setup\_\-timer0@{setup\_\-timer0}}
+\index{setup\_\-timer0@{setup\_\-timer0}!digital.c@{digital.c}}
+\subsubsection[{setup\_\-timer0}]{\setlength{\rightskip}{0pt plus 5cm}void setup\_\-timer0 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{digital_8c_a26591725983003f14d610f011aa7349c}
+
+
+Sets up timer0 for the overflow interrupt which is then used for button debouncing. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

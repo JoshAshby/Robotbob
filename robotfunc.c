@@ -10,6 +10,12 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #include "global.h"
 
+/** \brief Sets up the base comparison for the Ultrasound results on BOB
+ *
+ * \param pin char - Which ADC pin should be used for the results
+ * \return void - Returns nothing
+ *
+ */
 void calibrate(char pin) {
     /*
     sets up the rolling average, and fills it with data but only once,
@@ -39,6 +45,12 @@ void calibrate(char pin) {
     }
 }
 
+/** \brief Filters the ultrasound data on BOB to make the data a little more smoother and remove oddball bits (aka outliers).
+ *
+ * \param pin char - Which ADC pin should be used for the results
+ * \return uint16_t - The 10bit data from the ADC which has been filtered
+ *
+ */
 uint16_t ultrasound_filter(char pin) {
     /*
     simple filter that works quite well, it simply smooths out the ADC data from the ultrasounds

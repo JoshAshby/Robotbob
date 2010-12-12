@@ -1,0 +1,127 @@
+\hypertarget{uart_8c}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/uart.c File Reference}
+\label{uart_8c}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/uart.c@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/uart.c}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8c_a57dec283060c68725e979681a6bda710}{uart\_\-start} (void)
+\begin{DoxyCompactList}\small\item\em Sets up the registers and starts the UART for a baud of 9600. \item\end{DoxyCompactList}\item 
+void \hyperlink{uart_8c_a3aa33581e04c3d77bf6baf4453699c60}{uart\_\-sendint} (uint8\_\-t data)
+\begin{DoxyCompactList}\small\item\em Send an 8bit long piece of data. \item\end{DoxyCompactList}\item 
+void \hyperlink{uart_8c_a5f6766b9959ff631558c8c6314c48551}{uart\_\-sendint16} (uint16\_\-t data)
+\begin{DoxyCompactList}\small\item\em Send a 16bit long piece of data. \item\end{DoxyCompactList}\item 
+void \hyperlink{uart_8c_a23796b5110daf59f60bf0e24073723e5}{uart\_\-sendchar} (char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Sends either a single piece of data stored as a char, or sends a string. (If sending a string, avr-\/gcc will yell a warning at you, you can ignore it). \item\end{DoxyCompactList}\item 
+uint8\_\-t \hyperlink{uart_8c_a26112ddd1ecbbf65d98511a3434bc8d5}{uart\_\-get} (void)
+\begin{DoxyCompactList}\small\item\em Returns the data which was stored in the recieve register and retreived by the interrupt. \item\end{DoxyCompactList}\item 
+\hyperlink{uart_8c_a09ce999e15ad60b8a3f07d08af1946f9}{ISR} (USART\_\-RX\_\-vect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{uart_8c_a09ce999e15ad60b8a3f07d08af1946f9}{
+\index{uart.c@{uart.c}!ISR@{ISR}}
+\index{ISR@{ISR}!uart.c@{uart.c}}
+\subsubsection[{ISR}]{\setlength{\rightskip}{0pt plus 5cm}ISR (
+\begin{DoxyParamCaption}
+\item[{USART\_\-RX\_\-vect}]{}
+\end{DoxyParamCaption}
+)}}
+\label{uart_8c_a09ce999e15ad60b8a3f07d08af1946f9}
+\hypertarget{uart_8c_a26112ddd1ecbbf65d98511a3434bc8d5}{
+\index{uart.c@{uart.c}!uart\_\-get@{uart\_\-get}}
+\index{uart\_\-get@{uart\_\-get}!uart.c@{uart.c}}
+\subsubsection[{uart\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t uart\_\-get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{uart_8c_a26112ddd1ecbbf65d98511a3434bc8d5}
+
+
+Returns the data which was stored in the recieve register and retreived by the interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes nothing \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\_\-t -\/ The data in the form of an 8bit long piece of data 
+\end{DoxyReturn}
+\hypertarget{uart_8c_a23796b5110daf59f60bf0e24073723e5}{
+\index{uart.c@{uart.c}!uart\_\-sendchar@{uart\_\-sendchar}}
+\index{uart\_\-sendchar@{uart\_\-sendchar}!uart.c@{uart.c}}
+\subsubsection[{uart\_\-sendchar}]{\setlength{\rightskip}{0pt plus 5cm}void uart\_\-sendchar (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{uart_8c_a23796b5110daf59f60bf0e24073723e5}
+
+
+Sends either a single piece of data stored as a char, or sends a string. (If sending a string, avr-\/gcc will yell a warning at you, you can ignore it). 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]char$\ast$ -\/ The char data, or a string \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{uart_8c_a3aa33581e04c3d77bf6baf4453699c60}{
+\index{uart.c@{uart.c}!uart\_\-sendint@{uart\_\-sendint}}
+\index{uart\_\-sendint@{uart\_\-sendint}!uart.c@{uart.c}}
+\subsubsection[{uart\_\-sendint}]{\setlength{\rightskip}{0pt plus 5cm}void uart\_\-sendint (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{uart_8c_a3aa33581e04c3d77bf6baf4453699c60}
+
+
+Send an 8bit long piece of data. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]uint8\_\-t -\/ The 8bit long data \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{uart_8c_a5f6766b9959ff631558c8c6314c48551}{
+\index{uart.c@{uart.c}!uart\_\-sendint16@{uart\_\-sendint16}}
+\index{uart\_\-sendint16@{uart\_\-sendint16}!uart.c@{uart.c}}
+\subsubsection[{uart\_\-sendint16}]{\setlength{\rightskip}{0pt plus 5cm}void uart\_\-sendint16 (
+\begin{DoxyParamCaption}
+\item[{uint16\_\-t}]{ data}
+\end{DoxyParamCaption}
+)}}
+\label{uart_8c_a5f6766b9959ff631558c8c6314c48551}
+
+
+Send a 16bit long piece of data. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]uint16\_\-t -\/ The 16bit long data \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{uart_8c_a57dec283060c68725e979681a6bda710}{
+\index{uart.c@{uart.c}!uart\_\-start@{uart\_\-start}}
+\index{uart\_\-start@{uart\_\-start}!uart.c@{uart.c}}
+\subsubsection[{uart\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void uart\_\-start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{uart_8c_a57dec283060c68725e979681a6bda710}
+
+
+Sets up the registers and starts the UART for a baud of 9600. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes nothing \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}

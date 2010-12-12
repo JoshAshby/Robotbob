@@ -1,0 +1,53 @@
+\hypertarget{robotfunc_8c}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.c File Reference}
+\label{robotfunc_8c}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.c@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/robotfunc.c}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{robotfunc_8c_a46d7ef79053be77b680bc9e22c79f4c1}{calibrate} (char pin)
+\begin{DoxyCompactList}\small\item\em Sets up the base comparison for the Ultrasound results on BOB. \item\end{DoxyCompactList}\item 
+uint16\_\-t \hyperlink{robotfunc_8c_a7cf36d0ba0c0833d1b3ae525b664b056}{ultrasound\_\-filter} (char pin)
+\begin{DoxyCompactList}\small\item\em Filters the ultrasound data on BOB to make the data a little more smoother and remove oddball bits (aka outliers). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{robotfunc_8c_a46d7ef79053be77b680bc9e22c79f4c1}{
+\index{robotfunc.c@{robotfunc.c}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!robotfunc.c@{robotfunc.c}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate (
+\begin{DoxyParamCaption}
+\item[{char}]{ pin}
+\end{DoxyParamCaption}
+)}}
+\label{robotfunc_8c_a46d7ef79053be77b680bc9e22c79f4c1}
+
+
+Sets up the base comparison for the Ultrasound results on BOB. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pin}]char -\/ Which ADC pin should be used for the results \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{robotfunc_8c_a7cf36d0ba0c0833d1b3ae525b664b056}{
+\index{robotfunc.c@{robotfunc.c}!ultrasound\_\-filter@{ultrasound\_\-filter}}
+\index{ultrasound\_\-filter@{ultrasound\_\-filter}!robotfunc.c@{robotfunc.c}}
+\subsubsection[{ultrasound\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t ultrasound\_\-filter (
+\begin{DoxyParamCaption}
+\item[{char}]{ pin}
+\end{DoxyParamCaption}
+)}}
+\label{robotfunc_8c_a7cf36d0ba0c0833d1b3ae525b664b056}
+
+
+Filters the ultrasound data on BOB to make the data a little more smoother and remove oddball bits (aka outliers). 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em pin}]char -\/ Which ADC pin should be used for the results \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\_\-t -\/ The 10bit data from the ADC which has been filtered 
+\end{DoxyReturn}

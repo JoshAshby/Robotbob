@@ -1,0 +1,221 @@
+\hypertarget{pwm_8h}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.h File Reference}
+\label{pwm_8h}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.h@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/pwm.h}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pwm_8h_a9b673fdb396f671f5c9be5ac62bb7b86}{pwm\_\-setup\_\-all} (void)
+\begin{DoxyCompactList}\small\item\em Sets up all the timers on the chip for PWM fast output with prescalers of 64. Useless on BOB as he only uses timer1 for PWM and timer0 and timer2 for interrupts. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_a30660654e1fa35296f0d1ced5e7b3f31}{pwm\_\-setup0} (void)
+\begin{DoxyCompactList}\small\item\em Sets up timer0 for fast PWM with prescaler 64. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_a410ff6ea2dee7fef51d68bfdb37f6ac0}{pwm0A} (uint8\_\-t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM duty cycle to the value passed to it in the value variable for OCR0A. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_aabb0d1ab6770c1b8e0ce59a541525f09}{pwm0B} (uint8\_\-t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM duty cycle to the value passed to it in the value variable for OCR0B. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_aea93980b1d5eed47c447f64a2c36d568}{pwm\_\-setup1} (void)
+\begin{DoxyCompactList}\small\item\em Sets up timer1 (16Bit PWM/Timer) for fast PWM with prescaler 64. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_a50de54abccebc15fd833d747f16dee95}{pwm1A} (uint16\_\-t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM duty cycle to the value passed to it in the value variable for OCR1A. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_aa162ea3b5c2738e16ca2e2226a3a103b}{pwm1B} (uint16\_\-t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM duty cycle to the value passed to it in the value variable for OCR1B. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_a1898671bd13887033abc8a34ec781783}{pwm\_\-setup2} (void)
+\begin{DoxyCompactList}\small\item\em Sets up timer2 for fast PWM with prescaler 64. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_aee0609a4e87f0cb10d6ea253d64a3479}{pwm2A} (uint8\_\-t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM duty cycle to the value passed to it in the value variable for OCR2A. \item\end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_aed734e48b26d74f2f4b06e21c0c33d07}{pwm2B} (uint8\_\-t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM duty cycle to the value passed to it in the value variable for OCR2B. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{pwm_8h_a410ff6ea2dee7fef51d68bfdb37f6ac0}{
+\index{pwm.h@{pwm.h}!pwm0A@{pwm0A}}
+\index{pwm0A@{pwm0A}!pwm.h@{pwm.h}}
+\subsubsection[{pwm0A}]{\setlength{\rightskip}{0pt plus 5cm}void pwm0A (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_a410ff6ea2dee7fef51d68bfdb37f6ac0}
+
+
+Sets the PWM duty cycle to the value passed to it in the value variable for OCR0A. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]uint8\_\-t -\/ The 8bit long value which timer0's PWM duty is set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_aabb0d1ab6770c1b8e0ce59a541525f09}{
+\index{pwm.h@{pwm.h}!pwm0B@{pwm0B}}
+\index{pwm0B@{pwm0B}!pwm.h@{pwm.h}}
+\subsubsection[{pwm0B}]{\setlength{\rightskip}{0pt plus 5cm}void pwm0B (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_aabb0d1ab6770c1b8e0ce59a541525f09}
+
+
+Sets the PWM duty cycle to the value passed to it in the value variable for OCR0B. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]uint8\_\-t -\/ The 8bit long value which timer0's PWM duty is set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_a50de54abccebc15fd833d747f16dee95}{
+\index{pwm.h@{pwm.h}!pwm1A@{pwm1A}}
+\index{pwm1A@{pwm1A}!pwm.h@{pwm.h}}
+\subsubsection[{pwm1A}]{\setlength{\rightskip}{0pt plus 5cm}void pwm1A (
+\begin{DoxyParamCaption}
+\item[{uint16\_\-t}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_a50de54abccebc15fd833d747f16dee95}
+
+
+Sets the PWM duty cycle to the value passed to it in the value variable for OCR1A. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]uint16\_\-t -\/ The 16bit long value which timer1's PWM duty is set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_aa162ea3b5c2738e16ca2e2226a3a103b}{
+\index{pwm.h@{pwm.h}!pwm1B@{pwm1B}}
+\index{pwm1B@{pwm1B}!pwm.h@{pwm.h}}
+\subsubsection[{pwm1B}]{\setlength{\rightskip}{0pt plus 5cm}void pwm1B (
+\begin{DoxyParamCaption}
+\item[{uint16\_\-t}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_aa162ea3b5c2738e16ca2e2226a3a103b}
+
+
+Sets the PWM duty cycle to the value passed to it in the value variable for OCR1B. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]uint16\_\-t -\/ The 16bit long value which timer1's PWM duty is set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_aee0609a4e87f0cb10d6ea253d64a3479}{
+\index{pwm.h@{pwm.h}!pwm2A@{pwm2A}}
+\index{pwm2A@{pwm2A}!pwm.h@{pwm.h}}
+\subsubsection[{pwm2A}]{\setlength{\rightskip}{0pt plus 5cm}void pwm2A (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_aee0609a4e87f0cb10d6ea253d64a3479}
+
+
+Sets the PWM duty cycle to the value passed to it in the value variable for OCR2A. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]uint8\_\-t -\/ The 8bit long value which timer2's PWM duty is set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_aed734e48b26d74f2f4b06e21c0c33d07}{
+\index{pwm.h@{pwm.h}!pwm2B@{pwm2B}}
+\index{pwm2B@{pwm2B}!pwm.h@{pwm.h}}
+\subsubsection[{pwm2B}]{\setlength{\rightskip}{0pt plus 5cm}void pwm2B (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{ value}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_aed734e48b26d74f2f4b06e21c0c33d07}
+
+
+Sets the PWM duty cycle to the value passed to it in the value variable for OCR2B. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]uint8\_\-t -\/ The 8bit long value which timer2's PWM duty is set to \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_a30660654e1fa35296f0d1ced5e7b3f31}{
+\index{pwm.h@{pwm.h}!pwm\_\-setup0@{pwm\_\-setup0}}
+\index{pwm\_\-setup0@{pwm\_\-setup0}!pwm.h@{pwm.h}}
+\subsubsection[{pwm\_\-setup0}]{\setlength{\rightskip}{0pt plus 5cm}void pwm\_\-setup0 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_a30660654e1fa35296f0d1ced5e7b3f31}
+
+
+Sets up timer0 for fast PWM with prescaler 64. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes no arguments \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_aea93980b1d5eed47c447f64a2c36d568}{
+\index{pwm.h@{pwm.h}!pwm\_\-setup1@{pwm\_\-setup1}}
+\index{pwm\_\-setup1@{pwm\_\-setup1}!pwm.h@{pwm.h}}
+\subsubsection[{pwm\_\-setup1}]{\setlength{\rightskip}{0pt plus 5cm}void pwm\_\-setup1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_aea93980b1d5eed47c447f64a2c36d568}
+
+
+Sets up timer1 (16Bit PWM/Timer) for fast PWM with prescaler 64. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes no arguments \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_a1898671bd13887033abc8a34ec781783}{
+\index{pwm.h@{pwm.h}!pwm\_\-setup2@{pwm\_\-setup2}}
+\index{pwm\_\-setup2@{pwm\_\-setup2}!pwm.h@{pwm.h}}
+\subsubsection[{pwm\_\-setup2}]{\setlength{\rightskip}{0pt plus 5cm}void pwm\_\-setup2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_a1898671bd13887033abc8a34ec781783}
+
+
+Sets up timer2 for fast PWM with prescaler 64. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes no arguments \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_a9b673fdb396f671f5c9be5ac62bb7b86}{
+\index{pwm.h@{pwm.h}!pwm\_\-setup\_\-all@{pwm\_\-setup\_\-all}}
+\index{pwm\_\-setup\_\-all@{pwm\_\-setup\_\-all}!pwm.h@{pwm.h}}
+\subsubsection[{pwm\_\-setup\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void pwm\_\-setup\_\-all (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{pwm_8h_a9b673fdb396f671f5c9be5ac62bb7b86}
+
+
+Sets up all the timers on the chip for PWM fast output with prescalers of 64. Useless on BOB as he only uses timer1 for PWM and timer0 and timer2 for interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes no arguments \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}

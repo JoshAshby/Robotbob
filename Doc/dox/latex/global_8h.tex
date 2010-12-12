@@ -1,0 +1,157 @@
+\hypertarget{global_8h}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/global.h File Reference}
+\label{global_8h}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/global.h@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/global.h}}
+}
+{\ttfamily \#include $<$avr/io.h$>$}\par
+{\ttfamily \#include $<$util/delay.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$avr/interrupt.h$>$}\par
+{\ttfamily \#include $<$compat/twi.h$>$}\par
+{\ttfamily \#include $<$inttypes.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$avr/sleep.h$>$}\par
+{\ttfamily \#include \char`\"{}adc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}pwm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}i2c.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}uart.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}digital.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}boot.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}robotfunc.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{global_8h_a322565ccf348d13e4d3de13af771e5fc}{debug}~1
+\item 
+\#define \hyperlink{global_8h_ace59f3554f0e599b5a2a912ea0e11c20}{MCP\_\-ADDRESS}~0xC0
+\item 
+\#define \hyperlink{global_8h_ad250c32cbf473370b42a119bd69200f1}{button\_\-one}~0b00001000
+\item 
+\#define \hyperlink{global_8h_a54f935cd6244581a0939e91b0268f676}{button\_\-two}~0b00010000
+\item 
+\#define \hyperlink{global_8h_ae778a6c393796b87e4c825c1cf73de28}{stat\_\-led1}~5
+\item 
+\#define \hyperlink{global_8h_a202d68cde250b238fe3501caf097a41f}{stat\_\-led2}~6
+\item 
+\#define \hyperlink{global_8h_adee6e7afd3953794f845ad2a9f5c36c9}{CPU\_\-POW}~2
+\item 
+\#define \hyperlink{global_8h_aafb24366afc1384fb0d357e9b71784af}{GX\_\-H}~0x1D
+\item 
+\#define \hyperlink{global_8h_a45953d9ad687a9ee0f7114fcba6e3515}{GX\_\-L}~0x1E
+\item 
+\#define \hyperlink{global_8h_a5efc2ed345dc897c6da2762e5c5edebd}{GY\_\-H}~0x1F
+\item 
+\#define \hyperlink{global_8h_a877cdfc31a8d4fe032800228e2acf9d7}{GY\_\-L}~0x20
+\item 
+\#define \hyperlink{global_8h_a3654c2727586c8eaf35de4b4ec0c5da1}{GZ\_\-H}~0x21
+\item 
+\#define \hyperlink{global_8h_a90571d0d670fa3a267ece16293bd7ad7}{GZ\_\-L}~0x22
+\item 
+\#define \hyperlink{global_8h_a791e6653a713301d744ad191f9002a8e}{turn\_\-relay}~2
+\item 
+\#define \hyperlink{global_8h_a57f0549ce154779015d31bef8644ef2f}{drive\_\-relay}~3
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\_\-t \hyperlink{global_8h_a4f632740d52f3458463fcada13aafbfe}{count} \mbox{[}2\mbox{]}
+\item 
+unsigned char \hyperlink{global_8h_a0e3fe8415e88c54121fd37bef6bfbd6e}{button} \mbox{[}2\mbox{]}
+\item 
+uint16\_\-t \hyperlink{global_8h_abfd71761a6b1360dabc57c127d2c1c9d}{base}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{global_8h_ad250c32cbf473370b42a119bd69200f1}{
+\index{global.h@{global.h}!button\_\-one@{button\_\-one}}
+\index{button\_\-one@{button\_\-one}!global.h@{global.h}}
+\subsubsection[{button\_\-one}]{\setlength{\rightskip}{0pt plus 5cm}\#define button\_\-one~0b00001000}}
+\label{global_8h_ad250c32cbf473370b42a119bd69200f1}
+$<$ PORTD pin 3 button PORTD pin 4 button \hypertarget{global_8h_a54f935cd6244581a0939e91b0268f676}{
+\index{global.h@{global.h}!button\_\-two@{button\_\-two}}
+\index{button\_\-two@{button\_\-two}!global.h@{global.h}}
+\subsubsection[{button\_\-two}]{\setlength{\rightskip}{0pt plus 5cm}\#define button\_\-two~0b00010000}}
+\label{global_8h_a54f935cd6244581a0939e91b0268f676}
+\hypertarget{global_8h_adee6e7afd3953794f845ad2a9f5c36c9}{
+\index{global.h@{global.h}!CPU\_\-POW@{CPU\_\-POW}}
+\index{CPU\_\-POW@{CPU\_\-POW}!global.h@{global.h}}
+\subsubsection[{CPU\_\-POW}]{\setlength{\rightskip}{0pt plus 5cm}\#define CPU\_\-POW~2}}
+\label{global_8h_adee6e7afd3953794f845ad2a9f5c36c9}
+$<$ PORTD pin 2 LED Indicating CPU power \hypertarget{global_8h_a322565ccf348d13e4d3de13af771e5fc}{
+\index{global.h@{global.h}!debug@{debug}}
+\index{debug@{debug}!global.h@{global.h}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}\#define debug~1}}
+\label{global_8h_a322565ccf348d13e4d3de13af771e5fc}
+$<$ Debug, if set to one, any debug code will run Address of the MCP I2C DAC \hypertarget{global_8h_a57f0549ce154779015d31bef8644ef2f}{
+\index{global.h@{global.h}!drive\_\-relay@{drive\_\-relay}}
+\index{drive\_\-relay@{drive\_\-relay}!global.h@{global.h}}
+\subsubsection[{drive\_\-relay}]{\setlength{\rightskip}{0pt plus 5cm}\#define drive\_\-relay~3}}
+\label{global_8h_a57f0549ce154779015d31bef8644ef2f}
+\hypertarget{global_8h_aafb24366afc1384fb0d357e9b71784af}{
+\index{global.h@{global.h}!GX\_\-H@{GX\_\-H}}
+\index{GX\_\-H@{GX\_\-H}!global.h@{global.h}}
+\subsubsection[{GX\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define GX\_\-H~0x1D}}
+\label{global_8h_aafb24366afc1384fb0d357e9b71784af}
+\hypertarget{global_8h_a45953d9ad687a9ee0f7114fcba6e3515}{
+\index{global.h@{global.h}!GX\_\-L@{GX\_\-L}}
+\index{GX\_\-L@{GX\_\-L}!global.h@{global.h}}
+\subsubsection[{GX\_\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define GX\_\-L~0x1E}}
+\label{global_8h_a45953d9ad687a9ee0f7114fcba6e3515}
+\hypertarget{global_8h_a5efc2ed345dc897c6da2762e5c5edebd}{
+\index{global.h@{global.h}!GY\_\-H@{GY\_\-H}}
+\index{GY\_\-H@{GY\_\-H}!global.h@{global.h}}
+\subsubsection[{GY\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define GY\_\-H~0x1F}}
+\label{global_8h_a5efc2ed345dc897c6da2762e5c5edebd}
+\hypertarget{global_8h_a877cdfc31a8d4fe032800228e2acf9d7}{
+\index{global.h@{global.h}!GY\_\-L@{GY\_\-L}}
+\index{GY\_\-L@{GY\_\-L}!global.h@{global.h}}
+\subsubsection[{GY\_\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define GY\_\-L~0x20}}
+\label{global_8h_a877cdfc31a8d4fe032800228e2acf9d7}
+\hypertarget{global_8h_a3654c2727586c8eaf35de4b4ec0c5da1}{
+\index{global.h@{global.h}!GZ\_\-H@{GZ\_\-H}}
+\index{GZ\_\-H@{GZ\_\-H}!global.h@{global.h}}
+\subsubsection[{GZ\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define GZ\_\-H~0x21}}
+\label{global_8h_a3654c2727586c8eaf35de4b4ec0c5da1}
+\hypertarget{global_8h_a90571d0d670fa3a267ece16293bd7ad7}{
+\index{global.h@{global.h}!GZ\_\-L@{GZ\_\-L}}
+\index{GZ\_\-L@{GZ\_\-L}!global.h@{global.h}}
+\subsubsection[{GZ\_\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define GZ\_\-L~0x22}}
+\label{global_8h_a90571d0d670fa3a267ece16293bd7ad7}
+\hypertarget{global_8h_ace59f3554f0e599b5a2a912ea0e11c20}{
+\index{global.h@{global.h}!MCP\_\-ADDRESS@{MCP\_\-ADDRESS}}
+\index{MCP\_\-ADDRESS@{MCP\_\-ADDRESS}!global.h@{global.h}}
+\subsubsection[{MCP\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define MCP\_\-ADDRESS~0xC0}}
+\label{global_8h_ace59f3554f0e599b5a2a912ea0e11c20}
+\hypertarget{global_8h_ae778a6c393796b87e4c825c1cf73de28}{
+\index{global.h@{global.h}!stat\_\-led1@{stat\_\-led1}}
+\index{stat\_\-led1@{stat\_\-led1}!global.h@{global.h}}
+\subsubsection[{stat\_\-led1}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\_\-led1~5}}
+\label{global_8h_ae778a6c393796b87e4c825c1cf73de28}
+$<$ PORTD pin 5 LED PORTD pin 6 LED \hypertarget{global_8h_a202d68cde250b238fe3501caf097a41f}{
+\index{global.h@{global.h}!stat\_\-led2@{stat\_\-led2}}
+\index{stat\_\-led2@{stat\_\-led2}!global.h@{global.h}}
+\subsubsection[{stat\_\-led2}]{\setlength{\rightskip}{0pt plus 5cm}\#define stat\_\-led2~6}}
+\label{global_8h_a202d68cde250b238fe3501caf097a41f}
+\hypertarget{global_8h_a791e6653a713301d744ad191f9002a8e}{
+\index{global.h@{global.h}!turn\_\-relay@{turn\_\-relay}}
+\index{turn\_\-relay@{turn\_\-relay}!global.h@{global.h}}
+\subsubsection[{turn\_\-relay}]{\setlength{\rightskip}{0pt plus 5cm}\#define turn\_\-relay~2}}
+\label{global_8h_a791e6653a713301d744ad191f9002a8e}
+
+
+\subsection{Variable Documentation}
+\hypertarget{global_8h_abfd71761a6b1360dabc57c127d2c1c9d}{
+\index{global.h@{global.h}!base@{base}}
+\index{base@{base}!global.h@{global.h}}
+\subsubsection[{base}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf base}}}
+\label{global_8h_abfd71761a6b1360dabc57c127d2c1c9d}
+\hypertarget{global_8h_a0e3fe8415e88c54121fd37bef6bfbd6e}{
+\index{global.h@{global.h}!button@{button}}
+\index{button@{button}!global.h@{global.h}}
+\subsubsection[{button}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf button}\mbox{[}2\mbox{]}}}
+\label{global_8h_a0e3fe8415e88c54121fd37bef6bfbd6e}
+\hypertarget{global_8h_a4f632740d52f3458463fcada13aafbfe}{
+\index{global.h@{global.h}!count@{count}}
+\index{count@{count}!global.h@{global.h}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf count}\mbox{[}2\mbox{]}}}
+\label{global_8h_a4f632740d52f3458463fcada13aafbfe}

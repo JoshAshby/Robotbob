@@ -1,0 +1,82 @@
+\hypertarget{adc_8c}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.c File Reference}
+\label{adc_8c}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.c@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/adc.c}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{adc_8c_a05c2e5b588ced1cd7312f5b0edc5b295}{ISR} (ADC\_\-vect)
+\item 
+void \hyperlink{adc_8c_ad3367f307ac4fcf5363943152f625506}{adc\_\-start} (\_\-Bool left)
+\begin{DoxyCompactList}\small\item\em Sets up the registers and starts the Analog to Digital converter. \item\end{DoxyCompactList}\item 
+void \hyperlink{adc_8c_a92d4b3d1bd95c7cb3f61269ca2d87bf9}{adc\_\-stop} ()
+\begin{DoxyCompactList}\small\item\em Stops the Analog to Digital conversions. \item\end{DoxyCompactList}\item 
+void \hyperlink{adc_8c_a8a6015c9ba017423400e4c6421cade6c}{adc\_\-change} (char chan)
+\begin{DoxyCompactList}\small\item\em Change the ADC to use the given pin. 8 will return the results for the internal temperature sensor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{adc_8c_a8a6015c9ba017423400e4c6421cade6c}{
+\index{adc.c@{adc.c}!adc\_\-change@{adc\_\-change}}
+\index{adc\_\-change@{adc\_\-change}!adc.c@{adc.c}}
+\subsubsection[{adc\_\-change}]{\setlength{\rightskip}{0pt plus 5cm}void adc\_\-change (
+\begin{DoxyParamCaption}
+\item[{char}]{ chan}
+\end{DoxyParamCaption}
+)}}
+\label{adc_8c_a8a6015c9ba017423400e4c6421cade6c}
+
+
+Change the ADC to use the given pin. 8 will return the results for the internal temperature sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em chan}]char -\/ 0 through 8, representing which ADC pin the results are returned from \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{adc_8c_ad3367f307ac4fcf5363943152f625506}{
+\index{adc.c@{adc.c}!adc\_\-start@{adc\_\-start}}
+\index{adc\_\-start@{adc\_\-start}!adc.c@{adc.c}}
+\subsubsection[{adc\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void adc\_\-start (
+\begin{DoxyParamCaption}
+\item[{\_\-Bool}]{ left}
+\end{DoxyParamCaption}
+)}}
+\label{adc_8c_ad3367f307ac4fcf5363943152f625506}
+
+
+Sets up the registers and starts the Analog to Digital converter. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em left}]\_\-Bool -\/ Left adjust results (1) for 8bit results, or no left adjust (0) for full 10bit results. If using 8bit, simply read ADCH for the value, if using 10bit, read ADCL then ADCH. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{adc_8c_a92d4b3d1bd95c7cb3f61269ca2d87bf9}{
+\index{adc.c@{adc.c}!adc\_\-stop@{adc\_\-stop}}
+\index{adc\_\-stop@{adc\_\-stop}!adc.c@{adc.c}}
+\subsubsection[{adc\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void adc\_\-stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{adc_8c_a92d4b3d1bd95c7cb3f61269ca2d87bf9}
+
+
+Stops the Analog to Digital conversions. 
+
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{adc_8c_a05c2e5b588ced1cd7312f5b0edc5b295}{
+\index{adc.c@{adc.c}!ISR@{ISR}}
+\index{ISR@{ISR}!adc.c@{adc.c}}
+\subsubsection[{ISR}]{\setlength{\rightskip}{0pt plus 5cm}ISR (
+\begin{DoxyParamCaption}
+\item[{ADC\_\-vect}]{}
+\end{DoxyParamCaption}
+)}}
+\label{adc_8c_a05c2e5b588ced1cd7312f5b0edc5b295}

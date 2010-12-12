@@ -1,73 +1,54 @@
 Archive member included because of file (symbol)
 
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
-                              obj/Debug/robotfunc.o (__divmodhi4)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-                              /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o (exit)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
-                              obj/Debug/adc.o (__do_copy_data)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                              obj/Debug/robotfunc.o (__udivmodhi4)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o (exit)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+                              obj/Debug/main.o (__do_copy_data)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
                               obj/Debug/adc.o (__do_clear_bss)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                              obj/Debug/boot.o (__fixunssfsi)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o) (__subsf3)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                              obj/Debug/boot.o (__mulsf3)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                              obj/Debug/boot.o (__gtsf2)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o) (__gesf2)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                              obj/Debug/boot.o (__ltsf2)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o) (__fixsfsi)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__thenan_sf)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                              obj/Debug/pwm.o (__floatunsisf)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o) (__udivmodhi4)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__prologue_saves__)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__epilogue_restores__)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o) (__clzsi2)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__pack_f)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o) (__unpack_f)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o) (__fpcmp_parts_f)
-/usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o) (__clz_tab)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                              obj/Debug/robotfunc.o (__fixunssfsi)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o) (__subsf3)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                              obj/Debug/robotfunc.o (__mulsf3)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                              obj/Debug/robotfunc.o (__gtsf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o) (__gesf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                              obj/Debug/robotfunc.o (__ltsf2)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o) (__fixsfsi)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__thenan_sf)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__prologue_saves__)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__epilogue_restores__)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__pack_f)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o) (__unpack_f)
+/usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o) (__fpcmp_parts_f)
 
 Allocating common symbols
 Common symbol       size              file
 
-base                0x2               obj/Debug/main.o
-pwm_speed1A         0x2               obj/Debug/adc.o
-j                   0x2               obj/Debug/robotfunc.o
-pwm_value_old0B     0x2               obj/Debug/adc.o
-pwm_value1A         0x2               obj/Debug/adc.o
-pwm_speed0B         0x2               obj/Debug/adc.o
-pwm_speed2A         0x2               obj/Debug/adc.o
-pwm_value_old0A     0x2               obj/Debug/adc.o
-pwm_value_old1B     0x2               obj/Debug/adc.o
-pwm_speed2B         0x2               obj/Debug/adc.o
-pwm_speed1B         0x2               obj/Debug/adc.o
-pwm_value0B         0x2               obj/Debug/adc.o
-adc                 0x2               obj/Debug/robotfunc.o
-adcv                0x2               obj/Debug/main.o
-pwm_value2A         0x2               obj/Debug/adc.o
-pwm_value2B         0x2               obj/Debug/adc.o
-pwm_value1B         0x2               obj/Debug/adc.o
-pwm_value_old2A     0x2               obj/Debug/adc.o
-pwm_value_old1A     0x2               obj/Debug/adc.o
-pwm_value0A         0x2               obj/Debug/adc.o
-pwm_speed0A         0x2               obj/Debug/adc.o
-pwm_value_old2B     0x2               obj/Debug/adc.o
+base                0x2               obj/Debug/adc.o
+j                   0x1               obj/Debug/adc.o
+average             0x2               obj/Debug/adc.o
+read_spot           0x2               obj/Debug/adc.o
+button              0x2               obj/Debug/adc.o
+mcp_data            0x4               obj/Debug/adc.o
+input_buffer        0x2bc             obj/Debug/adc.o
+adc                 0x2               obj/Debug/adc.o
+count               0x2               obj/Debug/adc.o
+rollAverage         0x1e              obj/Debug/adc.o
+i_one               0x1               obj/Debug/adc.o
 
 Memory Configuration
 
@@ -83,18 +64,20 @@ signature        0x00840000         0x00000400         rw !x
 Linker script and memory map
 
 Address of section .data set to 0x800100
-LOAD /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+LOAD /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
 LOAD obj/Debug/adc.o
 LOAD obj/Debug/boot.o
 LOAD obj/Debug/digital.o
+LOAD obj/Debug/i2c.o
 LOAD obj/Debug/main.o
 LOAD obj/Debug/pwm.o
 LOAD obj/Debug/robotfunc.o
-LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
-LOAD /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/libm.a
-LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
-LOAD /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/libc.a
-LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
+LOAD obj/Debug/uart.o
+LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a
 
 .hash
  *(.hash)
@@ -186,9 +169,9 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x451e
+.text           0x00000000     0x1f46
  *(.vectors)
- .vectors       0x00000000       0x68 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .vectors       0x00000000       0x68 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vectors
                 0x00000000                __vector_default
  *(.vectors)
@@ -213,20 +196,20 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000068        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .init0         0x00000068        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
                 0x00000068                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000068        0xc /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .init2         0x00000068        0xc /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000074       0x16 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
+ .init4         0x00000074       0x16 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
                 0x00000074                __do_copy_data
- .init4         0x0000008a       0x10 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
+ .init4         0x0000008a       0x10 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
                 0x0000008a                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -238,10 +221,10 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000009a        0x8 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .init9         0x0000009a        0x8 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
  *(.init9)
  *(.text)
- .text          0x000000a2        0x4 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .text          0x000000a2        0x4 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
                 0x000000a2                __vector_22
                 0x000000a2                __vector_1
                 0x000000a2                __vector_24
@@ -264,114 +247,94 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
                 0x000000a2                __vector_8
                 0x000000a2                __vector_14
                 0x000000a2                __vector_10
-                0x000000a2                __vector_16
-                0x000000a2                __vector_18
                 0x000000a2                __vector_20
- .text          0x000000a6      0x1f2 obj/Debug/adc.o
-                0x00000138                adc_stop
-                0x000000c6                adc_start
+ .text          0x000000a6      0x2c2 obj/Debug/adc.o
                 0x000000a6                __vector_21
-                0x00000152                adc_change
- .text          0x00000298      0x964 obj/Debug/boot.o
-                0x00000298                all_good
-                0x0000053a                test
-                0x000002d0                error
-                0x000004da                setup
-                0x000002b4                oh_crap
- .text          0x00000bfc      0x1ce obj/Debug/digital.o
-                0x00000cd8                out
-                0x00000c6a                portD_out
-                0x00000bfc                portB_out
- .text          0x00000dca       0x7a obj/Debug/main.o
-                0x00000dca                main
- .text          0x00000e44     0x2614 obj/Debug/pwm.o
-                0x00001c3a                pwm1A
-                0x000026a4                pwm_rampDown1B
-                0x00000f8a                pwm_setup0
-                0x00001a46                pwm_rampDown0B
-                0x000028c6                pwm2B
-                0x00001c6c                pwm1B
-                0x0000105c                pwm_ramp0A
-                0x00002bc2                pwm_rampUp2A
-                0x00002d2c                pwm_rampDown2A
-                0x000032de                pwm_rampDown2B
-                0x00002262                pwm_ramp1B
-                0x00001f74                pwm_rampUp1A
-                0x00001494                pwm_rampDown0A
-                0x00002822                pwm_setup2
-                0x0000102e                pwm0B
-                0x00001610                pwm_ramp0B
-                0x00002ea8                pwm_ramp2B
-                0x00001c9e                pwm_ramp1A
-                0x00000e44                pwm_setup_all
-                0x00003174                pwm_rampUp2B
-                0x00002536                pwm_rampUp1B
-                0x00002898                pwm2A
-                0x0000132a                pwm_rampUp0A
-                0x000020e2                pwm_rampDown1A
-                0x00001bc4                pwm_setup1
-                0x00001000                pwm0A
-                0x000018dc                pwm_rampUp0B
-                0x000028f4                pwm_ramp2A
- .text          0x00003458      0x3c2 obj/Debug/robotfunc.o
-                0x00003466                turn_right
-                0x00003658                ultrasound_filter
-                0x00003458                turn_left
-                0x00003486                calibrate
-                0x00003474                stop
- .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
- .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .text          0x0000381a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .text          0x0000381a       0x58 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                0x0000381a                __fixunssfsi
- .text          0x00003872      0x354 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                0x00003b0a                __subsf3
-                0x00003b6c                __addsf3
- .text          0x00003bc6      0x1f4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                0x00003bc6                __mulsf3
- .text          0x00003dba       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                0x00003dba                __gtsf2
- .text          0x00003e1a       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                0x00003e1a                __gesf2
- .text          0x00003e7a       0x60 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                0x00003e7a                __ltsf2
- .text          0x00003eda       0xa8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                0x00003eda                __fixsfsi
- .text          0x00003f82        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
- .text          0x00003f82       0xf2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                0x00003f82                __floatunsisf
- .text          0x00004074        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
- .text          0x00004074        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .text          0x00004074        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .text          0x00004074       0x9e /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                0x00004074                __clzsi2
- .text          0x00004112      0x1aa /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                0x00004112                __pack_f
- .text          0x000042bc       0xf0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                0x000042bc                __unpack_f
- .text          0x000043ac       0xb2 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                0x000043ac                __fpcmp_parts_f
- .text          0x0000445e        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                0x0000445e                . = ALIGN (0x2)
+                0x000000c6                adc_start
+                0x00000144                adc_stop
+                0x00000160                adc_change
+ .text          0x00000368       0x84 obj/Debug/boot.o
+                0x00000368                bios
+ .text          0x000003ec      0x34e obj/Debug/digital.o
+                0x000003ec                portB_out
+                0x00000458                portD_out
+                0x000004c4                out
+                0x000005e6                setup_timer0
+                0x00000616                check_buttons
+                0x0000066c                buttons
+                0x000006c6                __vector_16
+ .text          0x0000073a      0x32c obj/Debug/i2c.o
+                0x0000073a                twi_start
+                0x00000756                twi_tran
+                0x000007d0                twi_mcp_dac
+                0x0000093e                twi_mcp_read
+ .text          0x00000a66       0x24 obj/Debug/main.o
+                0x00000a66                main
+ .text          0x00000a8a      0x294 obj/Debug/pwm.o
+                0x00000a8a                pwm_setup_all
+                0x00000b40                pwm_setup0
+                0x00000b86                pwm0A
+                0x00000bb0                pwm0B
+                0x00000bda                pwm_setup1
+                0x00000c20                pwm1A
+                0x00000c52                pwm1B
+                0x00000c84                pwm_setup2
+                0x00000cca                pwm2A
+                0x00000cf4                pwm2B
+ .text          0x00000d1e      0x4a4 obj/Debug/robotfunc.o
+                0x00000d1e                calibrate
+                0x00000f88                ultrasound_filter
+ .text          0x000011c2      0x236 obj/Debug/uart.o
+                0x000011c2                uart_start
+                0x0000123e                uart_sendint
+                0x0000126c                uart_sendint16
+                0x000012be                uart_sendchar
+                0x0000130a                uart_get
+                0x00001380                __vector_18
+ .text          0x000013f8        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x000013f8        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .text          0x000013f8        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .text          0x000013f8        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .text          0x000013f8       0x58 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                0x000013f8                __fixunssfsi
+ .text          0x00001450      0x354 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                0x000016e8                __subsf3
+                0x0000174a                __addsf3
+ .text          0x000017a4      0x1f4 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                0x000017a4                __mulsf3
+ .text          0x00001998       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                0x00001998                __gtsf2
+ .text          0x000019f8       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                0x000019f8                __gesf2
+ .text          0x00001a58       0x60 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                0x00001a58                __ltsf2
+ .text          0x00001ab8       0xa8 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                0x00001ab8                __fixsfsi
+ .text          0x00001b60        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+ .text          0x00001b60        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+ .text          0x00001b60        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+ .text          0x00001b60      0x1aa /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+                0x00001b60                __pack_f
+ .text          0x00001d0a       0xf0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+                0x00001d0a                __unpack_f
+ .text          0x00001dfa       0xb2 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x00001dfa                __fpcmp_parts_f
+                0x00001eac                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x0000445e       0x26 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
-                0x0000445e                __divmodhi4
-                0x0000445e                _div
- .text.libgcc   0x00004484        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x00004484        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x00004484        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x00004484       0x28 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
-                0x00004484                __udivmodhi4
- .text.libgcc   0x000044ac       0x38 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
-                0x000044ac                __prologue_saves__
- .text.libgcc   0x000044e4       0x36 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
-                0x000044e4                __epilogue_restores__
-                0x0000451a                . = ALIGN (0x2)
+ .text.libgcc   0x00001eac       0x28 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                0x00001eac                __udivmodhi4
+ .text.libgcc   0x00001ed4        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00001ed4        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001ed4        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00001ed4       0x38 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                0x00001ed4                __prologue_saves__
+ .text.libgcc   0x00001f0c       0x36 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                0x00001f0c                __epilogue_restores__
+                0x00001f42                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000451a        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-                0x0000451a                exit
-                0x0000451a                _exit
+ .fini9         0x00001f42        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                0x00001f42                exit
+                0x00001f42                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -390,121 +353,101 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000451a        0x4 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
+ .fini0         0x00001f42        0x4 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000451e                _etext = .
+                0x00001f46                _etext = .
 
-.data           0x00800100      0x108 load address 0x0000451e
+.data           0x00800100        0xe load address 0x00001f46
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
  .data          0x00800100        0x0 obj/Debug/adc.o
  .data          0x00800100        0x0 obj/Debug/boot.o
  .data          0x00800100        0x0 obj/Debug/digital.o
- .data          0x00800100        0x0 obj/Debug/main.o
- .data          0x00800100        0x0 obj/Debug/pwm.o
- .data          0x00800100        0x0 obj/Debug/robotfunc.o
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
- .data          0x00800100        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
- .data          0x00800100        0x8 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
-                0x00800100                __thenan_sf
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
- .data          0x00800108        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .data          0x00800108      0x100 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                0x00800108                __clz_tab
+ .data          0x00800100        0x0 obj/Debug/i2c.o
+ .data          0x00800100        0x6 obj/Debug/main.o
+ .data          0x00800106        0x0 obj/Debug/pwm.o
+ .data          0x00800106        0x0 obj/Debug/robotfunc.o
+ .data          0x00800106        0x0 obj/Debug/uart.o
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+ .data          0x00800106        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+ .data          0x00800106        0x8 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                0x00800106                __thenan_sf
+ .data          0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+ .data          0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+ .data          0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+ .data          0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+ .data          0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x00800208                . = ALIGN (0x2)
-                0x00800208                _edata = .
-                0x00800208                PROVIDE (__data_end, .)
+                0x0080010e                . = ALIGN (0x2)
+                0x0080010e                _edata = .
+                0x0080010e                PROVIDE (__data_end, .)
 
-.bss            0x00800208       0x56 load address 0x00004626
-                0x00800208                PROVIDE (__bss_start, .)
+.bss            0x0080010e      0x2ec
+                0x0080010e                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800208        0x0 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
- .bss           0x00800208        0x0 obj/Debug/adc.o
- .bss           0x00800208        0x0 obj/Debug/boot.o
- .bss           0x00800208        0x0 obj/Debug/digital.o
- .bss           0x00800208        0x0 obj/Debug/main.o
- .bss           0x00800208        0x0 obj/Debug/pwm.o
- .bss           0x00800208       0x2a obj/Debug/robotfunc.o
-                0x00800230                average
-                0x00800208                rollAverage
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x00800232        0x0 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ .bss           0x0080010e        0x0 obj/Debug/adc.o
+ .bss           0x0080010e        0x0 obj/Debug/boot.o
+ .bss           0x0080010e        0x0 obj/Debug/digital.o
+ .bss           0x0080010e        0x0 obj/Debug/i2c.o
+ .bss           0x0080010e        0x0 obj/Debug/main.o
+ .bss           0x0080010e        0x0 obj/Debug/pwm.o
+ .bss           0x0080010e        0x0 obj/Debug/robotfunc.o
+ .bss           0x0080010e        0x0 obj/Debug/uart.o
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+ .bss           0x0080010e        0x0 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800232       0x24 obj/Debug/adc.o
-                0x00800232                pwm_speed1A
-                0x00800234                pwm_value_old0B
-                0x00800236                pwm_value1A
-                0x00800238                pwm_speed0B
-                0x0080023a                pwm_speed2A
-                0x0080023c                pwm_value_old0A
-                0x0080023e                pwm_value_old1B
-                0x00800240                pwm_speed2B
-                0x00800242                pwm_speed1B
-                0x00800244                pwm_value0B
-                0x00800246                pwm_value2A
-                0x00800248                pwm_value2B
-                0x0080024a                pwm_value1B
-                0x0080024c                pwm_value_old2A
-                0x0080024e                pwm_value_old1A
-                0x00800250                pwm_value0A
-                0x00800252                pwm_speed0A
-                0x00800254                pwm_value_old2B
- COMMON         0x00800256        0x4 obj/Debug/main.o
-                0x00800256                base
-                0x00800258                adcv
- COMMON         0x0080025a        0x4 obj/Debug/robotfunc.o
-                0x0080025a                j
-                0x0080025c                adc
-                0x0080025e                PROVIDE (__bss_end, .)
-                0x0000451e                __data_load_start = LOADADDR (.data)
-                0x00004626                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080010e      0x2ec obj/Debug/adc.o
+                0x0080010e                base
+                0x00800110                j
+                0x00800111                average
+                0x00800113                read_spot
+                0x00800115                button
+                0x00800117                mcp_data
+                0x0080011b                input_buffer
+                0x008003d7                adc
+                0x008003d9                count
+                0x008003db                rollAverage
+                0x008003f9                i_one
+                0x008003fa                PROVIDE (__bss_end, .)
+                0x00001f46                __data_load_start = LOADADDR (.data)
+                0x00001f54                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080025e        0x0
-                0x0080025e                PROVIDE (__noinit_start, .)
+.noinit         0x008003fa        0x0
+                0x008003fa                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080025e                PROVIDE (__noinit_end, .)
-                0x0080025e                _end = .
-                0x0080025e                PROVIDE (__heap_start, .)
+                0x008003fa                PROVIDE (__noinit_end, .)
+                0x008003fa                _end = .
+                0x008003fa                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -522,25 +465,29 @@ LOAD /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x4fbc
+.stab           0x00000000     0x3d44
  *(.stab)
- .stab          0x00000000      0x6b4 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
- .stab          0x000006b4      0x678 obj/Debug/adc.o
-                                0x684 (size before relaxing)
- .stab          0x00000d2c      0xa74 obj/Debug/boot.o
+ .stab          0x00000000      0x6b4 /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+ .stab          0x000006b4      0xe94 obj/Debug/adc.o
+                                0xea0 (size before relaxing)
+ .stab          0x00001548      0x354 obj/Debug/boot.o
                                 0xc9c (size before relaxing)
- .stab          0x000017a0      0x300 obj/Debug/digital.o
-                                0x4bc (size before relaxing)
- .stab          0x00001aa0      0x30c obj/Debug/main.o
-                                0x534 (size before relaxing)
- .stab          0x00001dac     0x2ce8 obj/Debug/pwm.o
-                               0x2f04 (size before relaxing)
- .stab          0x00004a94      0x528 obj/Debug/robotfunc.o
-                                0x750 (size before relaxing)
+ .stab          0x0000189c      0x6a8 obj/Debug/digital.o
+                                0xff0 (size before relaxing)
+ .stab          0x00001f44      0x7c8 obj/Debug/i2c.o
+                               0x1110 (size before relaxing)
+ .stab          0x0000270c      0x2f4 obj/Debug/main.o
+                                0xc3c (size before relaxing)
+ .stab          0x00002a00      0x744 obj/Debug/pwm.o
+                               0x108c (size before relaxing)
+ .stab          0x00003144      0x600 obj/Debug/robotfunc.o
+                                0xf48 (size before relaxing)
+ .stab          0x00003744      0x600 obj/Debug/uart.o
+                                0xf48 (size before relaxing)
 
-.stabstr        0x00000000      0xf69
+.stabstr        0x00000000     0x2a1f
  *(.stabstr)
- .stabstr       0x00000000      0xf69 /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+ .stabstr       0x00000000     0x2a1f /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
 
 .stab.excl
  *(.stab.excl)
@@ -602,306 +549,239 @@ LOAD linker stubs
 Cross Reference Table
 
 Symbol                                            File
-__addsf3                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-__bad_interrupt                                   /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__bss_end                                         /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
-__bss_start                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
-__clz_tab                                         /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-__clzsi2                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-__data_end                                        /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
-__data_load_start                                 /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
-__data_start                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
-__divmodhi4                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
-                                                  obj/Debug/robotfunc.o
-__do_clear_bss                                    /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clear_bss.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
+__addsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__bad_interrupt                                   /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__bss_end                                         /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_clear_bss.o)
+                                                  obj/Debug/uart.o
                                                   obj/Debug/robotfunc.o
                                                   obj/Debug/pwm.o
                                                   obj/Debug/main.o
+                                                  obj/Debug/i2c.o
                                                   obj/Debug/digital.o
                                                   obj/Debug/boot.o
                                                   obj/Debug/adc.o
-__do_copy_data                                    /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_copy_data.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clz.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_clzsi2.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                                                  obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
+__do_copy_data                                    /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_copy_data.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
                                                   obj/Debug/main.o
-                                                  obj/Debug/digital.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-__epilogue_restores__                             /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_epilogue.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-__fixsfsi                                         /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-__fixunssfsi                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
-__floatunsisf                                     /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                                                  obj/Debug/pwm.o
-__fpcmp_parts_f                                   /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-__gesf2                                           /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-__gtsf2                                           /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
-__heap_end                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__init                                            /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__ltsf2                                           /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
-__mulsf3                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
-__pack_f                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_pack_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-__prologue_saves__                                /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_prologue.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_usi_to_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-__stack                                           /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__subsf3                                          /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_fixunssfsi.o)
-__thenan_sf                                       /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_thenan_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-__udivmodhi4                                      /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_udivmodhi4.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
-__unpack_f                                        /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_unpack_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_sf_to_si.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_lt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_ge_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_gt_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_mul_sf.o)
-                                                  /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_addsub_sf.o)
-__vector_1                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_10                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_11                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_12                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_13                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_14                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_15                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_16                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_17                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_18                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_19                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_2                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_20                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
+__epilogue_restores__                             /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_epilogue.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__fixsfsi                                         /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+__fixunssfsi                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+                                                  obj/Debug/robotfunc.o
+__fpcmp_parts_f                                   /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+__gesf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+__gtsf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  obj/Debug/robotfunc.o
+__heap_end                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__init                                            /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__ltsf2                                           /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  obj/Debug/robotfunc.o
+__mulsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  obj/Debug/robotfunc.o
+__pack_f                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_pack_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__prologue_saves__                                /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_prologue.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__stack                                           /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__subsf3                                          /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_fixunssfsi.o)
+__thenan_sf                                       /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_thenan_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__udivmodhi4                                      /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_udivmodhi4.o)
+                                                  obj/Debug/robotfunc.o
+__unpack_f                                        /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_unpack_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_sf_to_si.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_lt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_ge_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_gt_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_mul_sf.o)
+                                                  /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_addsub_sf.o)
+__vector_1                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_10                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_11                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_12                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_13                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_14                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_15                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_16                                       obj/Debug/digital.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_17                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_18                                       obj/Debug/uart.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_19                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_2                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_20                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
 __vector_21                                       obj/Debug/adc.o
-                                                  /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_22                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_23                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_24                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_25                                       /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_3                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_4                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_5                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_6                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_7                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_8                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_9                                        /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vector_default                                  /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-__vectors                                         /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-_div                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_divmodhi4.o)
-_exit                                             /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-adc                                               obj/Debug/robotfunc.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_22                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_23                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_24                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_25                                       /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_3                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_4                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_5                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_6                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_7                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_8                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_9                                        /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vector_default                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+__vectors                                         /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+_exit                                             /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+adc                                               obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
 adc_change                                        obj/Debug/adc.o
                                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/main.o
 adc_start                                         obj/Debug/adc.o
                                                   obj/Debug/boot.o
 adc_stop                                          obj/Debug/adc.o
-adcv                                              obj/Debug/main.o
-all_good                                          obj/Debug/boot.o
-average                                           obj/Debug/robotfunc.o
-base                                              obj/Debug/robotfunc.o
+average                                           obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+base                                              obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+bios                                              obj/Debug/boot.o
+                                                  obj/Debug/main.o
+button                                            obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+buttons                                           obj/Debug/digital.o
                                                   obj/Debug/main.o
 calibrate                                         obj/Debug/robotfunc.o
                                                   obj/Debug/main.o
-error                                             obj/Debug/boot.o
-                                                  obj/Debug/robotfunc.o
-exit                                              /usr/lib/gcc/avr/4.3.3/avr5/libgcc.a(_exit.o)
-                                                  /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-j                                                 obj/Debug/robotfunc.o
-main                                              obj/Debug/main.o
-                                                  /usr/lib/gcc/avr/4.3.3/../../../avr/lib/avr5/crtm328p.o
-oh_crap                                           obj/Debug/boot.o
-out                                               obj/Debug/digital.o
+check_buttons                                     obj/Debug/digital.o
                                                   obj/Debug/main.o
+count                                             obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
                                                   obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+exit                                              /usr/lib/gcc/avr/4.3.5/avr5/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+i_one                                             obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+input_buffer                                      obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+j                                                 obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+main                                              obj/Debug/main.o
+                                                  /usr/lib/gcc/avr/4.3.5/../../../avr/lib/avr5/crtm328p.o
+mcp_data                                          obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
+                                                  obj/Debug/pwm.o
+                                                  obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
+                                                  obj/Debug/boot.o
+                                                  obj/Debug/adc.o
+out                                               obj/Debug/digital.o
 portB_out                                         obj/Debug/digital.o
 portD_out                                         obj/Debug/digital.o
 pwm0A                                             obj/Debug/pwm.o
 pwm0B                                             obj/Debug/pwm.o
 pwm1A                                             obj/Debug/pwm.o
 pwm1B                                             obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
 pwm2A                                             obj/Debug/pwm.o
 pwm2B                                             obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-pwm_ramp0A                                        obj/Debug/pwm.o
-pwm_ramp0B                                        obj/Debug/pwm.o
-pwm_ramp1A                                        obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
-pwm_ramp1B                                        obj/Debug/pwm.o
-pwm_ramp2A                                        obj/Debug/pwm.o
-pwm_ramp2B                                        obj/Debug/pwm.o
-pwm_rampDown0A                                    obj/Debug/pwm.o
-pwm_rampDown0B                                    obj/Debug/pwm.o
-pwm_rampDown1A                                    obj/Debug/pwm.o
-pwm_rampDown1B                                    obj/Debug/pwm.o
-pwm_rampDown2A                                    obj/Debug/pwm.o
-pwm_rampDown2B                                    obj/Debug/pwm.o
-pwm_rampUp0A                                      obj/Debug/pwm.o
-pwm_rampUp0B                                      obj/Debug/pwm.o
-pwm_rampUp1A                                      obj/Debug/pwm.o
-pwm_rampUp1B                                      obj/Debug/pwm.o
-pwm_rampUp2A                                      obj/Debug/pwm.o
-pwm_rampUp2B                                      obj/Debug/pwm.o
 pwm_setup0                                        obj/Debug/pwm.o
 pwm_setup1                                        obj/Debug/pwm.o
-                                                  obj/Debug/boot.o
 pwm_setup2                                        obj/Debug/pwm.o
-                                                  obj/Debug/main.o
 pwm_setup_all                                     obj/Debug/pwm.o
-pwm_speed0A                                       obj/Debug/robotfunc.o
+                                                  obj/Debug/boot.o
+read_spot                                         obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
                                                   obj/Debug/pwm.o
                                                   obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
                                                   obj/Debug/boot.o
                                                   obj/Debug/adc.o
-pwm_speed0B                                       obj/Debug/robotfunc.o
+rollAverage                                       obj/Debug/uart.o
+                                                  obj/Debug/robotfunc.o
                                                   obj/Debug/pwm.o
                                                   obj/Debug/main.o
+                                                  obj/Debug/i2c.o
+                                                  obj/Debug/digital.o
                                                   obj/Debug/boot.o
                                                   obj/Debug/adc.o
-pwm_speed1A                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
+setup_timer0                                      obj/Debug/digital.o
                                                   obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_speed1B                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
+twi_mcp_dac                                       obj/Debug/i2c.o
+twi_mcp_read                                      obj/Debug/i2c.o
+twi_start                                         obj/Debug/i2c.o
                                                   obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_speed2A                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
+twi_tran                                          obj/Debug/i2c.o
+uart_get                                          obj/Debug/uart.o
+uart_sendchar                                     obj/Debug/uart.o
                                                   obj/Debug/main.o
+uart_sendint                                      obj/Debug/uart.o
+                                                  obj/Debug/digital.o
+uart_sendint16                                    obj/Debug/uart.o
+uart_start                                        obj/Debug/uart.o
                                                   obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_speed2B                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value0A                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value0B                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value1A                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value1B                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value2A                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value2B                                       obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value_old0A                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value_old0B                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value_old1A                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value_old1B                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value_old2A                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-pwm_value_old2B                                   obj/Debug/robotfunc.o
-                                                  obj/Debug/pwm.o
-                                                  obj/Debug/main.o
-                                                  obj/Debug/boot.o
-                                                  obj/Debug/adc.o
-rollAverage                                       obj/Debug/robotfunc.o
-setup                                             obj/Debug/boot.o
-                                                  obj/Debug/main.o
-stop                                              obj/Debug/robotfunc.o
-test                                              obj/Debug/boot.o
-turn_left                                         obj/Debug/robotfunc.o
-turn_right                                        obj/Debug/robotfunc.o
 ultrasound_filter                                 obj/Debug/robotfunc.o
-                                                  obj/Debug/main.o
+                                                  obj/Debug/digital.o

@@ -23,6 +23,12 @@ void error(char type) {
 }
 */
 
+/** \brief Takes care of setting everything up, including LEDs and setting up pins for Outputs.
+ *
+ * \param void - Takes nothing
+ * \return void - Returns nothing
+ *
+ */
 void bios(void) {
     DDRD |= (1<<CPU_POW); //CPU power led to output, and turn it on
     PORTD |= (1<<CPU_POW);

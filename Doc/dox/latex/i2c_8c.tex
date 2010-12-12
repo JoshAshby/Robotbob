@@ -1,0 +1,97 @@
+\hypertarget{i2c_8c}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.c File Reference}
+\label{i2c_8c}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.c@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.c}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2c_8c_af37269da7f6b1b22438b78d2f965f274}{twi\_\-start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the TWI/I2C interface with the correct clock speed. \item\end{DoxyCompactList}\item 
+unsigned char \hyperlink{i2c_8c_ae1c7c7c4539232c460ebc29a6b732528}{twi\_\-tran} (unsigned char type)
+\begin{DoxyCompactList}\small\item\em What action should be taken, simply used to clean code up a tad bit. \item\end{DoxyCompactList}\item 
+int \hyperlink{i2c_8c_ac2c85c5a5daf0037f3b9c2208e432fac}{twi\_\-mcp\_\-dac} (unsigned int twi\_\-address, uint16\_\-t data, \_\-Bool type)
+\begin{DoxyCompactList}\small\item\em TWI code for writing DAC data to the MCP4725 I2C DAC first to write to the dac only we must specify this in the POD byte for DAC only we send 0x40 which is 0b01000000 because we don't want any of the Power Down stuff and we only want DAC which means C2, C1, C0, should be 0, 1, 0 respectably. for writing to the DAC and the EEPROM they would be 0, 1, 1 and the last byte on the address should be 1. \item\end{DoxyCompactList}\item 
+uint16\_\-t \hyperlink{i2c_8c_a38d3e6f4136dddde09d47dc8b12d7d3b}{twi\_\-mcp\_\-read} (unsigned int twi\_\-address)
+\begin{DoxyCompactList}\small\item\em Reads the data from the EEPROM of the DAC. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{i2c_8c_ac2c85c5a5daf0037f3b9c2208e432fac}{
+\index{i2c.c@{i2c.c}!twi\_\-mcp\_\-dac@{twi\_\-mcp\_\-dac}}
+\index{twi\_\-mcp\_\-dac@{twi\_\-mcp\_\-dac}!i2c.c@{i2c.c}}
+\subsubsection[{twi\_\-mcp\_\-dac}]{\setlength{\rightskip}{0pt plus 5cm}int twi\_\-mcp\_\-dac (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ twi\_\-address, }
+\item[{uint16\_\-t}]{ data, }
+\item[{\_\-Bool}]{ type}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8c_ac2c85c5a5daf0037f3b9c2208e432fac}
+
+
+TWI code for writing DAC data to the MCP4725 I2C DAC first to write to the dac only we must specify this in the POD byte for DAC only we send 0x40 which is 0b01000000 because we don't want any of the Power Down stuff and we only want DAC which means C2, C1, C0, should be 0, 1, 0 respectably. for writing to the DAC and the EEPROM they would be 0, 1, 1 and the last byte on the address should be 1. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em twi\_\-address}]unsigned int -\/ The address of the I2C/TWI part we are talking to, in this case, the MCP4725 \item[{\em data}]uint16\_\-t -\/ The 10bit long DAC data \item[{\em type}]\_\-Bool -\/ Whether or not the data should also be written to the EEPROM \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ Good to go or not sort of thing. 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_a38d3e6f4136dddde09d47dc8b12d7d3b}{
+\index{i2c.c@{i2c.c}!twi\_\-mcp\_\-read@{twi\_\-mcp\_\-read}}
+\index{twi\_\-mcp\_\-read@{twi\_\-mcp\_\-read}!i2c.c@{i2c.c}}
+\subsubsection[{twi\_\-mcp\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t twi\_\-mcp\_\-read (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ twi\_\-address}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8c_a38d3e6f4136dddde09d47dc8b12d7d3b}
+
+
+Reads the data from the EEPROM of the DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em twi\_\-address}]unsigned int -\/ Address of the DAC \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\_\-t -\/ The data which is in the EEPROM (see datasheet) 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_af37269da7f6b1b22438b78d2f965f274}{
+\index{i2c.c@{i2c.c}!twi\_\-start@{twi\_\-start}}
+\index{twi\_\-start@{twi\_\-start}!i2c.c@{i2c.c}}
+\subsubsection[{twi\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void twi\_\-start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8c_af37269da7f6b1b22438b78d2f965f274}
+
+
+Starts the TWI/I2C interface with the correct clock speed. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes nothing \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{i2c_8c_ae1c7c7c4539232c460ebc29a6b732528}{
+\index{i2c.c@{i2c.c}!twi\_\-tran@{twi\_\-tran}}
+\index{twi\_\-tran@{twi\_\-tran}!i2c.c@{i2c.c}}
+\subsubsection[{twi\_\-tran}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char twi\_\-tran (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ type}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8c_ae1c7c7c4539232c460ebc29a6b732528}
+
+
+What action should be taken, simply used to clean code up a tad bit. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em type}]unsigned char -\/ What action should be taken, should the start condition be sent, the stop condition, or the data register \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned char -\/ Returns the TWI/I2C status register 
+\end{DoxyReturn}

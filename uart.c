@@ -11,6 +11,12 @@ freenode/#linuxandsci - JoshAshby
 #include "global.h"
 
 //Got through and set up the registers for UART
+/** \brief Sets up the registers and starts the UART for a baud of 9600
+ *
+ * \param void - Takes nothing
+ * \return void - Returns nothing
+ *
+ */
 void uart_start(void) {
     UCSR0B |= (1 << RXEN0) | (1 << TXEN0); //transmit side of hardware
     UCSR0C |= (1 << UCSZ00) | (1 << UCSZ01); //receive side of hardware
@@ -27,6 +33,12 @@ void uart_start(void) {
 	UDR0 = '\r';//send a new line just to be sure
 }
 
+/** \brief Send an 8bit long piece of data
+ *
+ * \param data uint8_t - The 8bit long data
+ * \return void - Returns nothing
+ *
+ */
 void uart_sendint(uint8_t data) {
     /*
     Use this to send a 8bit long piece of data
@@ -39,6 +51,12 @@ void uart_sendint(uint8_t data) {
 	UDR0 = '\r';//send a new line just to be sure*/
 }
 
+/** \brief Send a 16bit long piece of data
+ *
+ * \param data uint16_t - The 16bit long data
+ * \return void - Returns nothing
+ *
+ */
 void uart_sendint16(uint16_t data) {
     /*
     Use this to send a 16bit long piece of data
@@ -54,6 +72,12 @@ void uart_sendint16(uint16_t data) {
 	UDR0 = '\r';//send a new line just to be sure*/
 }
 
+/** \brief Sends either a single piece of data stored as a char, or sends a string. (If sending a string, avr-gcc will yell a warning at you, you can ignore it)
+ *
+ * \param data char* - The char data, or a string
+ * \return void - Returns nothing
+ *
+ */
 void uart_sendchar(char *data) {
     /*
     Use this to send a string, it will split it up into individual parts
@@ -70,6 +94,12 @@ void uart_sendchar(char *data) {
 	UDR0 = '\r';//send a new line just to be sure*/
 }
 
+/** \brief Returns the data which was stored in the recieve register and retreived by the interrupt
+ *
+ * \param void - Takes nothing
+ * \return uint8_t - The data in the form of an 8bit long piece of data
+ *
+ */
 uint8_t uart_get(void) {
     /*
     gets data from the register that the interrupt stored it

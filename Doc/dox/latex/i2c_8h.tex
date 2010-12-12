@@ -1,0 +1,144 @@
+\hypertarget{i2c_8h}{
+\section{/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.h File Reference}
+\label{i2c_8h}\index{/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.h@{/home/joshua/Desktop/Stuff/github/repos/Robotbob/i2c.h}}
+}
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{i2c_8h_afd63d23830ad86d01b6fff2e6c615f7e}{MAX\_\-TRIES}~50
+\item 
+\#define \hyperlink{i2c_8h_a3b12a0369906d5264bd6e7ea596f6d29}{TWI\_\-START}~0
+\item 
+\#define \hyperlink{i2c_8h_aaad9f06d6da950b43cc158cf2d28c92d}{TWI\_\-DATA}~1
+\item 
+\#define \hyperlink{i2c_8h_abc6fae092860c77838a2a320fbfcc512}{TWI\_\-STOP}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2c_8h_af37269da7f6b1b22438b78d2f965f274}{twi\_\-start} (void)
+\begin{DoxyCompactList}\small\item\em Starts the TWI/I2C interface with the correct clock speed. \item\end{DoxyCompactList}\item 
+unsigned char \hyperlink{i2c_8h_ae1c7c7c4539232c460ebc29a6b732528}{twi\_\-tran} (unsigned char type)
+\begin{DoxyCompactList}\small\item\em What action should be taken, simply used to clean code up a tad bit. \item\end{DoxyCompactList}\item 
+int \hyperlink{i2c_8h_ac2c85c5a5daf0037f3b9c2208e432fac}{twi\_\-mcp\_\-dac} (unsigned int twi\_\-address, uint16\_\-t data, \_\-Bool type)
+\begin{DoxyCompactList}\small\item\em TWI code for writing DAC data to the MCP4725 I2C DAC first to write to the dac only we must specify this in the POD byte for DAC only we send 0x40 which is 0b01000000 because we don't want any of the Power Down stuff and we only want DAC which means C2, C1, C0, should be 0, 1, 0 respectably. for writing to the DAC and the EEPROM they would be 0, 1, 1 and the last byte on the address should be 1. \item\end{DoxyCompactList}\item 
+uint16\_\-t \hyperlink{i2c_8h_a38d3e6f4136dddde09d47dc8b12d7d3b}{twi\_\-mcp\_\-read} (unsigned int twi\_\-address)
+\begin{DoxyCompactList}\small\item\em Reads the data from the EEPROM of the DAC. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\_\-t \hyperlink{i2c_8h_a404cc805020f4983a303cd8c1e716fff}{mcp\_\-data} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{i2c_8h_afd63d23830ad86d01b6fff2e6c615f7e}{
+\index{i2c.h@{i2c.h}!MAX\_\-TRIES@{MAX\_\-TRIES}}
+\index{MAX\_\-TRIES@{MAX\_\-TRIES}!i2c.h@{i2c.h}}
+\subsubsection[{MAX\_\-TRIES}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-TRIES~50}}
+\label{i2c_8h_afd63d23830ad86d01b6fff2e6c615f7e}
+\hypertarget{i2c_8h_aaad9f06d6da950b43cc158cf2d28c92d}{
+\index{i2c.h@{i2c.h}!TWI\_\-DATA@{TWI\_\-DATA}}
+\index{TWI\_\-DATA@{TWI\_\-DATA}!i2c.h@{i2c.h}}
+\subsubsection[{TWI\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define TWI\_\-DATA~1}}
+\label{i2c_8h_aaad9f06d6da950b43cc158cf2d28c92d}
+\hypertarget{i2c_8h_a3b12a0369906d5264bd6e7ea596f6d29}{
+\index{i2c.h@{i2c.h}!TWI\_\-START@{TWI\_\-START}}
+\index{TWI\_\-START@{TWI\_\-START}!i2c.h@{i2c.h}}
+\subsubsection[{TWI\_\-START}]{\setlength{\rightskip}{0pt plus 5cm}\#define TWI\_\-START~0}}
+\label{i2c_8h_a3b12a0369906d5264bd6e7ea596f6d29}
+\hypertarget{i2c_8h_abc6fae092860c77838a2a320fbfcc512}{
+\index{i2c.h@{i2c.h}!TWI\_\-STOP@{TWI\_\-STOP}}
+\index{TWI\_\-STOP@{TWI\_\-STOP}!i2c.h@{i2c.h}}
+\subsubsection[{TWI\_\-STOP}]{\setlength{\rightskip}{0pt plus 5cm}\#define TWI\_\-STOP~2}}
+\label{i2c_8h_abc6fae092860c77838a2a320fbfcc512}
+
+
+\subsection{Function Documentation}
+\hypertarget{i2c_8h_ac2c85c5a5daf0037f3b9c2208e432fac}{
+\index{i2c.h@{i2c.h}!twi\_\-mcp\_\-dac@{twi\_\-mcp\_\-dac}}
+\index{twi\_\-mcp\_\-dac@{twi\_\-mcp\_\-dac}!i2c.h@{i2c.h}}
+\subsubsection[{twi\_\-mcp\_\-dac}]{\setlength{\rightskip}{0pt plus 5cm}int twi\_\-mcp\_\-dac (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ twi\_\-address, }
+\item[{uint16\_\-t}]{ data, }
+\item[{\_\-Bool}]{ type}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8h_ac2c85c5a5daf0037f3b9c2208e432fac}
+
+
+TWI code for writing DAC data to the MCP4725 I2C DAC first to write to the dac only we must specify this in the POD byte for DAC only we send 0x40 which is 0b01000000 because we don't want any of the Power Down stuff and we only want DAC which means C2, C1, C0, should be 0, 1, 0 respectably. for writing to the DAC and the EEPROM they would be 0, 1, 1 and the last byte on the address should be 1. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em twi\_\-address}]unsigned int -\/ The address of the I2C/TWI part we are talking to, in this case, the MCP4725 \item[{\em data}]uint16\_\-t -\/ The 10bit long DAC data \item[{\em type}]\_\-Bool -\/ Whether or not the data should also be written to the EEPROM \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ Good to go or not sort of thing. 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_a38d3e6f4136dddde09d47dc8b12d7d3b}{
+\index{i2c.h@{i2c.h}!twi\_\-mcp\_\-read@{twi\_\-mcp\_\-read}}
+\index{twi\_\-mcp\_\-read@{twi\_\-mcp\_\-read}!i2c.h@{i2c.h}}
+\subsubsection[{twi\_\-mcp\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t twi\_\-mcp\_\-read (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{ twi\_\-address}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8h_a38d3e6f4136dddde09d47dc8b12d7d3b}
+
+
+Reads the data from the EEPROM of the DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em twi\_\-address}]unsigned int -\/ Address of the DAC \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\_\-t -\/ The data which is in the EEPROM (see datasheet) 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_af37269da7f6b1b22438b78d2f965f274}{
+\index{i2c.h@{i2c.h}!twi\_\-start@{twi\_\-start}}
+\index{twi\_\-start@{twi\_\-start}!i2c.h@{i2c.h}}
+\subsubsection[{twi\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void twi\_\-start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8h_af37269da7f6b1b22438b78d2f965f274}
+
+
+Starts the TWI/I2C interface with the correct clock speed. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em void}]-\/ Takes nothing \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void -\/ Returns nothing 
+\end{DoxyReturn}
+\hypertarget{i2c_8h_ae1c7c7c4539232c460ebc29a6b732528}{
+\index{i2c.h@{i2c.h}!twi\_\-tran@{twi\_\-tran}}
+\index{twi\_\-tran@{twi\_\-tran}!i2c.h@{i2c.h}}
+\subsubsection[{twi\_\-tran}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char twi\_\-tran (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ type}
+\end{DoxyParamCaption}
+)}}
+\label{i2c_8h_ae1c7c7c4539232c460ebc29a6b732528}
+
+
+What action should be taken, simply used to clean code up a tad bit. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em type}]unsigned char -\/ What action should be taken, should the start condition be sent, the stop condition, or the data register \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned char -\/ Returns the TWI/I2C status register 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{i2c_8h_a404cc805020f4983a303cd8c1e716fff}{
+\index{i2c.h@{i2c.h}!mcp\_\-data@{mcp\_\-data}}
+\index{mcp\_\-data@{mcp\_\-data}!i2c.h@{i2c.h}}
+\subsubsection[{mcp\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint16\_\-t {\bf mcp\_\-data}\mbox{[}2\mbox{]}}}
+\label{i2c_8h_a404cc805020f4983a303cd8c1e716fff}
