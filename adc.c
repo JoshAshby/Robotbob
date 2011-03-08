@@ -13,8 +13,9 @@ freenode/#linuxandsci - JoshAshby
 //anything that needs to be ran when ever a new conversion happens goes in here
 //other wise, simply read from the data registers if data isn't all that important
 //aka: you can miss a few bits of data and still be good to go
-ISR(ADC_vect) {
-}
+//ISR(ADC_vect) {
+
+//}
 
 /** \brief Sets up the registers and starts the Analog to Digital converter
  *

@@ -1,3 +1,9 @@
-Codeblocks project files for BOB_motor is the code for BOB's motor controller
-These branch is the experimental AVR-C code for BOB, simply open the project and click build, it should upload the code automatically, if not then change the post build options for the project to fit.
-for more information go to joshashby.com
+Codeblocks project files for BOB_motor is the code for BOB's motor controller.
+
+Branches, besides the gh-pages branch, are development branches which will eventually be merged into the main master branch.
+
+For documentation on the code, see bob.joshashby.com
+
+In the hardware folder you will find the boards, filed by generation of electronics, and which board. Such as generation 4 main, or generation motor. Inside each boards folder will be the eagle files, and pictures of the top and bottom of the board.
+
+Datasheets can be found in the datasheets folder.

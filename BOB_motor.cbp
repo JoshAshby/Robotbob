@@ -24,6 +24,14 @@
 					<Add option="-Os" />
 					<Add option="-O3" />
 				</Compiler>
+				<ExtraCommands>
+					<Add after="avr-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
+					<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
+					<Add after="avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_FILE).lss" />
+					<Add after="avrdude -P /dev/ttyACM0 -c stk500v2 -p m328p -U flash:w:$(TARGET_OUTPUT_FILE).hex:i" />
+					<Mode after="always" />
+				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
@@ -35,14 +43,6 @@
 			<Add option="-mmcu=atmega328p" />
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
 		</Linker>
-		<ExtraCommands>
-			<Add after="avr-size $(TARGET_OUTPUT_FILE)" />
-			<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
-			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
-			<Add after="avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_FILE).lss" />
-			<Add after="avrdude -P /dev/ttyACM0 -c stk500v2 -p m328p -U flash:w:$(TARGET_OUTPUT_FILE).hex:i" />
-			<Mode after="always" />
-		</ExtraCommands>
 		<Unit filename="README" />
 		<Unit filename="adc.c">
 			<Option compilerVar="CC" />
@@ -80,7 +80,11 @@
 			<envvars />
 			<code_completion />
 			<lib_finder disable_auto="1" />
-			<debugger />
+			<debugger>
+				<remote_debugging>
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="1234" additional_cmds="load bin/Debug/BOB_motor.elf" additional_cmds_before="target remote localhost:1234" />
+				</remote_debugging>
+			</debugger>
 			<AutoVersioning>
 				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
 				<Settings autoincrement="1" date_declarations="1" do_auto_increment="0" ask_to_increment="0" language="C" svn="0" svn_directory="" header_path="version.h" />

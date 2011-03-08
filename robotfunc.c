@@ -10,68 +10,22 @@ freenode/#linuxandsci - JoshAshby
 //-------------------------------------------
 #include "global.h"
 
-/** \brief Sets up the base comparison for the Ultrasound results on BOB
- *
- * \param pin char - Which ADC pin should be used for the results
- * \return void - Returns nothing
- *
- */
-void calibrate(char pin) {
-    /*
-    sets up the rolling average, and fills it with data but only once,
-    This is ran once and only once at the very begining of the code for BOB because it
-    tells BOB how far from the wall he should be
-    */
-    adc_change(pin);
-    _delay_ms(20); //need to get rid of this ugly delay, may replace it with timer2 interrupt
+uint8_t ultrasound_filter(char pin) {
+    filt = (average>>1);
     adc = ADCH;
-    for (j = 0; j <= 20; j++){
+    for (j = 0; j <= 16; j++){
         if (ADCH > average + 100)
         {
-            adc = (ADCH/2) + (average/2);
+            adc = (ADCH >> 1) + filt;
         }
         if (ADCH < average - 100){
-            adc = (ADCH/2) + (average/2);
+            adc = (ADCH >> 1) + filt;
         }
         rollAverage[j] = adc;
     }
-    for (j = 0; j <= 20; j++){
+    for (j = 0; j <= 16; j++){
         average += rollAverage[j];
     }
-    average = average/18;
-    base = average;
-    for (j = 0; j <= 20; j++){
-        rollAverage[j] = 0;
-    }
-}
-
-/** \brief Filters the ultrasound data on BOB to make the data a little more smoother and remove oddball bits (aka outliers).
- *
- * \param pin char - Which ADC pin should be used for the results
- * \return uint16_t - The 10bit data from the ADC which has been filtered
- *
- */
-uint16_t ultrasound_filter(char pin) {
-    /*
-    simple filter that works quite well, it simply smooths out the ADC data from the ultrasounds
-    if the ADC data is out of range, it will divide it by two, and then add the average divided by two
-    */
-    adc_change(pin);
-    _delay_ms(20); //need to get rid of this ugly delay, may replace it with timer2 interrupt
-    adc = ADCH;
-    for (j = 0; j <= 30; j++){
-        if (ADCH > average + 100)
-        {
-            adc = (ADCH/2) + (average/2);
-        }
-        if (ADCH < average - 100){
-            adc = (ADCH/2) + (average/2);
-        }
-        rollAverage[j] = adc;
-    }
-    for (j = 0; j <= 30; j++){
-        average += rollAverage[j];
-    }
-    average = average/30;
+    average = average >> 4;
     return average;
 }

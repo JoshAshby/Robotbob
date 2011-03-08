@@ -4,19 +4,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>12-12-2010 at 09:38.38</u><br />
-Build ended on: <u>12-12-2010 at 09:38.41</u><p />
+Build started on: <u>08-03-2011 at 10:57.41</u><br />
+Build ended on: <u>08-03-2011 at 10:57.43</u><p />
 <b>-------------- Build: Release in BOB_motor ---------------</b><br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c adc.c -o obj/Release/adc.o<br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c boot.c -o obj/Release/boot.o<br />
 avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c digital.c -o obj/Release/digital.o<br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c i2c.c -o obj/Release/i2c.o<br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c main.c -o obj/Release/main.o<br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c pwm.c -o obj/Release/pwm.o<br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c robotfunc.c -o obj/Release/robotfunc.o<br />
+avr-gcc -Wall -mmcu=atmega328p -DF_CPU=16000000UL  -Os -O3    -I/usr/include  -c uart.c -o obj/Release/uart.o<br />
 avr-g++ -L/usr/lib  -o bin/Release/BOB_motor.elf obj/Release/adc.o obj/Release/boot.o obj/Release/digital.o obj/Release/i2c.o obj/Release/main.o obj/Release/pwm.o obj/Release/robotfunc.o obj/Release/uart.o   -mmcu=atmega328p -Wl,-Map=bin/Release/BOB_motor.elf.map,--cref<br />
 /usr/lib/gcc/avr/4.3.5/../../../avr/bin/ld: skipping incompatible /usr/lib/libm.so when searching for -lm<br />
 /usr/lib/gcc/avr/4.3.5/../../../avr/bin/ld: skipping incompatible /usr/lib/libm.a when searching for -lm<br />
 /usr/lib/gcc/avr/4.3.5/../../../avr/bin/ld: skipping incompatible /usr/lib/libc.so when searching for -lc<br />
 /usr/lib/gcc/avr/4.3.5/../../../avr/bin/ld: skipping incompatible /usr/lib/libc.a when searching for -lc<br />
-Output size is 8.77 KB<br />
+Output size is 8.17 KB<br />
 avr-size bin/Release/BOB_motor.elf<br />
    text	   data	    bss	    dec	    hex	filename<br />
-   2718	      6	    748	   3472	    d90	bin/Release/BOB_motor.elf<br />
+   2210	      6	    741	   2957	    b8d	bin/Release/BOB_motor.elf<br />
 avr-objcopy -O ihex -R .eeprom -R .eesafe bin/Release/BOB_motor.elf bin/Release/BOB_motor.elf.hex<br />
 avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex bin/Release/BOB_motor.elf bin/Release/BOB_motor.elf.eep.hex<br />
 avr-objdump -h -S bin/Release/BOB_motor.elf > bin/Release/BOB_motor.elf.lss<br />

@@ -16,7 +16,7 @@ freenode/#linuxandsci - JoshAshby
 //Prototypes
 //-------------------------------------------
 
-uint16_t ultrasound_filter(char pin);
+/*uint16_t ultrasound_filter(char pin);
 void calibrate(char pin);
 
 //-------------------------------------------
@@ -26,6 +26,13 @@ void calibrate(char pin);
 volatile uint8_t rollAverage[30];
 volatile uint16_t average;
 volatile uint8_t j;
-volatile uint16_t adc;
+volatile uint16_t adc;*/
+
+volatile uint8_t filt;
+volatile uint8_t rollAverage[24];
+volatile uint8_t average;
+volatile uint8_t j;
+volatile uint8_t adc;
+uint8_t ultrasound_filter(char pin);
 
 #endif
